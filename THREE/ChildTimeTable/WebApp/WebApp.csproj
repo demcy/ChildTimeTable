@@ -5,11 +5,6 @@
         <UserSecretsId>aspnet-WebApp-5EE1FDCA-CB33-418E-8C53-1108C9CA7D27</UserSecretsId>
     </PropertyGroup>
 
-
-    <ItemGroup>
-        <None Update="app.db" CopyToOutputDirectory="PreserveNewest" ExcludeFromSingleFile="true" />
-    </ItemGroup>
-
     <ItemGroup>
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.2" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
@@ -19,10 +14,153 @@
         <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.2" />
         <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.2" />
         <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.1" />
+        <PackageReference Include="Pomelo.EntityFrameworkCore.MySql" Version="3.1.1" />
     </ItemGroup>
 
     <ItemGroup>
+      <ProjectReference Include="..\DAL.App.EF\DAL.App.EF.csproj" />
       <ProjectReference Include="..\Domain\Domain.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Views\PersonTypes\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PersonTypes\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PersonTypes\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PersonTypes\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\PersonTypes\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Persons\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Persons\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Persons\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Persons\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Persons\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\AccessDenied.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ConfirmEmail.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ExternalLogin.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ForgotPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Lockout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\LoginWith2fa.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Email.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\PersonalData.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\SetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_Layout.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\RegisterConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_StatusMessage.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\Error.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ValidationScriptsPartial.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewImports.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_ViewStart.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Families\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Families\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Families\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Families\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Families\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Locations\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Locations\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Locations\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Locations\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Locations\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Obligations\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Obligations\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Obligations\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Obligations\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Views\Obligations\Index.cshtml" />
+      <_ContentIncludedByDefault Remove="Areas\Identity\Pages\_Layout.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <UpToDateCheckInput Remove="Views\Persons\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\AccessDenied.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\ConfirmEmail.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\ConfirmEmailChange.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\ExternalLogin.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\ForgotPassword.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\ForgotPasswordConfirmation.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Lockout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Login.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\LoginWith2fa.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\LoginWithRecoveryCode.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Logout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\ChangePassword.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\DeletePersonalData.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\Disable2fa.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\DownloadPersonalData.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\Email.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\EnableAuthenticator.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\ExternalLogins.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\GenerateRecoveryCodes.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\Index.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\PersonalData.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\ResetAuthenticator.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\SetPassword.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\ShowRecoveryCodes.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\TwoFactorAuthentication.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\_Layout.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\_ManageNav.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\_StatusMessage.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Manage\_ViewImports.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\Register.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\RegisterConfirmation.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\ResetPassword.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\ResetPasswordConfirmation.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\_StatusMessage.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Account\_ViewImports.cshtml" />
+      <UpToDateCheckInput Remove="Areas\Identity\Pages\Error.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Persons\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Obligations\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Obligations\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Obligations\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Obligations\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Obligations\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Index.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="wwwroot\Icons" />
     </ItemGroup>
 
 </Project>

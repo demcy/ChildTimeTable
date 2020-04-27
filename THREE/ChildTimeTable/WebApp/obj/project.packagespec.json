@@ -18,6 +18,9 @@
     "frameworks": {
       "netcoreapp3.1": {
         "projectReferences": {
+          "/Users/kira/RiderProjects/idc0009-2019s/THREE/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/THREE/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj"
+          },
           "/Users/kira/RiderProjects/idc0009-2019s/THREE/ChildTimeTable/Domain/Domain.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/THREE/ChildTimeTable/Domain/Domain.csproj"
           }
@@ -62,6 +65,10 @@
           "version": "[3.1.2, )"
         },
         "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+          "target": "Package",
+          "version": "[3.1.1, )"
+        },
+        "Pomelo.EntityFrameworkCore.MySql": {
           "target": "Package",
           "version": "[3.1.1, )"
         }
