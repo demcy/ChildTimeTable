@@ -47,7 +47,7 @@ namespace Domain
         [InverseProperty(nameof(Obligation.Child))]
         public ICollection<Obligation> ChildObligations { get; set; }
         
-
+        public ICollection<Location> Locations { get; set; }
     
     }
 }

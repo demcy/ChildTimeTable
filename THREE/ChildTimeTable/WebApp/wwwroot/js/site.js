@@ -4,9 +4,13 @@
 // Write your JavaScript code.
 
 let today = new Date();
+let thisDay = today.getDate();
+let thisMonth = today.getMonth();
 let currentMonth = today.getMonth();
+let thisYear = today.getFullYear();
 let currentYear = today.getFullYear();
 let months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+let dutyDates = [];
 let monthAndYear = document.getElementById('monthAndYear');
 
 let logoDiv = document.getElementById('logo-div');
@@ -16,7 +20,21 @@ let logoInput = document.getElementById('logo-input');
 let newPersonDiv = document.getElementById('newPerson-div');
 
 
-showCalendar(currentMonth, currentYear);
+//showCalendar(currentMonth, currentYear);
+
+function newDutyDays(arrayDutyDates) {
+    for (let i = 0; i < arrayDutyDates.length; i++){
+        let dd = new Date(arrayDutyDates[i]);
+        //let dutyDate = [];
+        //dutyDate.push(dd.getDate());
+        //dutyDate.push(dd.getMonth());
+        //dutyDate.push(dd.getFullYear());
+        dutyDates.push(dd);
+    }
+    showCalendar(currentMonth, currentYear);
+}
+
+
 
 function showCalendar(month, year) {
     
@@ -68,12 +86,41 @@ function next() {
     showCalendar(currentMonth, currentYear);
 }
 
+function existDate(date, month, year) {
+    let existFound = false;
+    for (let i = 0; i < dutyDates.length; i++){
+        if(date === dutyDates[i].getDate() && month === dutyDates[i].getMonth()+1 && year === dutyDates[i].getFullYear()){
+            existFound = true;
+        }
+    }
+    return existFound;
+}
+
+function lateDay(date, month, year) {
+    let late = false;
+    if((date>=thisDay && month===thisMonth+1 && year===thisYear) || (month>thisMonth+1 && year>=thisYear)){
+        late = true;
+    }
+    return late;
+}
+
 function calendarControl(date, month, year) {
     let dataDiv = document.createElement('div');
     dataDiv.classList.add('dropdown');
     let dataButton = document.createElement('button');
     dataButton.classList.add('btn');
-    dataButton.classList.add('btn-outline-primary');
+    if(date===thisDay && month===thisMonth+1 && year===thisYear) {
+        if (existDate(date, month, year)) {
+            dataButton.classList.add('btn-warning');
+        } else {
+            dataButton.classList.add('btn-primary');
+        }
+    }else if(existDate(date, month, year)){
+        dataButton.classList.add('btn-outline-warning');
+    }else {
+        dataButton.classList.add('btn-outline-primary');
+    }
+    
     
     dataButton.type="button";
     dataButton.setAttribute('data-toggle', 'dropdown');
@@ -85,16 +132,18 @@ function calendarControl(date, month, year) {
     menuDiv.classList.add('dropdown-menu-right');
     let viewLink = document.createElement('a');
     viewLink.classList.add('dropdown-item');
-    viewLink.href="/Obligations/Index";
+    let dt = year + "-" + month + "-" + date;
+    viewLink.href="/Obligations/Index/?dt=" + dt;
     viewLink.innerText = "View";
     menuDiv.appendChild(viewLink);
-    let addLink = document.createElement('a');
-    addLink.classList.add('dropdown-item');
-    //let dt = month + "/" + date + "/" + year;
-    let dt = year + "-" + month + "-" + date;
-    addLink.href="/Obligations/Create/?dt=" + dt;
-    addLink.innerText = "Add";
-    menuDiv.appendChild(addLink);
+    if(lateDay(date, month, year)) {
+        let addLink = document.createElement('a');
+        addLink.classList.add('dropdown-item');
+        let dt = year + "-" + month + "-" + date;
+        addLink.href = "/Obligations/Create/?dt=" + dt;
+        addLink.innerText = "Add";
+        menuDiv.appendChild(addLink);
+    }
     dataDiv.appendChild(menuDiv);
     
     return dataDiv;

@@ -9,6 +9,6 @@ namespace Domain
         public DateTime StartTime { get; set; }
         public DateTime EndTime { get; set; }
 
-        public ICollection<Obligation> Type { get; set; }
+        public ICollection<Obligation> Obligations { get; set; } 
     }
 }

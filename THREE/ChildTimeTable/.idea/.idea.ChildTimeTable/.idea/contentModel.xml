@@ -10,8 +10,8 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.App.EF.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20200425151022_InitialDbCreation.cs" t="Include" />
-          <e p="20200425151022_InitialDbCreation.Designer.cs" t="Include" />
+          <e p="20200427201238_InitialDbCreation.cs" t="Include" />
+          <e p="20200427201238_InitialDbCreation.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
