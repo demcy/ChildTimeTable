@@ -1,0 +1,628 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c6918920-0ab5-4911-8203-d0fabd9f2d0d" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/Dara_game.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Identity/AppRole.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Identity/AppUser.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Location.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Notification.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Obligation.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/ObligationType.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Time.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Areas/Identity/Pages/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp3/Areas/Identity/Pages/_Layout.cshtml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.ChildTimeTable/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.idea.idc0009-2019s.dir/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.idea.idc0009-2019s.dir/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ONE/ChildTimetable" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/.idea/.idea.ChildTimeTable/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/.idea/.idea.ChildTimeTable/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/.idea/.idea.ChildTimeTable/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/.idea/.idea.ChildTimeTable/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/ChildTimeTable.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/ChildTimeTable.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Family.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Family.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/PersonType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/PersonType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/bin/Debug/netstandard2.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/bin/Debug/netstandard2.1/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/bin/Debug/netstandard2.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/bin/Debug/netstandard2.1/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Controllers/FamiliesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Controllers/PersonTypesController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Controllers/PersonsController.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Data/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/DAL.App.EF/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Migrations/20200312231238_InitialDbCreation.Designer.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Migrations/20200312231238_InitialDbCreation.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Families/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Families/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Families/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Families/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Families/Details.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Families/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Families/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Families/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Families/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/PersonTypes/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/PersonTypes/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/PersonTypes/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/PersonTypes/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/PersonTypes/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/PersonTypes/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/PersonTypes/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/PersonTypes/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/PersonTypes/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/PersonTypes/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Persons/Create.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Persons/Create.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Persons/Delete.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Persons/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Persons/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Persons/Edit.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Persons/Edit.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Persons/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Persons/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/app.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/app.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Delete.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Delete.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Create.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Delete.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Details.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Edit.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Index.cshtml.g.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Delete.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Delete.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../THREE/ChildTimeTable/WebApp/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/.idea/.idea.demo/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.demo/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/.idea/.idea.demo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.demo/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/.idea/.idea.demo/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.demo/.idea/indexLayout.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/.idea/.idea.demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.demo/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/.idea/.idea.demo/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.demo/.idea/projectSettingsUpdater.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/.idea/.idea.demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.demo/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/.idea/.idea.demo/riderModule.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/.idea/.idea.demo/riderModule.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/ChildTimeTable.sln" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/ChildTimeTable2.sln" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/ApplicationDbContext.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/ApplicationDbContext.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/DAL.App.EF.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/Migrations/20200308202618_InitialDbCreation.Designer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/Migrations/20200308202618_InitialDbCreation.Designer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/Migrations/20200308202618_InitialDbCreation.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/Migrations/20200308202618_InitialDbCreation.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/Migrations/ApplicationDbContextModelSnapshot.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/Migrations/ApplicationDbContextModelSnapshot.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/bin/Debug/netstandard2.1/DAL.App.EF.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/bin/Debug/netstandard2.1/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/bin/Debug/netstandard2.1/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.EntityFrameworkCore.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/DAL.App.EF.csproj.EntityFrameworkCore.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/DAL.App.EF.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csproj.CopyComplete" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/Debug/netstandard2.1/DAL.App.EF.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/DAL.App.EF/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/DAL.App.EF/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/Domain.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/Domain.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/Family.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/Family.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/Person.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/Person.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/PersonType.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/PersonType.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/bin/Debug/netstandard2.1/Domain.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/bin/Debug/netstandard2.1/Domain.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/bin/Debug/netstandard2.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/bin/Debug/netstandard2.1/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/bin/Debug/netstandard2.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/bin/Debug/netstandard2.1/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Debug/netstandard2.1/Domain.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Debug/netstandard2.1/Domain.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Debug/netstandard2.1/Domain.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Debug/netstandard2.1/Domain.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Debug/netstandard2.1/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Debug/netstandard2.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Debug/netstandard2.1/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Domain.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Domain.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Domain.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Domain.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Domain.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Domain.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/Domain.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/Domain.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/Domain/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/Domain/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Areas/Identity/Pages/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Areas/Identity/Pages/_ViewStart.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Controllers/FamiliesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Controllers/FamiliesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Controllers/HomeController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Controllers/HomeController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Controllers/PersonTypesController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Controllers/PersonTypesController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Controllers/PersonsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Controllers/PersonsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Models/ErrorViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Models/ErrorViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Families/Create.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Families/Delete.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Families/Details.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Families/Details.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Families/Edit.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Families/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Home/Index.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Home/Index.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Home/Privacy.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Home/Privacy.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/PersonTypes/Create.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/PersonTypes/Delete.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/PersonTypes/Details.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/PersonTypes/Edit.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/PersonTypes/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Persons/Create.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Persons/Delete.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Persons/Delete.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Persons/Details.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Persons/Edit.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Persons/Index.cshtml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Shared/Error.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Shared/Error.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Shared/_Layout.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Shared/_Layout.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Shared/_LoginPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Shared/_LoginPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/Shared/_ValidationScriptsPartial.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/_ViewImports.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/_ViewImports.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/Views/_ViewStart.cshtml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/Views/_ViewStart.cshtml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/WebApp.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/WebApp.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/app.db" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/app.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/DAL.App.EF.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/DAL.App.EF.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/DAL.App.EF.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/DAL.App.EF.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Domain.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Domain.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.Internal.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Cryptography.KeyDerivation.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V4.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V4.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Razor.Language.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Bcl.AsyncInterfaces.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Bcl.HashCode.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.Workspaces.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.CSharp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Razor.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.Workspaces.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.CodeAnalysis.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Data.Sqlite.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Data.Sqlite.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.DotNet.PlatformAbstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Design.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Relational.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.SqlServer.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Sqlite.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.Sqlite.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.EntityFrameworkCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Caching.Memory.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.Binder.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Configuration.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyInjection.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.DependencyModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Embedded.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.FileProviders.Embedded.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Identity.Stores.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.Abstractions.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Logging.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Options.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Extensions.Primitives.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.Identity.Client.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Contracts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGeneration.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/MySqlConnector.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/MySqlConnector.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Newtonsoft.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/NuGet.Frameworks.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Pomelo.EntityFrameworkCore.MySql.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Pomelo.JsonObject.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/Properties/launchSettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.batteries_v2.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.core.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.core.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.nativelibrary.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.provider.dynamic_cdecl.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/SQLitePCLRaw.provider.dynamic_cdecl.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Composition.AttributedModel.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Composition.Convention.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Composition.Hosting.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Composition.Hosting.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Composition.Runtime.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Composition.TypedParts.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Configuration.ConfigurationManager.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Runtime.Caching.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/System.Text.Json.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/System.Text.Json.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.StaticWebAssets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.StaticWebAssets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.deps.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.deps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.runtimeconfig.dev.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.runtimeconfig.dev.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.runtimeconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/WebApp.runtimeconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/appsettings.Development.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/appsettings.Development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/cs/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/de/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/dotnet-aspnet-codegenerator-design.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/es/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/fr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/it/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ja/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ko/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pl/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/pt-BR/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/ru/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/alpine-x64/native/libe_sqlite3.so" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/alpine-x64/native/libe_sqlite3.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-arm/native/libe_sqlite3.so" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-arm/native/libe_sqlite3.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-arm64/native/libe_sqlite3.so" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-arm64/native/libe_sqlite3.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-armel/native/libe_sqlite3.so" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-armel/native/libe_sqlite3.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-musl-x64/native/libe_sqlite3.so" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-musl-x64/native/libe_sqlite3.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-x64/native/libe_sqlite3.so" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-x64/native/libe_sqlite3.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-x86/native/libe_sqlite3.so" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/linux-x86/native/libe_sqlite3.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/osx-x64/native/libe_sqlite3.dylib" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/osx-x64/native/libe_sqlite3.dylib" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.0/System.Runtime.Caching.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/unix/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/e_sqlite3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-arm/native/e_sqlite3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/e_sqlite3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/e_sqlite3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-arm64/native/sni.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/e_sqlite3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x64/native/sni.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/e_sqlite3.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win-x86/native/sni.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.0/System.Runtime.Caching.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win/lib/netcoreapp2.1/Microsoft.Data.SqlClient.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/tr/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hans/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.CSharp.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.Workspaces.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/bin/Debug/netcoreapp3.1/zh-Hant/Microsoft.CodeAnalysis.resources.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Areas/Identity/Pages/_ViewStart.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Delete.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Delete.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Families/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Home/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Home/Privacy.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Delete.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Delete.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/PersonTypes/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Create.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Create.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Delete.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Delete.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Details.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Details.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Edit.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Edit.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Index.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Persons/Index.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/Error.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_Layout.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LoginPartial.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_ValidationScriptsPartial.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/_ViewImports.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/_ViewStart.cshtml.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.AssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.AssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.AssemblyInfoInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.AssemblyInfoInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.MvcApplicationPartsAssemblyInfo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.MvcApplicationPartsAssemblyInfo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.MvcApplicationPartsAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.MvcApplicationPartsAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorAssemblyInfo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorAssemblyInfo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorCoreGenerate.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorCoreGenerate.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorTargetAssemblyInfo.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorTargetAssemblyInfo.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorTargetAssemblyInfo.cs" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.RazorTargetAssemblyInfo.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.TagHelpers.input.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.TagHelpers.input.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.TagHelpers.output.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.TagHelpers.output.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.Views.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.assets.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.assets.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.csproj.CopyComplete" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.csproj.CopyComplete" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.csproj.FileListAbsolute.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.csproj.FileListAbsolute.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.dll" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/WebApp.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/WebApp.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/staticwebassets/WebApp.StaticWebAssets.Manifest.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/staticwebassets/WebApp.StaticWebAssets.Manifest.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/staticwebassets/WebApp.StaticWebAssets.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/Debug/netcoreapp3.1/staticwebassets/WebApp.StaticWebAssets.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/WebApp.csproj.EntityFrameworkCore.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/WebApp.csproj.EntityFrameworkCore.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/WebApp.csproj.codegeneration.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/WebApp.csproj.codegeneration.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.cache" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/WebApp.csproj.nuget.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.dgspec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/WebApp.csproj.nuget.dgspec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.g.props" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/WebApp.csproj.nuget.g.props" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/WebApp.csproj.nuget.g.targets" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/WebApp.csproj.nuget.g.targets" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/project.assets.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/project.assets.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/obj/project.packagespec.json" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/obj/project.packagespec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/css/site.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/css/site.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/js/site.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/js/site.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/LICENSE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation/LICENSE.md" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation/LICENSE.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation/dist/additional-methods.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery/dist/jquery.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery/dist/jquery.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery/dist/jquery.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery/dist/jquery.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../TWO/ChildTimeTable/WebApp/wwwroot/lib/jquery/dist/jquery.min.map" beforeDir="false" afterPath="$PROJECT_DIR$/../TWO/ChildTimeTable2/WebApp/wwwroot/lib/jquery/dist/jquery.min.map" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution>
+      <executable />
+    </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="JsFlowSettings">
+    <service-enabled>true</service-enabled>
+    <exe-path />
+    <other-services-enabled>true</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
+  <component name="ProjectId" id="1ZURhC5unaiNog418HVYTBjEf7Z" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="Settings.JavaScript" />
+  </component>
+  <component name="RunManager">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63344/untitled1/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.index.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c6918920-0ab5-4911-8203-d0fabd9f2d0d" name="Default Changelist" comment="" />
+      <created>1584891802406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1584891802406</updated>
+      <workItem from="1584891803782" duration="24570000" />
+      <workItem from="1585470182968" duration="27427000" />
+      <workItem from="1585561436119" duration="1101000" />
+      <workItem from="1587148923463" duration="35000" />
+    </task>
+    <task id="LOCAL-00001" summary="dara game">
+      <created>1585561497703</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1585561497703</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="dara game" />
+    <option name="LAST_COMMIT_MESSAGE" value="dara game" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="648" y="206" key="#xdebugger.XInspectDialog" timestamp="1585487228311">
+      <screen x="0" y="23" width="1440" height="809" />
+    </state>
+    <state x="648" y="206" key="#xdebugger.XInspectDialog/0.23.1440.809@0.23.1440.809" timestamp="1585487228311" />
+    <state x="321" y="35" key="CommitChangelistDialog2" timestamp="1585561494051">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state x="321" y="35" key="CommitChangelistDialog2/0.23.1440.807@0.23.1440.807" timestamp="1585561494051" />
+    <state width="1400" height="152" key="GridCell.Tab.0.bottom" timestamp="1585516071065">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.0.bottom/0.23.1440.807@0.23.1440.807" timestamp="1585516071065" />
+    <state width="1400" height="250" key="GridCell.Tab.0.bottom/0.23.1440.809@0.23.1440.809" timestamp="1585496185353" />
+    <state width="1400" height="152" key="GridCell.Tab.0.center" timestamp="1585516071064">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.0.center/0.23.1440.807@0.23.1440.807" timestamp="1585516071064" />
+    <state width="1400" height="250" key="GridCell.Tab.0.center/0.23.1440.809@0.23.1440.809" timestamp="1585496185352" />
+    <state width="1400" height="152" key="GridCell.Tab.0.left" timestamp="1585516071064">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.0.left/0.23.1440.807@0.23.1440.807" timestamp="1585516071064" />
+    <state width="1400" height="250" key="GridCell.Tab.0.left/0.23.1440.809@0.23.1440.809" timestamp="1585496185352" />
+    <state width="1400" height="152" key="GridCell.Tab.0.right" timestamp="1585516071065">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.0.right/0.23.1440.807@0.23.1440.807" timestamp="1585516071065" />
+    <state width="1400" height="250" key="GridCell.Tab.0.right/0.23.1440.809@0.23.1440.809" timestamp="1585496185352" />
+    <state width="1400" height="152" key="GridCell.Tab.1.bottom" timestamp="1585516071066">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.1.bottom/0.23.1440.807@0.23.1440.807" timestamp="1585516071066" />
+    <state width="1400" height="250" key="GridCell.Tab.1.bottom/0.23.1440.809@0.23.1440.809" timestamp="1585496185354" />
+    <state width="1400" height="152" key="GridCell.Tab.1.center" timestamp="1585516071066">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.1.center/0.23.1440.807@0.23.1440.807" timestamp="1585516071066" />
+    <state width="1400" height="250" key="GridCell.Tab.1.center/0.23.1440.809@0.23.1440.809" timestamp="1585496185353" />
+    <state width="1400" height="152" key="GridCell.Tab.1.left" timestamp="1585516071065">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.1.left/0.23.1440.807@0.23.1440.807" timestamp="1585516071065" />
+    <state width="1400" height="250" key="GridCell.Tab.1.left/0.23.1440.809@0.23.1440.809" timestamp="1585496185353" />
+    <state width="1400" height="152" key="GridCell.Tab.1.right" timestamp="1585516071066">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state width="1400" height="152" key="GridCell.Tab.1.right/0.23.1440.807@0.23.1440.807" timestamp="1585516071066" />
+    <state width="1400" height="250" key="GridCell.Tab.1.right/0.23.1440.809@0.23.1440.809" timestamp="1585496185353" />
+    <state x="338" y="186" key="Vcs.Push.Dialog.v2" timestamp="1585561502793">
+      <screen x="0" y="23" width="1440" height="807" />
+    </state>
+    <state x="338" y="186" key="Vcs.Push.Dialog.v2/0.23.1440.807@0.23.1440.807" timestamp="1585561502793" />
+    <state x="415" y="277" key="com.intellij.ide.util.TipDialog" timestamp="1587148935877">
+      <screen x="0" y="23" width="1440" height="803" />
+    </state>
+    <state x="415" y="277" key="com.intellij.ide.util.TipDialog/0.23.1440.803@0.23.1440.803" timestamp="1587148935877" />
+    <state x="415" y="278" key="com.intellij.ide.util.TipDialog/0.23.1440.807@0.23.1440.807" timestamp="1585561440212" />
+    <state x="415" y="279" key="com.intellij.ide.util.TipDialog/0.23.1440.809@0.23.1440.809" timestamp="1585470201416" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/script.js</url>
+          <line>365</line>
+          <option name="timeStamp" value="22" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="JavascriptDebugType">
+        <watch expression="X_COMBINATION" language="JavaScript" />
+        <watch expression="CIRCLE_COMBINATION" language="JavaScript" />
+        <watch expression="tempCombination" language="JavaScript" />
+      </configuration>
+    </watches-manager>
+  </component>
+</project>
