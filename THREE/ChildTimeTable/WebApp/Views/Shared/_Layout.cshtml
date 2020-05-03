@@ -1,4 +1,5 @@
-﻿@using Domain.Identity
+﻿@using System.Security.Claims
+@using Domain.Identity
 @using Microsoft.AspNetCore.Identity;
 @inject SignInManager<AppUser> SignInManager;
 
@@ -26,11 +27,15 @@
                     <ul class="navbar-nav flex-grow-1">
                         @if (SignInManager.IsSignedIn(User))
                         {
+                            
+                            
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Persons" asp-action="Edit">My Info</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Notifications" asp-action="Index">Notifications</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Notifications" asp-action="Index">
+                                    Notifications<span id="notBadge" class="badge badge-success"></span>
+                                </a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Obligations" asp-action="Index">Obligations</a>

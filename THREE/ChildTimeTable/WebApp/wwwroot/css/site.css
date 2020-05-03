@@ -157,5 +157,16 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-
+#bg{
+  height: auto;
+  left: 0;
+  margin: 0;
+  min-height: 100%;
+  min-width: 800px;
+  padding: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
 

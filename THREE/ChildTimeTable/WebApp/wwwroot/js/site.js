@@ -19,6 +19,14 @@ let logoInput = document.getElementById('logo-input');
 
 let newPersonDiv = document.getElementById('newPerson-div');
 
+//const badgeText = {};
+let notificationBadge = document.getElementById('notBadge');
+
+notificationBadge.innerText=localStorage.getItem('x');
+
+
+
+
 
 //showCalendar(currentMonth, currentYear);
 
@@ -40,7 +48,7 @@ function showCalendar(month, year) {
     
     
     let firstDay = new Date(year, month).getDay();
-    let daysInMonth = new Date(year, month, 0).getDate();
+    let daysInMonth = new Date(year, month+1, 0).getDate();
     let tbl = document.getElementById("calendar-body");
     tbl.innerHTML = "";
     
