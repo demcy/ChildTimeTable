@@ -1,0 +1,102 @@
+@model IEnumerable<Domain.Person>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-4">
+
+        <table class="table">
+            <thead>
+            <tr>
+                <h3>My Family</h3>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {
+                <tr>
+                    <td>
+                        <img src="@Html.DisplayFor(modelItem => item.Logo)" alt="logo" width="64" height="64"/>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.FirstName)  @Html.DisplayFor(modelItem => item.LastName)
+                    </td>
+                </tr>
+            }
+            <tr>
+                <td colspan="2">
+                    <button type="button" class="btn btn-warning btn-block" onclick="newPerson()">Add Person</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col">
+        <div>
+            <table style="width: 100%">
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-info" onclick="previous()">&#8810;</button>
+                    </td>
+                    <td>
+                        <h3 style="text-align: center" id="monthAndYear">Month and Year</h3>
+                    </td>
+                    <td>
+                        <button type="button" class="btn btn-outline-info" onclick="next()">&#8811;</button>
+                    </td>
+                    
+                </tr>
+            </table>
+            
+            
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Mon</th>
+                    <th>Tue</th>
+                    <th>Wed</th>
+                    <th>Thu</th>
+                    <th>Fri</th>
+                    <th>Sat</th>
+                    <th>Sun</th>
+                </tr>
+                </thead>
+                <tbody id="calendar-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@using(Html.BeginForm("NotificationCreate", "Persons"))
+            {
+                <div id="newPerson-div" style="display: none">
+                    <h4 style="text-align: center; color: white">Please input pesron email</h4>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text">&#64;</span>
+                        </div>
+                        <input name="email" class="form-control"/>
+                    </div>
+                    <input type="submit" class="btn btn-success btn-block" value="Send invitation" onclick="closeNewPerson()"/>
+                    <button type="button" class="btn btn-primary" style="position: absolute; right: 5px; top: 5px" onclick="closeNewPerson()">X</button>
+                            
+                </div>
+                
+            }
+@section Scripts {
+    <script>
+    document.body.onload = () => newDutyDays(@Html.Raw(Json.Serialize(ViewData["Dates"])));
+    
+    if('@ViewBag.Unread' === '0'){
+        localStorage.setItem('x','');
+    }
+    else{
+        localStorage.setItem('x','@ViewBag.Unread');
+    }
+    
+    notificationBadge.innerText=localStorage.getItem('x');
+    </script>
+}
+
+

@@ -1,0 +1,69 @@
+@model IEnumerable<Domain.Notification>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h3>New Notifications</h3>
+
+<ul class="list-group list-group-flush">
+    @foreach (var item in Model) {
+        if (item.Status == false)
+        {
+            if (item.Body.Contains("obligation"))
+            {
+                <li class="list-group-item d-flex justify-content-between align-items-center">
+                    @Html.DisplayFor(modelItem => item.Body)
+                    <span class="badge">
+                        <a class="btn btn-secondary" asp-action="ObligationAccept" asp-route-id="@item.NotificationId">X</a>
+                    </span>
+                </li>
+            }
+            else
+            {
+                @using (Html.BeginForm("InvitationAccept", "Notifications"))
+                {
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        @Html.DisplayFor(modelItem => item.Body)
+                        <span class="badge">
+                            <input type="submit" name="submitbutton" value="yes" class="btn btn-success"/>
+                            <input type="submit" name="submitbutton" value="no" class="btn btn-danger"/>
+                            <input type="hidden" name="id" value="@item.NotificationId"/>
+                        </span>
+                    </li>
+                }
+            }
+            
+        }
+    }
+</ul>
+
+<h3>Old Notifications</h3>
+
+<ul class="list-group list-group-flush">
+    @foreach (var item in Model) {
+        if (item.Status == true)
+        {
+            @using (Html.BeginForm("InvitationAccept", "Notifications"))
+            {
+                <li class="list-group-item list-group-item-dark">
+                    @Html.DisplayFor(modelItem => item.Body)
+                </li>
+            }
+        }
+    }
+</ul>
+
+@section Scripts {
+    <script>
+    
+    if('@ViewBag.Unread' === '0'){
+        localStorage.setItem('x','');
+    }
+    else{
+        localStorage.setItem('x','@ViewBag.Unread');
+    }
+    
+    notificationBadge.innerText=localStorage.getItem('x');
+    </script>
+}

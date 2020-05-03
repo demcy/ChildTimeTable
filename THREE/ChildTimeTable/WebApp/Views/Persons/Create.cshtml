@@ -23,16 +23,22 @@
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="IdentityUserId" class="control-label"></label>
-                <select asp-for="IdentityUserId" class ="form-control" asp-items="ViewBag.IdentityUserId"></select>
+                <label asp-for="Logo" class="control-label"></label>
+                <input asp-for="Logo" class="form-control" />
+                <span asp-validation-for="Logo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="AppUserId" class="control-label"></label>
+                <select asp-for="AppUserId" class ="form-control" asp-items="ViewBag.AppUserId"></select>
             </div>
             <div class="form-group">
                 <label asp-for="FamilyId" class="control-label"></label>
                 <select asp-for="FamilyId" class ="form-control" asp-items="ViewBag.FamilyId"></select>
             </div>
             <div class="form-group">
-                <label asp-for="PersonTypeId" class="control-label"></label>
-                <select asp-for="PersonTypeId" class ="form-control" asp-items="ViewBag.PersonTypeId"></select>
+                <label asp-for="PersonType" class="control-label"></label>
+                <select asp-for="PersonType" class="form-control"></select>
+                <span asp-validation-for="PersonType" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
