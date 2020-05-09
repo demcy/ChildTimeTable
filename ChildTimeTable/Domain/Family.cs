@@ -14,11 +14,6 @@ namespace Domain
         //public string FamilyValue { get; set; }
 
         public ICollection<Person> Persons { get; set; }
-
         
-        
-        //[MaxLength(255)]
-        //public string IdentityUserId { get; set; }
-        //public IdentityUser IdentityUser { get; set; }
     }
 }
