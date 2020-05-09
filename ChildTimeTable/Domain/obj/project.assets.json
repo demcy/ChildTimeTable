@@ -220,6 +220,30 @@
         "runtime": {
           "lib/netstandard2.0/System.Runtime.CompilerServices.Unsafe.dll": {}
         }
+      },
+      "Contracts.DAL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Contracts.DAL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.DAL.Base.dll": {}
+        }
+      },
+      "DAL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Contracts.DAL.Base": "1.0.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.Base.dll": {}
+        }
       }
     }
   },
@@ -652,10 +676,21 @@
         "useSharedDesignerContext.txt",
         "version.txt"
       ]
+    },
+    "Contracts.DAL.Base/1.0.0": {
+      "type": "project",
+      "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
+      "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+    },
+    "DAL.Base/1.0.0": {
+      "type": "project",
+      "path": "../DAL.Base/DAL.Base.csproj",
+      "msbuildProject": "../DAL.Base/DAL.Base.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
+      "DAL.Base >= 1.0.0",
       "Microsoft.Extensions.Identity.Stores >= 3.1.2",
       "System.ComponentModel.Annotations >= 4.7.0"
     ]
@@ -687,7 +722,11 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj": {
+              "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

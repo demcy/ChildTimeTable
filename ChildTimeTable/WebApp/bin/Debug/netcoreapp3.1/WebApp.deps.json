@@ -2474,6 +2474,14 @@
           "System.Xml.XmlDocument": "4.3.0"
         }
       },
+      "Contracts.DAL.Base/1.0.0": {
+        "runtime": {
+          "Contracts.DAL.Base.dll": {}
+        },
+        "compile": {
+          "Contracts.DAL.Base.dll": {}
+        }
+      },
       "DAL.App.EF/1.0.0": {
         "dependencies": {
           "Domain": "1.0.0",
@@ -2488,8 +2496,21 @@
           "DAL.App.EF.dll": {}
         }
       },
+      "DAL.Base/1.0.0": {
+        "dependencies": {
+          "Contracts.DAL.Base": "1.0.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "runtime": {
+          "DAL.Base.dll": {}
+        },
+        "compile": {
+          "DAL.Base.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "dependencies": {
+          "DAL.Base": "1.0.0",
           "Microsoft.Extensions.Identity.Stores": "3.1.2",
           "System.ComponentModel.Annotations": "4.7.0"
         },
@@ -5263,7 +5284,17 @@
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
     },
+    "Contracts.DAL.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "DAL.App.EF/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "DAL.Base/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

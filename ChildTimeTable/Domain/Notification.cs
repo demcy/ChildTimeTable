@@ -1,19 +1,23 @@
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using DAL.Base;
 
 namespace Domain
 {
-    public class Notification
+    public class Notification : DomainEntityMetadata
     {
-        public int NotificationId { get; set; }
+        //public int NotificationId { get; set; }
         public string Body { get; set; }
         public bool Status { get; set; }
         
+        [MaxLength(36)]
         [ForeignKey(nameof(Sender))]
-        public int SenderId { get; set; }
+        public string SenderId { get; set; }
         public Person Sender { get; set; }
         
+        [MaxLength(36)]
         [ForeignKey(nameof(Recipient))]
-        public int RecipientId { get; set; }
+        public string RecipientId { get; set; }
         public Person Recipient { get; set; }
     }
 }

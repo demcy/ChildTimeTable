@@ -2851,6 +2851,16 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "Contracts.DAL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Contracts.DAL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.DAL.Base.dll": {}
+        }
+      },
       "DAL.App.EF/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
@@ -2867,10 +2877,25 @@
           "bin/placeholder/DAL.App.EF.dll": {}
         }
       },
+      "DAL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Contracts.DAL.Base": "1.0.0",
+          "System.ComponentModel.Annotations": "4.7.0"
+        },
+        "compile": {
+          "bin/placeholder/DAL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DAL.Base.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "DAL.Base": "1.0.0",
           "Microsoft.Extensions.Identity.Stores": "3.1.2",
           "System.ComponentModel.Annotations": "4.7.0"
         },
@@ -8968,10 +8993,20 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "Contracts.DAL.Base/1.0.0": {
+      "type": "project",
+      "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
+      "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+    },
     "DAL.App.EF/1.0.0": {
       "type": "project",
       "path": "../DAL.App.EF/DAL.App.EF.csproj",
       "msbuildProject": "../DAL.App.EF/DAL.App.EF.csproj"
+    },
+    "DAL.Base/1.0.0": {
+      "type": "project",
+      "path": "../DAL.Base/DAL.Base.csproj",
+      "msbuildProject": "../DAL.Base/DAL.Base.csproj"
     },
     "Domain/1.0.0": {
       "type": "project",

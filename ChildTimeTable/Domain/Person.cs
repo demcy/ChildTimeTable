@@ -3,15 +3,16 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
  using System.ComponentModel.DataAnnotations.Schema;
+ using DAL.Base;
  using Domain.Identity;
  using Microsoft.AspNetCore.Identity;
 
 namespace Domain
 {
-    public class Person
+    public class Person : DomainEntityMetadata
     {
         
-        public int PersonId { get; set; }
+        //public int PersonId { get; set; }
 
         //[MaxLength(64)]
         public string FirstName { get; set; }
@@ -21,7 +22,7 @@ namespace Domain
 
         public string Logo { get; set; }
 
-        //[MaxLength(36)] 
+        [MaxLength(36)] 
         public string AppUserId { get; set; }
         public AppUser AppUser { get; set; }
         //[MaxLength(255)]
@@ -30,8 +31,9 @@ namespace Domain
 
         //public string FamilyName { get; set; }
 
-        public int FamilyId { get; set; }
-        public Family? Family { get; set; }
+        [MaxLength(36)]
+        public string FamilyId { get; set; }
+        public Family Family { get; set; }
         
         
         public PersonType PersonType { get; set; }

@@ -17,7 +17,11 @@
     },
     "frameworks": {
       "netstandard2.1": {
-        "projectReferences": {}
+        "projectReferences": {
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj"
+          }
+        }
       }
     },
     "warningProperties": {

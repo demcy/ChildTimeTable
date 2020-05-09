@@ -110,7 +110,7 @@ namespace WebApp.Areas.Identity.Pages.Account
                 p.PersonType = user.PersonType;
                 p.FirstName = Input.FirstName;
                 p.LastName = Input.LastName;
-                p.FamilyId = f.FamilyId;
+                p.FamilyId = f.Id;
                 p.Logo = "/Icons/" + logo;
                 _context.Add(p);
                 _context.SaveChanges();
