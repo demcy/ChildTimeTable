@@ -1,0 +1,8 @@
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/PublicApi.DTO.v1.deps.json
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/PublicApi.DTO.v1.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/PublicApi.DTO.v1.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.csprojAssemblyReference.cache
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.AssemblyInfoInputs.cache
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.AssemblyInfo.cs
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.pdb

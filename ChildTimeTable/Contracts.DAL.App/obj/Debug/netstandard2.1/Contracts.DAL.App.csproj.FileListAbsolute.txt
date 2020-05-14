@@ -1,0 +1,15 @@
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Contracts.DAL.App.deps.json
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Contracts.DAL.App.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Contracts.DAL.App.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Contracts.DAL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/DAL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Contracts.DAL.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/DAL.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.csprojAssemblyReference.cache
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.AssemblyInfoInputs.cache
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.AssemblyInfo.cs
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.csproj.CopyComplete
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.pdb
