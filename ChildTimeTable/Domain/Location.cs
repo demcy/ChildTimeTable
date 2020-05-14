@@ -1,19 +1,23 @@
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Contracts.DAL.Base;
 using DAL.Base;
 
 namespace Domain
 {
-    public class Location : DomainEntityMetadata
-
+    public class Location : Location<Guid>, IDomainEntity
     {
-    //public int LocationId { get; set; }
-    public string LocationValue { get; set; }
+        
+    }
+    public class Location<TKey> : DomainEntity<TKey>
+        where TKey : struct, IEquatable<TKey>
+    {
+        public virtual string LocationValue { get; set; } = default!;
+        
+        public virtual TKey PersonId { get; set; }
+        public virtual Person? Person { get; set; }
 
-    [MaxLength(36)]
-    public string PersonId { get; set; }
-    public Person Person { get; set; }
-
-    public ICollection<Obligation> Type { get; set; }
+        public virtual ICollection<Obligation>? Obligations { get; set; }
     }
 }

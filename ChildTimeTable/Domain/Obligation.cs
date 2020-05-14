@@ -1,35 +1,39 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Contracts.DAL.Base;
 using DAL.Base;
 
 namespace Domain
 {
-    public class Obligation : DomainEntityMetadata
+    public class Obligation : Obligation<Guid>, IDomainEntity
     {
-        //public int ObligationId { get; set; }
+            
+    }
+    public class Obligation<TKey> : DomainEntity
+    {
+        public virtual string Body { get; set; } = default!;
 
-        public string Body { get; set; }
+        public virtual bool Status { get; set; } = default!;
 
-        public bool Status { get; set; }
-
-        [MaxLength(36)]
-        public string LocationId { get; set; }
-        public Location Location { get; set; }
-
-        [MaxLength(36)]
-        public string TimeId { get; set; }
-        public Time Time { get; set; }
-
-        public ObligationType ObligationType { get; set; }
-
-        [MaxLength(36)]
-        [ForeignKey(nameof(Parent))]
-        public string ParentId { get; set; }
-        public Person Parent { get; set; }
         
-        [MaxLength(36)]
+        public virtual TKey LocationId { get; set; } = default!;
+        public virtual Location? Location { get; set; }
+
+        
+        public virtual TKey TimeId { get; set; } = default!;
+        public virtual Time? Time { get; set; }
+
+        public virtual ObligationType ObligationType { get; set; } = default!;
+
+        
+        [ForeignKey(nameof(Parent))]
+        public virtual TKey ParentId { get; set; } = default!;
+        public virtual Person? Parent { get; set; }
+        
+        
         [ForeignKey(nameof(Child))]
-        public string ChildId { get; set; }
-        public Person Child { get; set; }
+        public virtual TKey ChildId { get; set; } = default!;
+        public virtual Person? Child { get; set; }
     }
 }

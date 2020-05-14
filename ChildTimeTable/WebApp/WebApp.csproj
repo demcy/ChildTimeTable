@@ -20,6 +20,7 @@
     <ItemGroup>
       <ProjectReference Include="..\DAL.App.EF\DAL.App.EF.csproj" />
       <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\PublicApi.DTO.v1\PublicApi.DTO.v1.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -217,6 +218,21 @@
       <UpToDateCheckInput Remove="Views\Times\Details.cshtml" />
       <UpToDateCheckInput Remove="Views\Times\Edit.cshtml" />
       <UpToDateCheckInput Remove="Views\Times\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Times\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Times\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Times\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Times\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Times\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Locations\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Locations\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Locations\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Locations\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Locations\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>

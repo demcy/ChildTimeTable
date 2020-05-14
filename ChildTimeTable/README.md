@@ -1,22 +1,22 @@
-dotnet ef migrations add InitialDbCreation --project WebApp3 --startup-project WebApp3
-dotnet ef database update --project WebApp3 --startup-project WebApp3
-dotnet ef database drop --project WebApp3 --startup-project WebApp3
-
 dotnet ef migrations add InitialDbCreation --project DAL.App.EF --startup-project WebApp
 dotnet ef database update --project DAL.App.EF --startup-project WebApp
 dotnet ef database drop --project DAL.App.EF --startup-project WebApp
 
-dotnet aspnet-codegenerator controller -name NotificationsController          -actions -m Notification          -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
-dotnet aspnet-codegenerator controller -name PersonsController          -actions -m Person          -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
-dotnet aspnet-codegenerator controller -name FamiliesController       -actions -m Family        -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
-dotnet aspnet-codegenerator controller -name ObligationsController          -actions -m Obligation          -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
-dotnet aspnet-codegenerator controller -name LocationsController   -actions -m Location   -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
-dotnet aspnet-codegenerator controller -name TimesController   -actions -m Time   -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name PersonsController -actions -m Person -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name NotificationsController -actions -m Notification -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name ObligationsController -actions -m Obligation -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+
+dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Family -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name LocationsController -actions -m Location -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+dotnet aspnet-codegenerator controller -name TimesController -actions -m Time -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 
 
 dotnet aspnet-codegenerator controller -name PersonsController -actions -m Person -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
-dotnet aspnet-codegenerator controller -name ContactsController -actions -m Contact -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
-dotnet aspnet-codegenerator controller -name ContactTypesController -actions -m ContactType -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Family -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name NotificationsController -actions -m Notification -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name ObligationsController -actions -m Obligation -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name LocationsController -actions -m Location -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name TimesController -actions -m Time -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
 
 public async Task<IActionResult> Index()
         {
@@ -219,4 +219,22 @@ if (ModelState.IsValid)
 var errors = ModelState.Values.SelectMany(v => v.Errors);
 
 
+Solution structure by the projects
 
+We want to write our solutions with as much shared code as possible - to avoid writing the same code again in the next solution. So we need to separate our code into 2 major parts - current app specific and common shared base.
+
+What can we share? PK definitions, definitions for base repository - those would repeat from one solution to the next. And we can share both - interfaces (contracts) and their implementations.
+
+So:
+
+Shared, common codebase
+
+Contracts.DAL.Base - specs for domain metadata and PK in entities. Specs for common base repository.
+DAL.Base - abstract implementations of interfaces for domain.
+DAL.Base.EF - implementation of common base repository done in EF.
+
+App specific codebase for our solution
+
+Domain - Domain objects - what is our business about
+Contracts.DAL.App - specs for repositories
+DAL.App.EF - implementation of repositories

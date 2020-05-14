@@ -18,6 +18,12 @@
     "frameworks": {
       "netstandard2.1": {
         "projectReferences": {
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj"
+          },
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj"
+          },
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
           }
@@ -38,6 +44,10 @@
           "version": "[3.1.2, )"
         },
         "Microsoft.EntityFrameworkCore": {
+          "target": "Package",
+          "version": "[3.1.2, )"
+        },
+        "Microsoft.EntityFrameworkCore.SqlServer": {
           "target": "Package",
           "version": "[3.1.2, )"
         },

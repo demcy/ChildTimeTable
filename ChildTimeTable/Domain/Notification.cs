@@ -1,23 +1,30 @@
+using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using Contracts.DAL.Base;
 using DAL.Base;
 
 namespace Domain
 {
-    public class Notification : DomainEntityMetadata
+    public class Notification : Notification<Guid>, IDomainEntity
+        {
+            
+        }
+    public class Notification<TKey> : DomainEntity<TKey>
+        where TKey : struct, IEquatable<TKey>
     {
         //public int NotificationId { get; set; }
-        public string Body { get; set; }
-        public bool Status { get; set; }
+        public virtual string Body { get; set; } = default!;
+        public virtual bool Status { get; set; } = default!;
+
         
-        [MaxLength(36)]
         [ForeignKey(nameof(Sender))]
-        public string SenderId { get; set; }
-        public Person Sender { get; set; }
+        public virtual TKey SenderId { get; set; }
+        public virtual Person? Sender { get; set; }
         
-        [MaxLength(36)]
+        
         [ForeignKey(nameof(Recipient))]
-        public string RecipientId { get; set; }
-        public Person Recipient { get; set; }
+        public virtual TKey RecipientId { get; set; }
+        public virtual Person? Recipient { get; set; }
     }
 }

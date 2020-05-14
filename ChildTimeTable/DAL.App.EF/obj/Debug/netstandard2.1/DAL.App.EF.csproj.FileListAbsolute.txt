@@ -24,3 +24,7 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.Base.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/Contracts.DAL.Base.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/Contracts.DAL.App.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.Base.EF.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/Contracts.DAL.App.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/bin/Debug/netstandard2.1/DAL.Base.EF.pdb

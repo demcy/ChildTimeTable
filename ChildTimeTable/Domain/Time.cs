@@ -1,15 +1,19 @@
 using System;
 using System.Collections.Generic;
+using Contracts.DAL.Base;
 using DAL.Base;
 
 namespace Domain
 {
-    public class Time : DomainEntityMetadata
+    public class Time : Time<Guid>, IDomainEntity
     {
-        //public int TimeId { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
+        
+    }
+    public class Time<TKey> : DomainEntity
+    {
+        public virtual DateTime StartTime { get; set; } = default!;
+        public virtual DateTime EndTime { get; set; } = default!;
 
-        public ICollection<Obligation> Obligations { get; set; } 
+        public virtual ICollection<Obligation>? Obligations { get; set; } 
     }
 }

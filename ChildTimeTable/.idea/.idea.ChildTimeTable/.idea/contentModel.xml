@@ -5,9 +5,29 @@
     <e p="$USER_HOME$/Library/Caches/Rider2019.3/resharper-host/local/Transient/ReSharperHost/v193/SolutionCaches/_ChildTimeTable.1008672766.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
       <e p="ChildTimeTable.sln" t="IncludeFlat" />
+      <e p="Contracts.DAL.App" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Contracts.DAL.App.csproj" t="IncludeRecursive" />
+        <e p="IAppUnitOfWork.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Contracts.DAL.App.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="ILocationRepository.cs" t="Include" />
+          <e p="INotificationRepository.cs" t="Include" />
+          <e p="IObligationRepository.cs" t="Include" />
+          <e p="IPersonRepository.cs" t="Include" />
+        </e>
+      </e>
       <e p="Contracts.DAL.Base" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.DAL.Base.csproj" t="IncludeRecursive" />
+        <e p="IBaseUnitOfWork.cs" t="Include" />
+        <e p="IDomainBaseEntity.cs" t="Include" />
         <e p="IDomainEntity.cs" t="Include" />
         <e p="IDomainEntityMetadata.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -17,14 +37,18 @@
             </e>
           </e>
         </e>
+        <e p="Repositories" t="Include">
+          <e p="IBaseRepository.cs" t="Include" />
+        </e>
       </e>
       <e p="DAL.App.EF" t="IncludeRecursive">
         <e p="ApplicationDbContext.cs" t="Include" />
+        <e p="AppUnitOfWork.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.App.EF.csproj" t="IncludeRecursive" />
         <e p="Migrations" t="Include">
-          <e p="20200504154024_InitialDbCreation.cs" t="Include" />
-          <e p="20200504154024_InitialDbCreation.Designer.cs" t="Include" />
+          <e p="20200513161531_InitialDbCreation.cs" t="Include" />
+          <e p="20200513161531_InitialDbCreation.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -34,10 +58,17 @@
             </e>
           </e>
         </e>
+        <e p="Repositories" t="Include">
+          <e p="NotificationRepository.cs" t="Include" />
+          <e p="ObligationRepository.cs" t="Include" />
+          <e p="PersonRepository.cs" t="Include" />
+        </e>
       </e>
       <e p="DAL.Base" t="IncludeRecursive">
+        <e p="BaseUnitOfWork.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.Base.csproj" t="IncludeRecursive" />
+        <e p="DomainBaseEntity.cs" t="Include" />
         <e p="DomainEntity.cs" t="Include" />
         <e p="DomainEntityMetadata.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -46,6 +77,21 @@
               <e p="DAL.Base.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+      </e>
+      <e p="DAL.Base.EF" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="DAL.Base.EF.csproj" t="IncludeRecursive" />
+        <e p="EFBaseUnitOfWork.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="DAL.Base.EF.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Repositories" t="Include">
+          <e p="EFBaseRepository.cs" t="Include" />
         </e>
       </e>
       <e p="Domain" t="IncludeRecursive">
@@ -72,9 +118,34 @@
         <e p="Time.cs" t="Include" />
       </e>
       <e p="packages" t="ExcludeRecursive" />
+      <e p="PublicApi.DTO.v1" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="FamilyDTO.cs" t="Include" />
+        <e p="LocationDTO.cs" t="Include" />
+        <e p="NotificationDTO.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="PublicApi.DTO.v1.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="ObligationDTO.cs" t="Include" />
+        <e p="PersonDTO.cs" t="Include" />
+        <e p="PublicApi.DTO.v1.csproj" t="IncludeRecursive" />
+        <e p="TimeDTO.cs" t="Include" />
+      </e>
       <e p="README.md" t="Include" />
       <e p="Solution Items" t="Include" />
       <e p="WebApp" t="IncludeRecursive">
+        <e p="ApiControllers" t="Include">
+          <e p="FamiliesController.cs" t="Include" />
+          <e p="LocationsController.cs" t="Include" />
+          <e p="NotificationsController.cs" t="Include" />
+          <e p="ObligationsController.cs" t="Include" />
+          <e p="PersonsController.cs" t="Include" />
+          <e p="TimesController.cs" t="Include" />
+        </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="Areas" t="Include">
@@ -161,13 +232,10 @@
         </e>
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
-          <e p="FamiliesController.cs" t="Include" />
           <e p="HomeController.cs" t="Include" />
-          <e p="LocationsController.cs" t="Include" />
           <e p="NotificationsController.cs" t="Include" />
           <e p="ObligationsController.cs" t="Include" />
           <e p="PersonsController.cs" t="Include" />
-          <e p="TimesController.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
@@ -189,23 +257,9 @@
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
-          <e p="Families" t="Include">
-            <e p="Create.cshtml" t="Include" />
-            <e p="Delete.cshtml" t="Include" />
-            <e p="Details.cshtml" t="Include" />
-            <e p="Edit.cshtml" t="Include" />
-            <e p="Index.cshtml" t="Include" />
-          </e>
           <e p="Home" t="Include">
             <e p="Index.cshtml" t="Include" />
             <e p="Privacy.cshtml" t="Include" />
-          </e>
-          <e p="Locations" t="Include">
-            <e p="Create.cshtml" t="Include" />
-            <e p="Delete.cshtml" t="Include" />
-            <e p="Details.cshtml" t="Include" />
-            <e p="Edit.cshtml" t="Include" />
-            <e p="Index.cshtml" t="Include" />
           </e>
           <e p="Notifications" t="Include">
             <e p="Create.cshtml" t="Include" />
@@ -233,13 +287,6 @@
             <e p="_LoginPartial.cshtml" t="Include" />
             <e p="_ValidationScriptsPartial.cshtml" t="Include" />
             <e p="Error.cshtml" t="Include" />
-          </e>
-          <e p="Times" t="Include">
-            <e p="Create.cshtml" t="Include" />
-            <e p="Delete.cshtml" t="Include" />
-            <e p="Details.cshtml" t="Include" />
-            <e p="Edit.cshtml" t="Include" />
-            <e p="Index.cshtml" t="Include" />
           </e>
         </e>
         <e p="WebApp.csproj" t="IncludeRecursive" />

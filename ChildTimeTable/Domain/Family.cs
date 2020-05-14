@@ -1,19 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using Contracts.DAL.Base;
 using DAL.Base;
 using Microsoft.AspNetCore.Identity;
 
 namespace Domain
 {
-    public class Family : DomainEntityMetadata
+    public class Family : Family<Guid>, IDomainEntity
     {
-        //public int FamilyId { get; set; } 
         
-        //[MaxLength(64)]
-        //public string FamilyValue { get; set; }
-
-        public ICollection<Person> Persons { get; set; }
-        
+    }
+    public class Family<TKey> :  DomainEntity<TKey>
+        where TKey : struct, IEquatable<TKey>
+    {
+        public virtual ICollection<Person>? Persons { get; set; }
     }
 }

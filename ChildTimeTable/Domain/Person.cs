@@ -3,53 +3,45 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
  using System.ComponentModel.DataAnnotations.Schema;
+ using Contracts.DAL.Base;
  using DAL.Base;
  using Domain.Identity;
  using Microsoft.AspNetCore.Identity;
 
 namespace Domain
 {
-    public class Person : DomainEntityMetadata
+
+    public class Person : Person<Guid>, IDomainEntity
     {
         
-        //public int PersonId { get; set; }
-
-        //[MaxLength(64)]
-        public string FirstName { get; set; }
+    }
+    public class Person<TKey> : DomainEntity<TKey>
+        where TKey : struct, IEquatable<TKey>
+    {
+        [MinLength(1)] [MaxLength(64)] public virtual string FirstName { get; set; } = default!;
+        [MinLength(1)] [MaxLength(64)] public virtual string LastName { get; set; } = default!;
+        public virtual string Logo { get; set; } = default!;
         
-        //[MaxLength(64)]
-        public string LastName { get; set; }
-
-        public string Logo { get; set; }
-
-        [MaxLength(36)] 
-        public string AppUserId { get; set; }
-        public AppUser AppUser { get; set; }
-        //[MaxLength(255)]
-        //public string IdentityUserId { get; set; }
-        //public IdentityUser IdentityUser { get; set; }
-
-        //public string FamilyName { get; set; }
-
-        [MaxLength(36)]
-        public string FamilyId { get; set; }
-        public Family Family { get; set; }
+        public virtual TKey AppUserId { get; set; }
+        public virtual AppUser? AppUser { get; set; }
         
+        public virtual TKey FamilyId { get; set; }
+        public virtual Family? Family { get; set; }
         
-        public PersonType PersonType { get; set; }
+        public virtual PersonType PersonType { get; set; } = default!;
         
         [InverseProperty(nameof(Notification.Sender))]
-        public ICollection<Notification> SenderNotifications { get; set; }
+        public virtual ICollection<Notification>? SenderNotifications { get; set; }
         [InverseProperty(nameof(Notification.Recipient))]
-        public ICollection<Notification> RecipientNotifications { get; set; }
+        public virtual ICollection<Notification>? RecipientNotifications { get; set; }
         
         
         [InverseProperty(nameof(Obligation.Parent))]
-        public ICollection<Obligation> ParentObligations { get; set; }
+        public virtual ICollection<Obligation>? ParentObligations { get; set; }
         [InverseProperty(nameof(Obligation.Child))]
-        public ICollection<Obligation> ChildObligations { get; set; }
+        public virtual ICollection<Obligation>? ChildObligations { get; set; }
         
-        public ICollection<Location> Locations { get; set; }
+        public virtual ICollection<Location>? Locations { get; set; }
     
     }
 }
