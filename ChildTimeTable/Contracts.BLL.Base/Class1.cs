@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Resources
+namespace Contracts.BLL.Base
 {
     public class Class1
     {

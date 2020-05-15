@@ -493,3 +493,7 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Shared/_LanguageSelection.cshtml.g.cs
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Resources.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Resources.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/ru/Resources.resources.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/en/Resources.resources.dll

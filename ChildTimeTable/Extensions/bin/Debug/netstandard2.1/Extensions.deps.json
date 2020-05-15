@@ -94,28 +94,28 @@
     "Microsoft.IdentityModel.JsonWebTokens/6.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-zOnP8Hv6JcA+E2qeHGVo6KM7lV7J9kj2a/+VasTTqZ1mkLhnxTLpX7oZ3n8HJ7hZXuG2KY3P/EaCt6eApM30kQ==",
+      "sha512": "sha512-6tCltlZUY16am/HXbwfxWYqeCEhRpNKbUQWKLpGsqMSwcNbGoG2BzZhA97DFdwfcXaLuo3oO0LjO0FUKTBopWg==",
       "path": "microsoft.identitymodel.jsonwebtokens/6.5.1",
       "hashPath": "microsoft.identitymodel.jsonwebtokens.6.5.1.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Logging/6.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-iujlW4mgBKaib0gB3wbJLCCRhaNmxt504O5aGMdIH0JLIjCw+LbX+q3SFf3u0C29rYErvQQ9xeAtGywjvSGLxg==",
+      "sha512": "sha512-URnSa+BrHzPBfrB66ycjJIFuDUBh1NA+nduzv94vUsySbRXp8s3X5oubaX1F7dfuIGdXAQ/mEYHDkPXkLOVQ1g==",
       "path": "microsoft.identitymodel.logging/6.5.1",
       "hashPath": "microsoft.identitymodel.logging.6.5.1.nupkg.sha512"
     },
     "Microsoft.IdentityModel.Tokens/6.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-+kKU5tbizQmXee6iYJwqxROInlohMYhKYbLa37BUnU/YBhCvPapi2iywE4bVgno2NOF78p7VBERd/s+gYM/9dA==",
+      "sha512": "sha512-kdE/JZPgiryo0eecQqtFV/HvpwRF5bXBBPjB06d5RZ0qpTC6lqWsrWnlffeBdvzqmGivkjVSofopXjjqy9ddrA==",
       "path": "microsoft.identitymodel.tokens/6.5.1",
       "hashPath": "microsoft.identitymodel.tokens.6.5.1.nupkg.sha512"
     },
     "System.IdentityModel.Tokens.Jwt/6.5.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-2t8+04Ozz4vX10X1h+lqV8X7PkLUSRTr+kRY4QNpAeTUngqGqv180A1JDK2piGEKCvNbm6xGGkajL9STgI0JJA==",
+      "sha512": "sha512-SxQV8+bYCtWKEyUNBx3ksBo1U1SyKpYyb9D3xMvByrF1ChMDzvYZB6UiRTmpl5j+ow8/6jEv3hi6jZZcRJQswA==",
       "path": "system.identitymodel.tokens.jwt/6.5.1",
       "hashPath": "system.identitymodel.tokens.jwt.6.5.1.nupkg.sha512"
     },

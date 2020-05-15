@@ -31,15 +31,15 @@
                             
                             
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Persons" asp-action="Edit">My Info</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Persons" asp-action="Edit">@Resources.Views.Shared._Layout.MyInfo</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Notifications" asp-action="Index">
-                                    Notifications<span id="notBadge" class="badge badge-success"></span>
+                                    @Resources.Views.Shared._Layout.Notifications<span id="notBadge" class="badge badge-success"></span>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="Obligations" asp-action="Index">Obligations</a>
+                                <a class="nav-link text-dark" asp-area="" asp-controller="Obligations" asp-action="Index">@Resources.Views.Shared._Layout.Obligations</a>
                             </li>
                         }
                         
@@ -59,7 +59,7 @@
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2020 - WebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a> Culture: @Thread.CurrentThread.CurrentCulture.Name UICulture: @Thread.CurrentThread.CurrentUICulture.Name
+            &copy; 2020 - WebApp - <a asp-area="" asp-controller="Home" asp-action="Privacy">@Resources.Views.Shared._Layout.Privacy</a> Culture: @Thread.CurrentThread.CurrentCulture.Name UICulture: @Thread.CurrentThread.CurrentUICulture.Name
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

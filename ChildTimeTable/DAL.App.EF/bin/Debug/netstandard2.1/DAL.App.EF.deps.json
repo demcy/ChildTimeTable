@@ -1565,10 +1565,24 @@
         "dependencies": {
           "DAL.Base": "1.0.0",
           "Microsoft.Extensions.Identity.Stores": "3.1.2",
+          "Resources": "1.0.0",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
           "Domain.dll": {}
+        }
+      },
+      "Resources/1.0.0": {
+        "runtime": {
+          "Resources.dll": {}
+        },
+        "resources": {
+          "ru/Resources.resources.dll": {
+            "locale": "ru"
+          },
+          "en/Resources.resources.dll": {
+            "locale": "en"
+          }
         }
       }
     }
@@ -2524,6 +2538,11 @@
       "sha512": ""
     },
     "Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Resources/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

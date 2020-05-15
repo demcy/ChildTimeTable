@@ -1,0 +1,7 @@
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/bin/Debug/netstandard2.1/Contracts.BLL.Base.deps.json
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/bin/Debug/netstandard2.1/Contracts.BLL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/bin/Debug/netstandard2.1/Contracts.BLL.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/obj/Debug/netstandard2.1/Contracts.BLL.Base.AssemblyInfoInputs.cache
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/obj/Debug/netstandard2.1/Contracts.BLL.Base.AssemblyInfo.cs
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/obj/Debug/netstandard2.1/Contracts.BLL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/obj/Debug/netstandard2.1/Contracts.BLL.Base.pdb

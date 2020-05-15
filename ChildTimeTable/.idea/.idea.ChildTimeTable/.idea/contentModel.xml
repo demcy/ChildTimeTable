@@ -179,10 +179,15 @@
       <e p="README.md" t="Include" />
       <e p="Resources" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Domain" t="Include" />
+        <e p="Domain" t="Include">
+          <e p="Person.Designer.cs" t="Include" />
+          <e p="Person.en.resx" t="Include" />
+          <e p="Person.resx" t="Include" />
+          <e p="Person.ru.resx" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
-            <e p="netcoreapp2.1" t="Include">
+            <e p="netstandard2.1" t="Include">
               <e p="Resources.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
@@ -190,22 +195,20 @@
         <e p="Resources.csproj" t="IncludeRecursive" />
         <e p="Views" t="Include">
           <e p="Home" t="Include" />
-          <e p="Notifications" t="Include" />
-          <e p="Obligations" t="Include" />
-          <e p="Persons" t="Include" />
+          <e p="Owners" t="Include" />
+          <e p="Shared" t="Include">
+            <e p="_Layout.Designer.cs" t="Include" />
+            <e p="_Layout.en.resx" t="Include" />
+            <e p="_Layout.resx" t="Include" />
+            <e p="_Layout.ru.resx" t="Include" />
+          </e>
         </e>
       </e>
       <e p="WebApp" t="IncludeRecursive">
         <e p="ApiControllers" t="Include">
-          <e p="FamiliesController.cs" t="Include" />
           <e p="Identity" t="Include">
             <e p="AccountController.cs" t="Include" />
           </e>
-          <e p="LocationsController.cs" t="Include" />
-          <e p="NotificationsController.cs" t="Include" />
-          <e p="ObligationsController.cs" t="Include" />
-          <e p="PersonsController.cs" t="Include" />
-          <e p="TimesController.cs" t="Include" />
         </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />

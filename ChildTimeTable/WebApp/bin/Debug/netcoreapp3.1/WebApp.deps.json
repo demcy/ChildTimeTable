@@ -38,6 +38,7 @@
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "3.1.1",
           "Pomelo.EntityFrameworkCore.MySql": "3.1.1",
           "PublicApi.DTO.v1": "1.0.0",
+          "Resources": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Abstractions": "3.1.0.0",
           "Microsoft.AspNetCore.Authentication.Cookies": "3.1.0.0",
@@ -2634,6 +2635,7 @@
         "dependencies": {
           "DAL.Base": "1.0.0",
           "Microsoft.Extensions.Identity.Stores": "3.1.2",
+          "Resources": "1.0.0",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
@@ -2664,6 +2666,22 @@
         },
         "compile": {
           "PublicApi.DTO.v1.dll": {}
+        }
+      },
+      "Resources/1.0.0": {
+        "runtime": {
+          "Resources.dll": {}
+        },
+        "resources": {
+          "ru/Resources.resources.dll": {
+            "locale": "ru"
+          },
+          "en/Resources.resources.dll": {
+            "locale": "en"
+          }
+        },
+        "compile": {
+          "Resources.dll": {}
         }
       },
       "Microsoft.AspNetCore.Antiforgery/3.1.0.0": {
@@ -5514,6 +5532,11 @@
       "sha512": ""
     },
     "PublicApi.DTO.v1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Resources/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

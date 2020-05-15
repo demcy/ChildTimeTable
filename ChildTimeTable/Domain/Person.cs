@@ -18,8 +18,12 @@ namespace Domain
     public class Person<TKey> : DomainEntity<TKey>
         where TKey : struct, IEquatable<TKey>
     {
-        [MinLength(1)] [MaxLength(64)] public virtual string FirstName { get; set; } = default!;
-        [MinLength(1)] [MaxLength(64)] public virtual string LastName { get; set; } = default!;
+        [MinLength(1)] [MaxLength(64)]
+        [Display(Name = nameof(FirstName), ResourceType = typeof(Resources.Domain.Person))]
+        public virtual string FirstName { get; set; } = default!;
+        [MinLength(1)] [MaxLength(64)] 
+        [Display(Name = nameof(LastName), ResourceType = typeof(Resources.Domain.Person))]
+        public virtual string LastName { get; set; } = default!;
         public virtual string Logo { get; set; } = default!;
         
         public virtual TKey AppUserId { get; set; }
@@ -28,6 +32,7 @@ namespace Domain
         public virtual TKey FamilyId { get; set; }
         public virtual Family? Family { get; set; }
         
+        [Display(Name = nameof(PersonType), ResourceType = typeof(Resources.Domain.Person))]
         public virtual PersonType PersonType { get; set; } = default!;
         
         [InverseProperty(nameof(Notification.Sender))]
