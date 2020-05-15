@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
 using System.Linq;
@@ -64,10 +65,12 @@ namespace WebApp.Areas.Identity.Pages.Account
             
             [MaxLength(128)]
             [MinLength(1)]
+            [Display(Name = "FirstName")]
             public string FirstName { get; set; }
             
             [MaxLength(128)]
             [MinLength(1)]
+            [Display(Name = "LastName")]
             public string LastName { get; set; }
 
             public PersonType PersonType { get; set; }
@@ -96,8 +99,16 @@ namespace WebApp.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
-                var user = new AppUser { UserName = Input.Email, Email = Input.Email };
+                var user = new AppUser
+                {
+                    UserName = Input.Email,
+                    FirstName = Input.FirstName,
+                    LastName = Input.LastName,
+                    PersonType = Input.PersonType,
+                    Email = Input.Email
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                result = _userManager.AddToRoleAsync(user, "User").Result;
                 Family f = new Family();
                 _context.Add(f);
                 _context.SaveChanges();

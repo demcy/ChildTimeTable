@@ -394,6 +394,69 @@
         }
       }
     },
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj",
+        "projectName": "Extensions",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.IdentityModel.Tokens": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            },
+            "System.IdentityModel.Tokens.Jwt": {
+              "target": "Package",
+              "version": "[6.5.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/PublicApi.DTO.v1.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -483,6 +546,9 @@
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
               },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj"
+              },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/PublicApi.DTO.v1.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/PublicApi.DTO.v1.csproj"
               }
@@ -498,6 +564,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.2, )"

@@ -6,6 +6,7 @@
     </PropertyGroup>
 
     <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.4" />
         <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.2" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.2" />
         <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.2" />
@@ -20,6 +21,7 @@
     <ItemGroup>
       <ProjectReference Include="..\DAL.App.EF\DAL.App.EF.csproj" />
       <ProjectReference Include="..\Domain\Domain.csproj" />
+      <ProjectReference Include="..\Extensions\Extensions.csproj" />
       <ProjectReference Include="..\PublicApi.DTO.v1\PublicApi.DTO.v1.csproj" />
     </ItemGroup>
 
@@ -233,10 +235,22 @@
       <UpToDateCheckInput Remove="Views\Locations\Details.cshtml" />
       <UpToDateCheckInput Remove="Views\Locations\Edit.cshtml" />
       <UpToDateCheckInput Remove="Views\Locations\Index.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Create.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Delete.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Details.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Edit.cshtml" />
+      <UpToDateCheckInput Remove="Views\Families\Index.cshtml" />
     </ItemGroup>
 
     <ItemGroup>
       <Folder Include="wwwroot\Icons" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Update="Views\Shared\_LanguageSelection.cshtml">
+        <ExcludeFromSingleFile>true</ExcludeFromSingleFile>
+        <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      </Content>
     </ItemGroup>
 
 </Project>

@@ -2,6 +2,18 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v3.1": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.4": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols.OpenIdConnect": "5.5.0"
+        },
+        "compile": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll": {}
+        }
+      },
       "Microsoft.AspNetCore.Cryptography.Internal/3.1.2": {
         "type": "package",
         "compile": {
@@ -33,10 +45,7 @@
         },
         "runtime": {
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore.dll": {}
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
+        }
       },
       "Microsoft.AspNetCore.Html.Abstractions/2.2.0": {
         "type": "package",
@@ -80,12 +89,9 @@
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.Views.V4.dll": {},
           "lib/netcoreapp3.1/Microsoft.AspNetCore.Identity.UI.dll": {}
         },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ],
         "build": {
-          "buildTransitive/Microsoft.AspNetCore.Identity.UI.props": {},
-          "buildTransitive/Microsoft.AspnetCore.Identity.UI.targets": {}
+          "build/Microsoft.AspNetCore.Identity.UI.props": {},
+          "build/Microsoft.AspnetCore.Identity.UI.targets": {}
         },
         "buildMultiTargeting": {
           "buildMultiTargeting/Microsoft.AspNetCore.Identity.UI.props": {},
@@ -129,10 +135,10 @@
       "Microsoft.Bcl.AsyncInterfaces/1.1.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "ref/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/Microsoft.Bcl.AsyncInterfaces.dll": {}
+          "lib/netstandard2.0/Microsoft.Bcl.AsyncInterfaces.dll": {}
         }
       },
       "Microsoft.Bcl.HashCode/1.1.0": {
@@ -780,6 +786,69 @@
         },
         "runtime": {
           "lib/netcoreapp2.1/Microsoft.Identity.Client.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Tokens": "5.5.0",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Logging/5.5.0": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Protocols/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "5.5.0",
+          "Microsoft.IdentityModel.Tokens": "5.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Protocols.OpenIdConnect/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Protocols": "5.5.0",
+          "Newtonsoft.Json": "10.0.1",
+          "System.IdentityModel.Tokens.Jwt": "5.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll": {}
+        }
+      },
+      "Microsoft.IdentityModel.Tokens/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.Logging": "5.5.0",
+          "Newtonsoft.Json": "10.0.1",
+          "System.Security.Cryptography.Cng": "4.5.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
       "Microsoft.NETCore.Platforms/2.1.2": {
@@ -1470,10 +1539,10 @@
       "System.ComponentModel.Annotations/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netstandard2.1/System.ComponentModel.Annotations.dll": {}
+          "ref/netstandard2.0/System.ComponentModel.Annotations.dll": {}
         },
         "runtime": {
-          "lib/netstandard2.1/System.ComponentModel.Annotations.dll": {}
+          "lib/netstandard2.0/System.ComponentModel.Annotations.dll": {}
         }
       },
       "System.ComponentModel.Primitives/4.3.0": {
@@ -1743,6 +1812,20 @@
             "assetType": "runtime",
             "rid": "win"
           }
+        }
+      },
+      "System.IdentityModel.Tokens.Jwt/5.5.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.IdentityModel.JsonWebTokens": "5.5.0",
+          "Microsoft.IdentityModel.Tokens": "5.5.0",
+          "Newtonsoft.Json": "10.0.1"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll": {}
         }
       },
       "System.IO/4.3.0": {
@@ -2381,30 +2464,16 @@
           }
         }
       },
-      "System.Security.Cryptography.Cng/4.3.0": {
+      "System.Security.Cryptography.Cng/4.5.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "1.1.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Runtime.Handles": "4.3.0",
-          "System.Runtime.InteropServices": "4.3.0",
-          "System.Security.Cryptography.Algorithms": "4.3.0",
-          "System.Security.Cryptography.Encoding": "4.3.0",
-          "System.Security.Cryptography.Primitives": "4.3.0",
-          "System.Text.Encoding": "4.3.0"
-        },
         "compile": {
-          "ref/netstandard1.6/_._": {}
+          "ref/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll": {
+          "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2851,86 +2920,19 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
-      "Contracts.DAL.App/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
-          "Domain": "1.0.0"
-        },
-        "compile": {
-          "bin/placeholder/Contracts.DAL.App.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Contracts.DAL.App.dll": {}
-        }
-      },
-      "Contracts.DAL.Base/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "compile": {
-          "bin/placeholder/Contracts.DAL.Base.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/Contracts.DAL.Base.dll": {}
-        }
-      },
       "DAL.App.EF/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "Contracts.DAL.App": "1.0.0",
-          "DAL.Base.EF": "1.0.0",
-          "Domain": "1.0.0",
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.2",
-          "Microsoft.EntityFrameworkCore": "3.1.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.2",
-          "Pomelo.EntityFrameworkCore.MySql": "3.1.1"
-        },
+        "framework": "Unsupported,Version=v0.0",
         "compile": {
           "bin/placeholder/DAL.App.EF.dll": {}
         },
         "runtime": {
           "bin/placeholder/DAL.App.EF.dll": {}
-        }
-      },
-      "DAL.Base/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
-          "System.ComponentModel.Annotations": "4.7.0"
-        },
-        "compile": {
-          "bin/placeholder/DAL.Base.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DAL.Base.dll": {}
-        }
-      },
-      "DAL.Base.EF/1.0.0": {
-        "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
-          "DAL.Base": "1.0.0",
-          "Microsoft.EntityFrameworkCore": "3.1.2"
-        },
-        "compile": {
-          "bin/placeholder/DAL.Base.EF.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/DAL.Base.EF.dll": {}
         }
       },
       "Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "DAL.Base": "1.0.0",
-          "Microsoft.Extensions.Identity.Stores": "3.1.2",
-          "System.ComponentModel.Annotations": "4.7.0"
-        },
+        "framework": "Unsupported,Version=v0.0",
         "compile": {
           "bin/placeholder/Domain.dll": {}
         },
@@ -2938,12 +2940,19 @@
           "bin/placeholder/Domain.dll": {}
         }
       },
+      "Extensions/1.0.0": {
+        "type": "project",
+        "framework": "Unsupported,Version=v0.0",
+        "compile": {
+          "bin/placeholder/Extensions.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Extensions.dll": {}
+        }
+      },
       "PublicApi.DTO.v1/1.0.0": {
         "type": "project",
-        "framework": ".NETStandard,Version=v2.1",
-        "dependencies": {
-          "System.ComponentModel.Annotations": "4.3.0"
-        },
+        "framework": "Unsupported,Version=v0.0",
         "compile": {
           "bin/placeholder/PublicApi.DTO.v1.dll": {}
         },
@@ -2954,8 +2963,23 @@
     }
   },
   "libraries": {
+    "Microsoft.AspNetCore.Authentication.JwtBearer/3.1.4": {
+      "sha512": "m3xulSieLYh3r9pkydW3yHMP/b+c17Evd4CmMeiHgaSzh5hW4fpFVIkHHq4AnVA5M1HRevl3nX8ZU8Z2DhMErQ==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/3.1.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
+        "lib/netcoreapp3.1/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
+        "microsoft.aspnetcore.authentication.jwtbearer.3.1.4.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
+      ]
+    },
     "Microsoft.AspNetCore.Cryptography.Internal/3.1.2": {
-      "sha512": "Yi69aUt2rZsMor/eIEy7IgDoh/bZ6Lx0ZD3p9FZeU2zw+LIjERghrA8fOJUfpacJxBlWqcf9YkIzD85SSJ0u7Q==",
+      "sha512": "tpGuPpK/USIeeqbHTojDS1+o2Cy1w+7kYOYlhgMJV553Cad1cad+IciDQ+Ju+HxulrSUuiN5Oq1mnOLmuqXqwg==",
       "type": "package",
       "path": "microsoft.aspnetcore.cryptography.internal/3.1.2",
       "files": [
@@ -2971,7 +2995,7 @@
       ]
     },
     "Microsoft.AspNetCore.Cryptography.KeyDerivation/3.1.2": {
-      "sha512": "p5ZGlen0a0eIBHBRBj+4XgArONulCZmE4X8rc91n6O4ZneRkLDKvyMiKC9f20t5Bf42cILkj/YjjrcdLYPmcXQ==",
+      "sha512": "xBSYg/flzgeHEsndZIzwr1CTN5f2R5HS26siPg/LeExr7yxxK/iuBxP/Rj9nJDsySDFniGm41/W3W/RmWcu/7A==",
       "type": "package",
       "path": "microsoft.aspnetcore.cryptography.keyderivation/3.1.2",
       "files": [
@@ -2989,7 +3013,7 @@
       ]
     },
     "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore/3.1.2": {
-      "sha512": "0ysz80HcarZUsfQm/AjEXrFso3IqUd69+XCtx73UKEdkT1KGAQl/GAtIsJ5xZ4Fnz8M58locJXbReR2IKE5nsw==",
+      "sha512": "+HxF81akYFHQOEaHjGEq3yeDUu1Gdro83IORLEhjmE2fiVQtNSoSfNXym4TS/HN0LXZzidakmiol+dnDGrC4Qw==",
       "type": "package",
       "path": "microsoft.aspnetcore.diagnostics.entityframeworkcore/3.1.2",
       "files": [
@@ -3016,7 +3040,7 @@
       ]
     },
     "Microsoft.AspNetCore.Identity.EntityFrameworkCore/3.1.2": {
-      "sha512": "+z3jkvdCcV9aKE5kwRRDoDXu6lTxh5NwFwJ4joraKySpeLSJj74KC+++sGgnESkuSgmtVuXWltcoJ5wmbP/MIQ==",
+      "sha512": "/qzSnAEAWiMQ7jOEKzo2n3TxNa06m+O/mzfpOJK4Q0mgtomL9wo4hWV70397B57yT0WFSseM0405CDMIrB8VxA==",
       "type": "package",
       "path": "microsoft.aspnetcore.identity.entityframeworkcore/3.1.2",
       "files": [
@@ -3032,7 +3056,7 @@
       ]
     },
     "Microsoft.AspNetCore.Identity.UI/3.1.2": {
-      "sha512": "VAU8NqNCKZyvr+FaxZ/QUZ+T3X+9uwl1NlB5biu9jhXP7f/l2X7gmGUJeJ2XDulFRlgJNJ3Bmk52tIJ6r1GIiw==",
+      "sha512": "3oBU3xwtpFaTJ3+l74fwJK9Z26y6EDH8bkoAm2x+Q4YPw5P9UdGnzWTlkGEPEJRNaT9Y7aJfnP5Vt1cSkay6gg==",
       "type": "package",
       "path": "microsoft.aspnetcore.identity.ui/3.1.2",
       "files": [
@@ -3135,7 +3159,7 @@
       ]
     },
     "Microsoft.AspNetCore.Razor.Language/3.1.0": {
-      "sha512": "e/atqZ5CzmJWuG/yaYOzbWNON+oqNKfk1M/xTYW+hje/RoiUUjVP88wrX1s9rEHzaAU4UljIOSvMxLABc2X2gg==",
+      "sha512": "XVp+FhEaw7MnXM2li0DJouZpoQ9h7il1NxAXEN1DgOf8sKkWpvoytRbJY2PRMGA/HKvoMhFH930NA7CYLH1UtA==",
       "type": "package",
       "path": "microsoft.aspnetcore.razor.language/3.1.0",
       "files": [
@@ -3213,10 +3237,9 @@
       ]
     },
     "Microsoft.CodeAnalysis.Analyzers/2.9.4": {
-      "sha512": "alIJhS0VUg/7x5AsHEoovh/wRZ0RfCSS7k5pDSqpRLTyuMTtRgj6OJJPRApRhJHOGYYsLakf1hKeXFoDwKwNkg==",
+      "sha512": "hXDXMLG4eZrhZtmDMQQTVYcyLBVJbPVd5HzcUQMfV3cvdQ0/Gz19LxrZaJSAYtOj47EMSqtmv0/yeyZtUe+a2A==",
       "type": "package",
       "path": "microsoft.codeanalysis.analyzers/2.9.4",
-      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3284,7 +3307,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Common/3.3.1": {
-      "sha512": "N5yQdGy+M4kimVG7hwCeGTCfgYjK2o5b/Shumkb/rCC+/SAkvP1HUAYK+vxPFS7dLJNtXLRsmPHKj3fnyNWnrw==",
+      "sha512": "v/BF7ffgy86hbXnvsFn3LICsiaprIJ1qmE1YA4qfypVhBTywsdFRbOV0DY5ejkJZgIiwwq4XKpKctO8JfcoayQ==",
       "type": "package",
       "path": "microsoft.codeanalysis.common/3.3.1",
       "files": [
@@ -3312,7 +3335,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.CSharp/3.3.1": {
-      "sha512": "WDUIhTHem38H6VJ98x2Ssq0fweakJHnHYl7vbG8ARnsAwLoJKCQCy78EeY1oRrCKG42j0v6JVljKkeqSDA28UA==",
+      "sha512": "luNXmYFwyeqx5ESyOlXILAdDzxZOjnVwTYiVyHsgi76cic16Imbrpk6mdbqp21yYn0z6WRfbuiWooLq/vy0KXg==",
       "type": "package",
       "path": "microsoft.codeanalysis.csharp/3.3.1",
       "files": [
@@ -3340,7 +3363,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.CSharp.Workspaces/3.3.1": {
-      "sha512": "dHs/UyfLgzsVC4FjTi/x+H+yQifgOnpe3rSN8GwkHWjnidePZ3kSqr1JHmFDf5HTQEydYwrwCAfQ0JSzhsEqDA==",
+      "sha512": "hMgeZNIR73KACLJFJw++oUNgW6bZQa1wdwHs5yjjifpOlJKm8zqIK8pNtE4R1BjALSH4lUaswJ8aOIZNL1g19Q==",
       "type": "package",
       "path": "microsoft.codeanalysis.csharp.workspaces/3.3.1",
       "files": [
@@ -3368,7 +3391,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Razor/3.1.0": {
-      "sha512": "EI/9iVMneil8nZn7mqEujJvV63VRaz01Czc69NTrCQAh5CRfBvoeqBVsDx6oC9CIYla/AJYss+U4B/6Usecx7A==",
+      "sha512": "l0WGrlXYRoQ0iJMUhc/CMhmaoWecX8qhvZrJGk+QLJFattlQWjIjtkeU9L6gziLembyu3xJJXEsjF1cb6wpZPQ==",
       "type": "package",
       "path": "microsoft.codeanalysis.razor/3.1.0",
       "files": [
@@ -3382,7 +3405,7 @@
       ]
     },
     "Microsoft.CodeAnalysis.Workspaces.Common/3.3.1": {
-      "sha512": "NfBz3b5hFSbO+7xsCNryD+p8axsIJFTG7qM3jvMTC/MqYrU6b8E1b6JoRj5rJSOBB+pSunk+CMqyGQTOWHeDUg==",
+      "sha512": "3eAv3Q095H74KzHiaVNK9ooE9EmEJp/dQQobbXLH9qrVmDnFwf8Ri1i38Fwnsc6SERSL1PZ61bzSUW/UNT+ZSQ==",
       "type": "package",
       "path": "microsoft.codeanalysis.workspaces.common/3.3.1",
       "files": [
@@ -3478,7 +3501,7 @@
       ]
     },
     "Microsoft.Data.SqlClient/1.0.19269.1": {
-      "sha512": "p2xa+sUAt7IRNxCl8ZT77bd7qHVKookDJ4HDUc+ArWkFk204rIpFhHajCTQqomSbcYi+olwheqQrwr+ohGRmJw==",
+      "sha512": "SeRKTp2dtIGueV4PAQ7Npx4PNKoBXPocOCIZbYUfQS6BbHlUxxsO8SLhKfC4YQR4jmSOaMPajlbt1CFojwuTqA==",
       "type": "package",
       "path": "microsoft.data.sqlclient/1.0.19269.1",
       "files": [
@@ -3521,7 +3544,7 @@
       ]
     },
     "Microsoft.Data.Sqlite.Core/3.1.2": {
-      "sha512": "6j5E9qke3hDbKiz2/2N+ofbiHHIIfGgI8Rq8eyG9AYdBY+SzDI74I9fzDaGrnd+cfFEiZh8pwcA+d6GAOwhoXA==",
+      "sha512": "lyWLbiMYv+XsbeaV2Sm4K8hiiOOW7J2LAN8/LMT6brV9aA52q0NCFQ2lftvhtFxwIc8w5w0ubkgaSLqc56fxtg==",
       "type": "package",
       "path": "microsoft.data.sqlite.core/3.1.2",
       "files": [
@@ -3535,7 +3558,7 @@
       ]
     },
     "Microsoft.DotNet.PlatformAbstractions/3.1.2": {
-      "sha512": "VFkzaiSK1j9fkdA/cWRk2st2gKA3x8CukFrVoGwL2X5m8eJ1ZhpeSxDlKb/TP6VY3ci/dwoN81Du95Mf/TosiA==",
+      "sha512": "zIlWsQhbtP379+bldehh9AAa6zpnjTap2omTxElEMgZY/W6wRsEfqRWVfqxHOQCagMoM/IrB0qczVcReDEDxhQ==",
       "type": "package",
       "path": "microsoft.dotnet.platformabstractions/3.1.2",
       "files": [
@@ -3555,7 +3578,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore/3.1.2": {
-      "sha512": "VMpXQUCwVPXjDmX913ZcP6CF2XSUsCbf0C3FtVt6sNPsLlVB/ogiSQRx49UUbwZUoIkRuvsJsg7H8ugtUjQG6g==",
+      "sha512": "JWtZb4yHduyxaCXsclr/cAz+e6hjjphuubXQf7nCjt6l+k+VPrG9fZfW3f31ZM7NsZQyN+lK6kePAkLC3Gu1RQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore/3.1.2",
       "files": [
@@ -3569,7 +3592,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Abstractions/3.1.2": {
-      "sha512": "68sbjBsyhu4VjEttN1N0vnT/51AeemXv8HmbDLNC2kRMCw0BZxIhRVsK4/3eWvGd5antNfEswFkHVDPAmB99Pw==",
+      "sha512": "zdsxABZoux+VWMUdML9B7pUusp5wWVw2vXFk+Rhg4adaGLBmqDxk758uR/B0pZ7/FwJwhQZVsvdjYTEx2aMgSQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.abstractions/3.1.2",
       "files": [
@@ -3583,7 +3606,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Analyzers/3.1.2": {
-      "sha512": "2v0Md70wiGS1vmco8/koAz93eOSusFh83OqwYWFxhxS6wSii7LDOhWL5Ww/zRsuGkxH4uWtNkMg5gLXBTs64Jg==",
+      "sha512": "AJN4VO2YDbYMI+fkPpU+sKOkwjxidsTKcBYGOrFYlIuZsh8zD3kk2sr1H67GCirNSCRMiY18XomEhhNFq4qqSA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.analyzers/3.1.2",
       "files": [
@@ -3597,7 +3620,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Design/3.1.2": {
-      "sha512": "DVbwHFZVWp37ti2uAqzSnfLqqvI1TjxLy8xOYm5jAyFLr/9OiGGyJHdtrMr3n62SG28eV3CeD+N4YwedyVhKSQ==",
+      "sha512": "sy+rMtDAC3jebw3w8i+yZMED1NimhZP7oJhMJ5zcgbQzu5I70cWAee+uyGxi/gzubO5ctwAXMh2ejTRMvRg9GQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.design/3.1.2",
       "files": [
@@ -3613,7 +3636,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Relational/3.1.2": {
-      "sha512": "7CKgFCLzsw7Lms3jxnhv2m5Wc1VmrR7E50tvGRxIT7aXMm4CoOIiG5YlRfAecSC2BlgJu2+oa2Mwd+zOJo0Qkg==",
+      "sha512": "AgcudkrGLY3ZZl/Hi/XyZB6hSeCvL7Dc82W/xnx6YANr1RWrUSe5gKKVmdYZJ3WiAXtaiN1PbYLOaCup60FsDw==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.relational/3.1.2",
       "files": [
@@ -3627,7 +3650,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Sqlite/3.1.2": {
-      "sha512": "h+af7gO+IMsvXhpNus7+gmVgU4xLk3/de+SRHkd9639KWUqab97ejZIh+41/yN7qO28gEpEFL60W0IvyJj94Cg==",
+      "sha512": "93FIp4T6xK7ZhvwVBRUQEqKG5Lu6dC3tVlPtgbv2FDUC5Khn9koimC3VCGPRP6llgjKfu8e+SIYHfZH6ykvbjQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.sqlite/3.1.2",
       "files": [
@@ -3640,7 +3663,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Sqlite.Core/3.1.2": {
-      "sha512": "hAWBUKsdZJsvEWAgm7aCWu1v4UtgIiNKUwAOR2Dn4Z1iwAsQtvxhWcTTuDQBjOxEiWytvILa17mVS3iTWZfOvg==",
+      "sha512": "NbEsb01P8CpBHpOLpliNehL2yEjuJautCI7TU0KEnxFbwtgytjwkQlIwk2NjEFUyevUQYpvVCtGyo72oLIw2XA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.sqlite.core/3.1.2",
       "files": [
@@ -3654,7 +3677,7 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.SqlServer/3.1.2": {
-      "sha512": "+bCJKMZ8Xxl5kNFZrcgWzB4O5za3Ku+colHil4ssl2lkMxkSDuIWyImDkmR+sLJC6l3MExaXAWEj7JqaXRQC+A==",
+      "sha512": "2hHX+sN5TB1Q+Ug+zfdqBTX6InhcvgMBHPvE3vN0ahnhGsAWaArAO36eWtuPSRKZNWGSl6qMdURZPtWNxW+shA==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.sqlserver/3.1.2",
       "files": [
@@ -3668,10 +3691,9 @@
       ]
     },
     "Microsoft.EntityFrameworkCore.Tools/3.1.2": {
-      "sha512": "EEupVMDIHqS2b81nYebaMNDHD9iKU4eKrGtG6j+7D5NF/EsTYLPgypguX1Jv3HwdOesysKD/xYaGrUUCJLHIgQ==",
+      "sha512": "8lrSeS9ambal46mUF8vSbxahti1TXtjsnV8c7pS/OjYtWRXLLukAD5nFEWT/acRpUdzqU7NE8hzLkk0IJ+UkxQ==",
       "type": "package",
       "path": "microsoft.entityframeworkcore.tools/3.1.2",
-      "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -3692,7 +3714,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Abstractions/3.1.2": {
-      "sha512": "UfMC7L+8ha05PUAfVpmMS0kb7C1BoOrWxN70706D50qWohXLYgkUsu22oS7zkd9amCPTCmhRm2z/LisN8SESgg==",
+      "sha512": "xuwf6omA8YLhZyHr+I/S1ylGFvxBRo1WXv8yJzHzpZJ/5VF5qLBEU+jilMqpmYfh6Z0k9KbiGYTS8HSsZFAfpg==",
       "type": "package",
       "path": "microsoft.extensions.caching.abstractions/3.1.2",
       "files": [
@@ -3708,7 +3730,7 @@
       ]
     },
     "Microsoft.Extensions.Caching.Memory/3.1.2": {
-      "sha512": "4O/YgpVhK/ZIYteGy9LyJv+YRcTxLOe7AnMUHBj1m1U40Er1/dbMymFTH1HrRS/fkVB90un24JhG+c1qSWjjjA==",
+      "sha512": "FHwafXg9d6aiYGsU7B9ME/vTdMyEprmhz4vo+7dL0x6quWuEfFPwH1FHqvJXALqteAX7914/+d6kJfzGFWVMmA==",
       "type": "package",
       "path": "microsoft.extensions.caching.memory/3.1.2",
       "files": [
@@ -3724,7 +3746,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration/3.1.2": {
-      "sha512": "BxwRSBab309SYMCDCFyB6eSc7FnX5m9kOJQHw2IQIyb5PEtpfslhscTw63Gwhl3dPnaM1VGFXIyI0BVgpiLgOw==",
+      "sha512": "391qrG9bFpvSz+V2TAKKA0MbJD0X6k04tOdqaFmVmTN6ZXoQK2L2BOGZCT0f7mMb0VctWTfv6BAZwIoFlJ61OQ==",
       "type": "package",
       "path": "microsoft.extensions.configuration/3.1.2",
       "files": [
@@ -3740,7 +3762,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Abstractions/3.1.2": {
-      "sha512": "xmfdVdazTslWJ8od7uNS9QSPqn1wBC84RLprPrFS20EdAqd3lV0g0IZAitYbCiiICpjktnhzbUb85aLHNZ3RQw==",
+      "sha512": "a7E5bMUgGsxkCHRhe92nOeq+0LvBOCzH3k7gYfO6zuxx6LeoqapLQpMx92B9iJAEGQKamXx6PDO/JYX3Xc1rPg==",
       "type": "package",
       "path": "microsoft.extensions.configuration.abstractions/3.1.2",
       "files": [
@@ -3756,7 +3778,7 @@
       ]
     },
     "Microsoft.Extensions.Configuration.Binder/3.1.2": {
-      "sha512": "IWrc9/voGki2pc5g8bRXIqs+P50tXOjNf47qgFKSu/pL50InRuXxh/nj5AG9Po8YRpvT/bYIUk3XQqHH7yUg5w==",
+      "sha512": "tYa60d3Ys0L+sbI/d61XfaDtBJ+ehFlJUaTPzhCaLhenXZJNoxvj33J96arWuf2Sy+3iyPFBi+pvQW8NGycy/w==",
       "type": "package",
       "path": "microsoft.extensions.configuration.binder/3.1.2",
       "files": [
@@ -3772,7 +3794,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection/3.1.2": {
-      "sha512": "e+F6/wjQPOFHB/sGWTAqC8FX/C6+JZWWLpryXTAQYIS3tr+17lByADdP9Y6RtxfJ4kW/IPrU6RuxTNZNdAQz1A==",
+      "sha512": "+TSL4pduaIKe0P5Z8SSD2BCxStxU7n96Ply//sN9ENgIwEJE5w0DLC5W127rzmb81PXs1eS+Ngv4oKrAO5HNsQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection/3.1.2",
       "files": [
@@ -3792,7 +3814,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyInjection.Abstractions/3.1.2": {
-      "sha512": "/CZzCSCIm/3FFoXHfUpsfov/Elo268dcvlz/MMINT0vPgphqg2pAgdEn/EjCDyoAT3NAmsRmjfGwBumC1uYJtA==",
+      "sha512": "3RbCTuKECmz3NZcHn0VQWYa4am8fKsgJQC91cyp0hdowyrw7St7Bm3jy8W2xVtvMxP7Pu+e5BSDO8VazKRGndQ==",
       "type": "package",
       "path": "microsoft.extensions.dependencyinjection.abstractions/3.1.2",
       "files": [
@@ -3806,7 +3828,7 @@
       ]
     },
     "Microsoft.Extensions.DependencyModel/3.1.2": {
-      "sha512": "AZR4ChHbwEHArC6iuLyf5Pr7BANayuVGcDUzuF+HoX5P1MTxFnyJu7cYOgRwPWAgIDZftqqeOm4LbGIQnQXsTw==",
+      "sha512": "HqEuKHjdlPwfeWx6Uu7wL4ONE8DCkm6f/8d2MoNLZTqo+VhD/Cou2w4VZOuYOuFiXIJBs2/0P1WtCEA2U+OMSw==",
       "type": "package",
       "path": "microsoft.extensions.dependencymodel/3.1.2",
       "files": [
@@ -3828,7 +3850,7 @@
       ]
     },
     "Microsoft.Extensions.FileProviders.Abstractions/3.1.2": {
-      "sha512": "O9+N6KuA7kiPIYpdgRFFveKRyI3X2hLgdqdEwQki0MOA5XtCVOkxz8O+6CK1+b1a7Y1TildGfx3i+h/652vyHg==",
+      "sha512": "cz1fRWkj9iUUNNnY1caGyxTI5ZHxxBUl9oPNtxLXRFFU+f63HT8g0l43qJuyzjJGPn4trwLbSuwYDYVsaf/ZBA==",
       "type": "package",
       "path": "microsoft.extensions.fileproviders.abstractions/3.1.2",
       "files": [
@@ -3844,7 +3866,7 @@
       ]
     },
     "Microsoft.Extensions.FileProviders.Embedded/3.1.2": {
-      "sha512": "Axz1qa8/u5Pg/fDCW0KU++7UQczENbiD9TEq+dtLneed+8qWhk2KW7xUNUCxkaYJMwfU22E9Ec66dUuc+M6kPA==",
+      "sha512": "mvJjFjvNgOweVaelBR1G3QVv8P8CcIKC3EMO+17SlqgUaciZkacAh/qahIiGRD+yP0oT7/urBFfU/Y1CQm/JBQ==",
       "type": "package",
       "path": "microsoft.extensions.fileproviders.embedded/3.1.2",
       "files": [
@@ -3865,7 +3887,7 @@
       ]
     },
     "Microsoft.Extensions.Identity.Core/3.1.2": {
-      "sha512": "C6jXkZ8JbrOl9EI+awhLbPCq61+I4oV7ePErIm8C+Kp8LpVK1HmnUuOZBjyyBsSYk3AazxGYHviquGyyVlOW8A==",
+      "sha512": "noqoiL5ybkqcHoAhGG5gZuxF6AkvnmrIw1HIUN93DDSeHOCDP7NFQSwGbF0dmtg7bh46PDHyst4/dK5X+8XwBQ==",
       "type": "package",
       "path": "microsoft.extensions.identity.core/3.1.2",
       "files": [
@@ -3881,7 +3903,7 @@
       ]
     },
     "Microsoft.Extensions.Identity.Stores/3.1.2": {
-      "sha512": "s8KmZ8O6ScFjapiTbUT3slH396RysBF9cJCiDwfGQ5LZ9jKWvrMVqq4ytq+qvAt3x6dkdc5COqjr2y4McY+gVA==",
+      "sha512": "x9UDhF2zkWplQf8lZEhlkYwr5d30NzZ13bIw2xDmH1TGnKvu9qbDrWVCuNqY7Pjc3UmWBSW3BhO5xjZbm41Bpg==",
       "type": "package",
       "path": "microsoft.extensions.identity.stores/3.1.2",
       "files": [
@@ -3897,7 +3919,7 @@
       ]
     },
     "Microsoft.Extensions.Logging/3.1.2": {
-      "sha512": "AIIRgKamzEqJNLZsHd37VogFX9YpxgrBmf/b3dznD7S0qjxWQnAs498ulLV1n6AKJ8XVjTCBNzsvQiSwCa7dIw==",
+      "sha512": "6v8ncmEpWugxfpkoAcHVqAwM2+Sn1DuLv6Ocw9Gc4AgyiS40W2THlv5U+hd3RxfoF51Px9khyjnm4D+tsKuW7w==",
       "type": "package",
       "path": "microsoft.extensions.logging/3.1.2",
       "files": [
@@ -3913,7 +3935,7 @@
       ]
     },
     "Microsoft.Extensions.Logging.Abstractions/3.1.2": {
-      "sha512": "cIXPw7VVX3fON4uuHwJFmCi0qDl8uY75xZMKB2oM3In0ZDEB1Ee+p9Ti1DSw92AwRtJ2Zh+QG1joTBednJMzvA==",
+      "sha512": "vxSZ8y7On3VKRr7sUe8eVFoqU4Ql4D2xsxqsaOFMqYZMcKWYqqVJMq/iKrlYJT0aJ+QGKqtMEfzGXNkLyyremw==",
       "type": "package",
       "path": "microsoft.extensions.logging.abstractions/3.1.2",
       "files": [
@@ -3927,7 +3949,7 @@
       ]
     },
     "Microsoft.Extensions.Options/3.1.2": {
-      "sha512": "6F4anwt9yMlnQckac2etjrasRFyqZNIp46p+i9qVps0DXNsOLZIKRkqq4AY4FlxXxKeGkEJC7M77RQEkvd3p8Q==",
+      "sha512": "9eHkE5NArEjDL0dUXpj7kO6wjcujlCv2Nv0DFXtOrRSX8gHJPyFgR6p9WCLXrwy81tSCCYROe7hiL5jfzp+lag==",
       "type": "package",
       "path": "microsoft.extensions.options/3.1.2",
       "files": [
@@ -3943,7 +3965,7 @@
       ]
     },
     "Microsoft.Extensions.Primitives/3.1.2": {
-      "sha512": "WGtoFWY9yc9HGMG6ObDNQPz9dBP+xz/GqFe2dKjdE/cSdXFEKxCFTyYCzL/e8kxVkc/Bq9qjOsXRWydvn0g9Uw==",
+      "sha512": "n9zncB2fCRBwUc+hz0jgj9DEGX3JfzEQS2FajX4jsvpqEfijqXcBjN+sdnBE3p2DPfjbrwFYhBumFrG5gbJwnw==",
       "type": "package",
       "path": "microsoft.extensions.primitives/3.1.2",
       "files": [
@@ -3959,7 +3981,7 @@
       ]
     },
     "Microsoft.Identity.Client/3.0.8": {
-      "sha512": "9E1gXBRJta8+UXooYpJkp/8g6Cy4kFQl3iURduGhR7/vU8rGKTWEMJ3tUKOO2m1qzJOfaog/n89lyjdi7S56Rg==",
+      "sha512": "AoNwPsjtgZRYhNoutfL7+1DlfzZYFxbk59tVAs9+IWMWUUKMhkKuKfvlJTIp/poYn9BumNqesBRfKXYIyZvKAw==",
       "type": "package",
       "path": "microsoft.identity.client/3.0.8",
       "files": [
@@ -3998,8 +4020,113 @@
         "ref/xamarinmac20/Microsoft.Identity.Client.xml"
       ]
     },
+    "Microsoft.IdentityModel.JsonWebTokens/5.5.0": {
+      "sha512": "KGolSaf7JnBpAiXB3Ly7z5QNxG8HelKLWYthYayjdYbSFGBs08RTXXwZftrvZfhFozXjIyb4X/599r8UoQ7BVg==",
+      "type": "package",
+      "path": "microsoft.identitymodel.jsonwebtokens/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net45/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net451/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net451/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/net461/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/netstandard1.4/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.JsonWebTokens.xml",
+        "microsoft.identitymodel.jsonwebtokens.5.5.0.nupkg.sha512",
+        "microsoft.identitymodel.jsonwebtokens.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Logging/5.5.0": {
+      "sha512": "0dkS2v216kNockvZPtCEJ5iMwuDo7IyO6xedntjanTTBu87H53nh5NU3jlxkWhwtEABH0yATz1yMgu1QBFGg0Q==",
+      "type": "package",
+      "path": "microsoft.identitymodel.logging/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Logging.dll",
+        "lib/net45/Microsoft.IdentityModel.Logging.xml",
+        "lib/net451/Microsoft.IdentityModel.Logging.dll",
+        "lib/net451/Microsoft.IdentityModel.Logging.xml",
+        "lib/net461/Microsoft.IdentityModel.Logging.dll",
+        "lib/net461/Microsoft.IdentityModel.Logging.xml",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Logging.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Logging.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Logging.xml",
+        "microsoft.identitymodel.logging.5.5.0.nupkg.sha512",
+        "microsoft.identitymodel.logging.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Protocols/5.5.0": {
+      "sha512": "RT5Qt/SHMRZxpcDL2Sihig0ywMfmZx8W7vuHhQZWKTkaE6AtnfGh5x15LIs+Zk7lpsQiKe9fSDqDqfsC9RlANw==",
+      "type": "package",
+      "path": "microsoft.identitymodel.protocols/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Protocols.dll",
+        "lib/net45/Microsoft.IdentityModel.Protocols.xml",
+        "lib/net451/Microsoft.IdentityModel.Protocols.dll",
+        "lib/net451/Microsoft.IdentityModel.Protocols.xml",
+        "lib/net461/Microsoft.IdentityModel.Protocols.dll",
+        "lib/net461/Microsoft.IdentityModel.Protocols.xml",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Protocols.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Protocols.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.xml",
+        "microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
+        "microsoft.identitymodel.protocols.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Protocols.OpenIdConnect/5.5.0": {
+      "sha512": "o6Xih8GT9YBBQ0GMQU/NGdJ9eIUGHSye5GMVX/l+5FTJXDTBhoqdNqBxTKovsGvie8ZUEbw2YW6mtgOm44th0A==",
+      "type": "package",
+      "path": "microsoft.identitymodel.protocols.openidconnect/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "lib/net45/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
+        "lib/net451/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "lib/net451/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
+        "lib/net461/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "lib/net461/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.xml",
+        "microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
+        "microsoft.identitymodel.protocols.openidconnect.nuspec"
+      ]
+    },
+    "Microsoft.IdentityModel.Tokens/5.5.0": {
+      "sha512": "QIOkpxDKZhts/5cE+h03OZzA5XiI8xfclJ0fRSxxGCoIy9Xh6Z/VfDYhyDjrq2L5hLuMFP9txKSTzsHANYFZNw==",
+      "type": "package",
+      "path": "microsoft.identitymodel.tokens/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net45/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net451/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net451/Microsoft.IdentityModel.Tokens.xml",
+        "lib/net461/Microsoft.IdentityModel.Tokens.dll",
+        "lib/net461/Microsoft.IdentityModel.Tokens.xml",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.dll",
+        "lib/netstandard1.4/Microsoft.IdentityModel.Tokens.xml",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll",
+        "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
+        "microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
+        "microsoft.identitymodel.tokens.nuspec"
+      ]
+    },
     "Microsoft.NETCore.Platforms/2.1.2": {
-      "sha512": "mOJy3M0UN+LUG21dLGMxaWZEP6xYpQEpLuvuEQBaownaX4YuhH6NmNUlN9si+vNkAS6dwJ//N1O4DmLf2CikVg==",
+      "sha512": "7J7veIH7Mu6zc4llWnM7YRgTv9+Ew+JWkkDj0K7cEe8wuFA6HRt6STtwux2g+qjpDXeYeWsK0UQ3uIgRiTYHIg==",
       "type": "package",
       "path": "microsoft.netcore.platforms/2.1.2",
       "files": [
@@ -4030,7 +4157,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration/3.1.1": {
-      "sha512": "As3HZwVDwdFRKrZ5gWflHTolau+Rkb3P6YAZt9Ob+tcQdlRL5y0tDYNE1DMQIWc6rcn7LtlttT3/0FLd6A9Qjg==",
+      "sha512": "KkHn2qP89O83e5SQvrzwqioTRjc3ZkF2DcZVPaJ/879qzi3ynAeXM+avFbd0OfvFtJmdbHfg076E+eZ15C4uJw==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration/3.1.1",
       "files": [
@@ -4044,7 +4171,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Contracts/3.1.1": {
-      "sha512": "xiMVRctA0xwCbm1aYF1wbJJn77PNK/u734q4C5TnqczK4T87OqRJjbX1ldl+PJE5sw3e/8H/j9NNYzL2ux3wng==",
+      "sha512": "7JcFtdzy7OwqvEY9ywj2Rs0QFt+JrHx9LaHS63rwFg/Mh38Z6nWsnLARXlEna25o/rpoMoUuMvh/+W2YtKtYCw==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.contracts/3.1.1",
       "files": [
@@ -4058,7 +4185,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Core/3.1.1": {
-      "sha512": "B0CCd/7nIuk0P+9qc964SKsaM59fbeOvHGbBIGZvRH4vpCsq8eDRXQ2bfX6fqEgchX9VPAAm6CwL2Ka1aoEijg==",
+      "sha512": "6EGYVHqe9c2EnsZWqmBrl+68se4qRKUoRFKysRkN6VuDIdXO0dEvJwqVfU9P3DPkm369GtsbiilFN5bROb1aNg==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.core/3.1.1",
       "files": [
@@ -4072,7 +4199,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Design/3.1.1": {
-      "sha512": "dPuG5OJUL/1mlToWYhu83qYQymr24n7uDRrSTn46rejVlON6OLtTqZNve5CcppR0NtHkalINrOjlY+0dXNnAKg==",
+      "sha512": "6XPDgJGsxNd+uXwlNeMnKJdjQcIMBlcnDDRr2ElZ0y8BuUBnG33bytydhTx2agFjWWBZ579/k4kGDvvV0pWdEQ==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.design/3.1.1",
       "files": [
@@ -4095,7 +4222,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore/3.1.1": {
-      "sha512": "z4Y4WVI93y9nbtNui8WQNeGh2/Bk6TvjXcMOJAw2b4Xm3zBj1g5f+HybxTXsX2aMXRpKbgLvCK7/sel9WYL99w==",
+      "sha512": "NTFtrS3D2yiBRp8NLgbPWDLN0SJlCsqIL8gZa6CjwqWWMfjPRKhb439pvX7Fwl9SoAq5Oy1Nu0PmeiLX3SRioQ==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.entityframeworkcore/3.1.1",
       "files": [
@@ -4110,7 +4237,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Templating/3.1.1": {
-      "sha512": "fm68G+Dgzvqh2JgaimU2kyC3vUl5Fpqa//02lsCd2AaaGCZSf2qd/gGA/5RQsQlH6mBCv2Xwgv8eFgWHhF+PTw==",
+      "sha512": "wacbImytlfCXsFDWlbRUxdtDwmNV6+Elw8u5M7qyaRiMPqslwXk5olyy9dVKsRwlMihlaVFWIUPP29GmjoGl9w==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.templating/3.1.1",
       "files": [
@@ -4124,7 +4251,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGeneration.Utils/3.1.1": {
-      "sha512": "TmYCv8rvabShBKKW0k7LzlcivK1TzhJUD8pe/9u/gp2zzwF+PW21QASXKAOL4Sed/RXxxWfGQLH3cxwtAOSwIg==",
+      "sha512": "dfYOdRQnIGX44GYQAYnzrTSitUWJcw/kyG+P5aj3siksQ6m/C7jBo8zHb2HQg3HQeB6uEKVO9GooeyTKZEJ3UA==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegeneration.utils/3.1.1",
       "files": [
@@ -4138,7 +4265,7 @@
       ]
     },
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc/3.1.1": {
-      "sha512": "U+ud8PSdPOxnRMPNZcuppp5vS+PbY2nzHVNvcD1u/RYzG8jXVtrwlDkFLazbEsR7/8uym2UbdvQ5qKEcSkzPXA==",
+      "sha512": "/+BFOfstKawgdv5YFy9PAUTWbd55c+mT7WHcOSOjAvrsJqc5s4b7psoK5roLCY/SNJ//FmE1Inqu12MYC+YOGA==",
       "type": "package",
       "path": "microsoft.visualstudio.web.codegenerators.mvc/3.1.1",
       "files": [
@@ -4515,7 +4642,7 @@
       ]
     },
     "MySqlConnector/0.61.0": {
-      "sha512": "E01yibVzCkVOmhNsUb+B4amjQKfKFlGiR1huNd6Q8aTCqBrACo0I3JMKvJBMpZfYhAsR8bqB9496PwcGpr+LuQ==",
+      "sha512": "iCgVCaej7uxwHd/vFdEa7MyxGz4X7LZPFDdeSqlbAcIFVH5NCTFzCzg08KVWimbpowK/TivE1LpiJeK6zWX8lw==",
       "type": "package",
       "path": "mysqlconnector/0.61.0",
       "files": [
@@ -4555,7 +4682,7 @@
       ]
     },
     "Newtonsoft.Json/12.0.2": {
-      "sha512": "rTK0s2EKlfHsQsH6Yx2smvcTCeyoDNgCW7FEYyV01drPlh2T243PR2DiDXqtC5N4GDm4Ma/lkxfW5a/4793vbA==",
+      "sha512": "mtweBXPWhp1CMQATtBT7ZfMZrbZBTKfjGwz6Y75NwGjx/GztDaUnfw8GK9KZ2T4fDIqKJyDjc9Rxlw5+G2FcVA==",
       "type": "package",
       "path": "newtonsoft.json/12.0.2",
       "files": [
@@ -4602,7 +4729,7 @@
       ]
     },
     "Pomelo.EntityFrameworkCore.MySql/3.1.1": {
-      "sha512": "DYMsaJe/lKoaPGjB0ACnP+h5FeaJC+07f83FewBulkqfkUvc7m97PECX0OUHSTT+qEF0EOmJ7HQR0dltSCDyPQ==",
+      "sha512": "7v6IrwK/I9L9/SFy7FNtsqDz3jy6l11uli/waUr0mLhA0VorD6qRp2gfSH+Dg7Y9VZjFnDBAQZhD+zJRh94p9A==",
       "type": "package",
       "path": "pomelo.entityframeworkcore.mysql/3.1.1",
       "files": [
@@ -4615,7 +4742,7 @@
       ]
     },
     "Pomelo.JsonObject/2.2.1": {
-      "sha512": "VHPk3Yf7nDt+tZMC1M4oAoc3bgTYsOrap3VTjn//vd91b/nfquAbAeq1k0Lf7mPt8J7imLd9Pbzm50uB5euuZA==",
+      "sha512": "5KiqoTQ74Z9fBQp9KH+GYEh2YYQZpq2MY0TSKmciY1VJ1Mn1ZtG8/X0/ffkg/PiLavrdpdKFgqzXat7q4fyCyQ==",
       "type": "package",
       "path": "pomelo.jsonobject/2.2.1",
       "files": [
@@ -4895,7 +5022,7 @@
       ]
     },
     "SQLitePCLRaw.bundle_e_sqlite3/2.0.2": {
-      "sha512": "OVPI/nh5AqfLCIKhAYqjCa6AHhc7oKApGcGM3UhMRSerFiBx58nSpGwxVFdMgjOCWZR+fA49nzsnKlWp5hFo8w==",
+      "sha512": "WIjgY/8DLoAGNyNV9fJIHo4WODYwHaRPpGOVxhAQ5UDal9axD/UzSz8+eLR15tSVAiYCOfpHq3FplWKtK4cEOA==",
       "type": "package",
       "path": "sqlitepclraw.bundle_e_sqlite3/2.0.2",
       "files": [
@@ -4913,7 +5040,7 @@
       ]
     },
     "SQLitePCLRaw.core/2.0.2": {
-      "sha512": "TFSBX426OelS1tkaVC254NVVlrJIe9YLhWPkEvuqJj2104QpmDmEYOhfdfDJD1E/2SmqDhoRw1ek5cQHj8olcQ==",
+      "sha512": "eqAtL/dGAMUbRMVydjALEfAQnKJALjj7F46S57bB0PZY7xyfxgDvRJ2FSKCbBE5HOg0s5adHP2D6ZsUN64/Y1g==",
       "type": "package",
       "path": "sqlitepclraw.core/2.0.2",
       "files": [
@@ -4925,7 +5052,7 @@
       ]
     },
     "SQLitePCLRaw.lib.e_sqlite3/2.0.2": {
-      "sha512": "S+Tsqe/M7wsc+9HeediI6UHtBKf2X586aRwhi1aBVLGe0WxkAo52O9ZxwEy/v8XMLefcrEMupd2e9CDlIT6QCw==",
+      "sha512": "rYlPe1cVd7GCwPJPq4lDZUYqhCXXoLuR1OT8Ab7Rk2hPs4MrvH0dBXoYhclB/lh8+Sl8roVkiuIe0fBBq3AyXg==",
       "type": "package",
       "path": "sqlitepclraw.lib.e_sqlite3/2.0.2",
       "files": [
@@ -4955,7 +5082,7 @@
       ]
     },
     "SQLitePCLRaw.provider.dynamic_cdecl/2.0.2": {
-      "sha512": "ZSwacbKJUsxJEZxwT23uZVrGbaIvXcADZDz5Sr66fikO5eehdcceDncjzwzTzWfW13di8gpTpstx3WJSt/Ci5Q==",
+      "sha512": "+VDDrX19Hr6PWSCiH04W+hBNJlQrutUauqLrSzQSn3o2z975/VO/7AW4HL30CrVFBnGnv4lJolV21YIlD0FHhA==",
       "type": "package",
       "path": "sqlitepclraw.provider.dynamic_cdecl/2.0.2",
       "files": [
@@ -5594,7 +5721,7 @@
       ]
     },
     "System.Configuration.ConfigurationManager/4.5.0": {
-      "sha512": "UIFvaFfuKhLr9u5tWMxmVoDPkFeD+Qv8gUuap4aZgVGYSYMdERck4OhLN/2gulAc0nYTEigWXSJNNWshrmxnng==",
+      "sha512": "+2SYYKwbN0n+9SrBanflZdaVleFkytEfTNzOu+f3SK0vROMMrorpw1UJyHJQ1ZooughRxPmLj8Fh5N2tSe7sdA==",
       "type": "package",
       "path": "system.configuration.configurationmanager/4.5.0",
       "files": [
@@ -6032,6 +6159,27 @@
         "system.globalization.extensions.nuspec"
       ]
     },
+    "System.IdentityModel.Tokens.Jwt/5.5.0": {
+      "sha512": "0qmIRXlIUe3f+WFV3O0FtlG6iappg7lz72P7FulaS1XGtkmsseD6zKJEwMb7esTcm4cSEwGpvuo+wPb10yucWw==",
+      "type": "package",
+      "path": "system.identitymodel.tokens.jwt/5.5.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net45/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net45/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/net451/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net451/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/net461/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/net461/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/netstandard1.4/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/netstandard1.4/System.IdentityModel.Tokens.Jwt.xml",
+        "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.dll",
+        "lib/netstandard2.0/System.IdentityModel.Tokens.Jwt.xml",
+        "system.identitymodel.tokens.jwt.5.5.0.nupkg.sha512",
+        "system.identitymodel.tokens.jwt.nuspec"
+      ]
+    },
     "System.IO/4.3.0": {
       "sha512": "3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
       "type": "package",
@@ -6450,7 +6598,7 @@
       ]
     },
     "System.Memory/4.5.3": {
-      "sha512": "3oDzvc/zzetpTKWMShs1AADwZjQ/36HnsufHRPcOjyRAAMLDlu2iD33MBI2opxnezcVUtXyqDXXjoFMOU9c7SA==",
+      "sha512": "cPzhWlLMdqrLrgXI6J4uOY0dMpA/Y/ZAp91KPldH8seoh9S/0i8qLkAnSQbPkWSN/RaXNPt8dOubT3JhQITh2w==",
       "type": "package",
       "path": "system.memory/4.5.3",
       "files": [
@@ -7330,7 +7478,7 @@
       ]
     },
     "System.Runtime.Caching/4.5.0": {
-      "sha512": "95j9KShuaAENf2gLbQ/9YoJDHIWAnoaFYA71xo4QVQyLkOMginn34cD1+6RcYIrqJamLkMXgvgUnOzwzBk+U0w==",
+      "sha512": "qKt7Kt7hY0FcAN2bFyH8Sj9RxQSIw7chgyN/lB4aXHoAdooEagLbDf522y1wdlyvT/vN/iwxpQUBxzhw+/9z7A==",
       "type": "package",
       "path": "system.runtime.caching/4.5.0",
       "files": [
@@ -7364,7 +7512,7 @@
       ]
     },
     "System.Runtime.CompilerServices.Unsafe/4.5.2": {
-      "sha512": "wprSFgext8cwqymChhrBLu62LMg/1u92bU+VOwyfBimSPVFXtsNqEWC92Pf9ofzJFlk4IHmJA75EDJn1b2goAQ==",
+      "sha512": "hMkdWxksypQlFXB7JamQegDscxEAQO4FHd/lw/zlSZU9dZgAij65xjCrXer183wvoNAzJic5zzjj2oc9/dloWg==",
       "type": "package",
       "path": "system.runtime.compilerservices.unsafe/4.5.2",
       "files": [
@@ -7927,31 +8075,67 @@
         "system.security.cryptography.algorithms.nuspec"
       ]
     },
-    "System.Security.Cryptography.Cng/4.3.0": {
-      "sha512": "03idZOqFlsKRL4W+LuCpJ6dBYDUWReug6lZjBa3uJWnk5sPCUXckocevTaUA8iT/MFSrY/2HXkOt753xQ/cf8g==",
+    "System.Security.Cryptography.Cng/4.5.0": {
+      "sha512": "O4tqXxWCD8y1IU1VTgzbuBFwoRahrADhDUxHjwezhHCsqyFNyQ5EytjWBxu0EsZuH14b4UO2pFkG063K2h/9Ug==",
       "type": "package",
-      "path": "system.security.cryptography.cng/4.3.0",
+      "path": "system.security.cryptography.cng/4.5.0",
       "files": [
         ".nupkg.metadata",
-        "ThirdPartyNotices.txt",
-        "dotnet_library_license.txt",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
         "lib/net46/System.Security.Cryptography.Cng.dll",
         "lib/net461/System.Security.Cryptography.Cng.dll",
-        "lib/net463/System.Security.Cryptography.Cng.dll",
+        "lib/net462/System.Security.Cryptography.Cng.dll",
+        "lib/net47/System.Security.Cryptography.Cng.dll",
+        "lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.Cng.dll",
+        "lib/uap10.0.16299/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
         "ref/net46/System.Security.Cryptography.Cng.dll",
         "ref/net461/System.Security.Cryptography.Cng.dll",
-        "ref/net463/System.Security.Cryptography.Cng.dll",
+        "ref/net461/System.Security.Cryptography.Cng.xml",
+        "ref/net462/System.Security.Cryptography.Cng.dll",
+        "ref/net462/System.Security.Cryptography.Cng.xml",
+        "ref/net47/System.Security.Cryptography.Cng.dll",
+        "ref/net47/System.Security.Cryptography.Cng.xml",
+        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
+        "ref/netcoreapp2.0/System.Security.Cryptography.Cng.xml",
+        "ref/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
+        "ref/netcoreapp2.1/System.Security.Cryptography.Cng.xml",
         "ref/netstandard1.3/System.Security.Cryptography.Cng.dll",
         "ref/netstandard1.4/System.Security.Cryptography.Cng.dll",
         "ref/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "runtimes/unix/lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Cng.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.Cng.xml",
+        "ref/uap10.0.16299/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
         "runtimes/win/lib/net46/System.Security.Cryptography.Cng.dll",
         "runtimes/win/lib/net461/System.Security.Cryptography.Cng.dll",
-        "runtimes/win/lib/net463/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/net462/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/net47/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Security.Cryptography.Cng.dll",
+        "runtimes/win/lib/netcoreapp2.1/System.Security.Cryptography.Cng.dll",
         "runtimes/win/lib/netstandard1.4/System.Security.Cryptography.Cng.dll",
         "runtimes/win/lib/netstandard1.6/System.Security.Cryptography.Cng.dll",
-        "system.security.cryptography.cng.4.3.0.nupkg.sha512",
-        "system.security.cryptography.cng.nuspec"
+        "runtimes/win/lib/uap10.0.16299/_._",
+        "system.security.cryptography.cng.4.5.0.nupkg.sha512",
+        "system.security.cryptography.cng.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Security.Cryptography.Csp/4.3.0": {
@@ -8069,7 +8253,7 @@
       ]
     },
     "System.Security.Cryptography.ProtectedData/4.5.0": {
-      "sha512": "wLBKzFnDCxP12VL9ANydSYhk59fC4cvOr9ypYQLPnAj48NQIhqnjdD2yhP8yEKyBJEjERWS9DisKL7rX5eU25Q==",
+      "sha512": "s/MFK8BvgtejZj5a8qAPDXEGBtWkpFX98qwQP/wqVa9CgIC7LrKHxDFdlN5x6afGAb0ZVBVGIZlCdBLnO2QjZw==",
       "type": "package",
       "path": "system.security.cryptography.protecteddata/4.5.0",
       "files": [
@@ -8229,7 +8413,7 @@
       ]
     },
     "System.Security.SecureString/4.3.0": {
-      "sha512": "PnXp38O9q/2Oe4iZHMH60kinScv6QiiL2XH54Pj2t0Y6c2zKPEiAZsM/M3wBOHLNTBDFP0zfy13WN2M0qFz5jg==",
+      "sha512": "VQRz+JB9J9NVIKT7ZpIvDUIhq6nNhKfoo1sWLwBvbat+A78FIUS54XXn9a+xu2VFXfWpR8vn6LenYqNKAuq0Eg==",
       "type": "package",
       "path": "system.security.securestring/4.3.0",
       "files": [
@@ -8337,7 +8521,7 @@
       ]
     },
     "System.Text.Encoding.CodePages/4.5.1": {
-      "sha512": "4J2JQXbftjPMppIHJ7IC+VXQ9XfEagN92vZZNoG12i+zReYlim5dMoXFC1Zzg7tsnKDM7JPo5bYfFK4Jheq44w==",
+      "sha512": "Eu3dyUUqDFkuskrrK54VLWC41EVANJNo5vzjojnGAphH+FV63NJg3zs5x0TvRaYDTZ2y+86eIOK43Hg2NXiw7w==",
       "type": "package",
       "path": "system.text.encoding.codepages/4.5.1",
       "files": [
@@ -8458,7 +8642,7 @@
       ]
     },
     "System.Text.Json/4.7.1": {
-      "sha512": "XwzMbct3iNepJaFylN1+l8weWlFburEzXidqleSsLvSXdHSIJHEKtRVKHPlpWcFmJX6k3goPFfVgUfp40RR+bg==",
+      "sha512": "8kC+7DXbAsRPlMo3oeJA/8UoOqk2xB6hmWJX66RSxL0W8qdmx0mElUpMfLnv33U7MNtaeRQcN6avyZCcq3c/8w==",
       "type": "package",
       "path": "system.text.json/4.7.1",
       "files": [
@@ -8700,7 +8884,7 @@
       ]
     },
     "System.Threading.Tasks.Extensions/4.5.3": {
-      "sha512": "+MvhNtcvIbqmhANyKu91jQnvIRVSTiaOiFNfKWwXGHG48YAb4I/TyH8spsySiPYla7gKal5ZnF3teJqZAximyQ==",
+      "sha512": "ELsmPiHFrvulVLpumtz8wx+fNpL2dWZbWM92taW8whM9Vu7bqU9CKzC+mtJR7c/rp+vCShX/TLeDgHLpu7GEcA==",
       "type": "package",
       "path": "system.threading.tasks.extensions/4.5.3",
       "files": [
@@ -9038,35 +9222,20 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
-    "Contracts.DAL.App/1.0.0": {
-      "type": "project",
-      "path": "../Contracts.DAL.App/Contracts.DAL.App.csproj",
-      "msbuildProject": "../Contracts.DAL.App/Contracts.DAL.App.csproj"
-    },
-    "Contracts.DAL.Base/1.0.0": {
-      "type": "project",
-      "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
-      "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
-    },
     "DAL.App.EF/1.0.0": {
       "type": "project",
       "path": "../DAL.App.EF/DAL.App.EF.csproj",
       "msbuildProject": "../DAL.App.EF/DAL.App.EF.csproj"
     },
-    "DAL.Base/1.0.0": {
-      "type": "project",
-      "path": "../DAL.Base/DAL.Base.csproj",
-      "msbuildProject": "../DAL.Base/DAL.Base.csproj"
-    },
-    "DAL.Base.EF/1.0.0": {
-      "type": "project",
-      "path": "../DAL.Base.EF/DAL.Base.EF.csproj",
-      "msbuildProject": "../DAL.Base.EF/DAL.Base.EF.csproj"
-    },
     "Domain/1.0.0": {
       "type": "project",
       "path": "../Domain/Domain.csproj",
       "msbuildProject": "../Domain/Domain.csproj"
+    },
+    "Extensions/1.0.0": {
+      "type": "project",
+      "path": "../Extensions/Extensions.csproj",
+      "msbuildProject": "../Extensions/Extensions.csproj"
     },
     "PublicApi.DTO.v1/1.0.0": {
       "type": "project",
@@ -9078,6 +9247,8 @@
     ".NETCoreApp,Version=v3.1": [
       "DAL.App.EF >= 1.0.0",
       "Domain >= 1.0.0",
+      "Extensions >= 1.0.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 3.1.4",
       "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.2",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.2",
       "Microsoft.AspNetCore.Identity.UI >= 3.1.2",
@@ -9101,13 +9272,13 @@
       "projectName": "WebApp",
       "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/WebApp.csproj",
       "packagesPath": "/Users/kira/.nuget/packages/",
-      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/obj/",
+      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kira/.nuget/NuGet/NuGet.Config"
+        "/Users/kira/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp3.1"
@@ -9124,6 +9295,9 @@
             "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
               "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
             },
+            "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj": {
+              "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj"
+            },
             "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/PublicApi.DTO.v1.csproj": {
               "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/PublicApi.DTO.v1.csproj"
             }
@@ -9139,6 +9313,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": {
+            "target": "Package",
+            "version": "[3.1.4, )"
+          },
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
             "target": "Package",
             "version": "[3.1.2, )"
@@ -9185,17 +9363,46 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "Microsoft.AspNetCore.App": {
-            "privateAssets": "none"
-          },
-          "Microsoft.NETCore.App": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project DAL.App.EF is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project DAL.App.EF supports: netstandard2.1 (.NETStandard,Version=v2.1)",
+      "libraryId": "DAL.App.EF",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project Domain is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project Domain supports: netstandard2.1 (.NETStandard,Version=v2.1)",
+      "libraryId": "Domain",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project Extensions is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project Extensions supports: netstandard2.1 (.NETStandard,Version=v2.1)",
+      "libraryId": "Extensions",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    },
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project PublicApi.DTO.v1 is not compatible with netcoreapp3.1 (.NETCoreApp,Version=v3.1). Project PublicApi.DTO.v1 supports: netstandard2.1 (.NETStandard,Version=v2.1)",
+      "libraryId": "PublicApi.DTO.v1",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v3.1"
+      ]
+    }
+  ]
 }

@@ -10,6 +10,8 @@ dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Fami
 dotnet aspnet-codegenerator controller -name LocationsController -actions -m Location -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 dotnet aspnet-codegenerator controller -name TimesController -actions -m Time -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 
+dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Family -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
+
 
 dotnet aspnet-codegenerator controller -name PersonsController -actions -m Person -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
 dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Family -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f

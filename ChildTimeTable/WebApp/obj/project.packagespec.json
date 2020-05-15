@@ -24,6 +24,9 @@
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
           },
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj"
+          },
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/PublicApi.DTO.v1.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/PublicApi.DTO.v1.csproj"
           }
@@ -39,6 +42,10 @@
   "frameworks": {
     "netcoreapp3.1": {
       "dependencies": {
+        "Microsoft.AspNetCore.Authentication.JwtBearer": {
+          "target": "Package",
+          "version": "[3.1.4, )"
+        },
         "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
           "target": "Package",
           "version": "[3.1.2, )"

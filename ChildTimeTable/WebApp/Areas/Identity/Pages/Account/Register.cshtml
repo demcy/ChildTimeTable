@@ -32,7 +32,9 @@
             
             <div class="form-group">
                 <label asp-for="Input.PersonType" class="control-label"></label>
-                <select asp-for="Input.PersonType" class="form-control" asp-items="@Html.GetEnumSelectList<PersonType>()"></select>
+                <select asp-for="Input.PersonType" class="form-control" asp-items="@Html.GetEnumSelectList<PersonType>()">
+                    <option selected>Select your family role</option>
+                </select>
                 <span asp-validation-for="Input.PersonType" class="text-danger"></span>
             </div>
             

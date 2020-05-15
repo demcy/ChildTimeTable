@@ -1,0 +1,8 @@
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/bin/Debug/netstandard2.1/Extensions.deps.json
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/bin/Debug/netstandard2.1/Extensions.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/bin/Debug/netstandard2.1/Extensions.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj/Debug/netstandard2.1/Extensions.csprojAssemblyReference.cache
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj/Debug/netstandard2.1/Extensions.AssemblyInfoInputs.cache
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj/Debug/netstandard2.1/Extensions.AssemblyInfo.cs
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj/Debug/netstandard2.1/Extensions.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj/Debug/netstandard2.1/Extensions.pdb

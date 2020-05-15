@@ -1,6 +1,9 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 using Contracts.DAL.App;
 using Contracts.DAL.App.Repositories;
@@ -12,11 +15,15 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Localization;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+
 
 namespace WebApp
 {
@@ -32,16 +39,56 @@ namespace WebApp
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
                     Configuration.GetConnectionString("AzureSqlConnection")));
 
             services.AddScoped<IAppUnitOfWork, AppUnitOfWork>();
 
-            services.AddDefaultIdentity<AppUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddDefaultIdentity<AppUser>(options=>options.SignIn.RequireConfirmedAccount = true)
+                .AddRoles<AppRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
+            /*services.AddIdentity<AppUser,AppRole>()//(options=>options.SignIn.RequireConfirmedAccount = true)
+                .AddDefaultUI()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();*/
             services.AddControllersWithViews();
             services.AddRazorPages();
+            
+            // =============== JWT support ===============
+            JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // => remove default claims
+            services
+                .AddAuthentication()
+                .AddCookie(options => { options.SlidingExpiration = true; })
+                .AddJwtBearer(cfg =>
+                {
+                    cfg.RequireHttpsMetadata = false;
+                    cfg.SaveToken = true;
+                    cfg.TokenValidationParameters = new TokenValidationParameters
+                    {
+                        ValidIssuer = Configuration["JWT:Issuer"],
+                        ValidAudience = Configuration["JWT:Issuer"],
+                        IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:SigningKey"])),
+                        ClockSkew = TimeSpan.Zero // remove delay of token when expire
+                    };
+                });
+            
+            services.Configure<RequestLocalizationOptions>(options =>{
+                var supportedCultures = new[]{
+                    new CultureInfo(name: "en-GB"),
+                    new CultureInfo(name: "ru-RU")
+                };
+
+                // State what the default culture for your application is. 
+                options.DefaultRequestCulture = new RequestCulture(culture: "en-GB", uiCulture: "en-GB");
+
+                // You must explicitly state which cultures your application supports.
+                options.SupportedCultures = supportedCultures;
+
+                // These are the cultures the app supports for UI strings
+                options.SupportedUICultures = supportedCultures;
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -62,7 +109,9 @@ namespace WebApp
                 app.UseHsts();
             }
             
-            
+            app.UseRequestLocalization(
+                options: app.ApplicationServices
+                    .GetService<IOptions<RequestLocalizationOptions>>().Value);
             
             
 
@@ -85,14 +134,41 @@ namespace WebApp
             
         }
 
-        private static void UpdateDatabase(IApplicationBuilder app, IWebHostEnvironment env, IConfiguration Configuration)
+        private static void UpdateDatabase(IApplicationBuilder app, IWebHostEnvironment env, 
+            IConfiguration Configuration)
         {
             using var serviceScope = app.ApplicationServices
                 .GetRequiredService<IServiceScopeFactory>()
                 .CreateScope();
             using var ctx = serviceScope.ServiceProvider.GetService<ApplicationDbContext>();
-            ctx.Database.EnsureDeleted();
-            ctx.Database.Migrate();
+            using var userManager = serviceScope.ServiceProvider.GetService<UserManager<AppUser>>();
+            using var roleManager = serviceScope.ServiceProvider.GetService<RoleManager<AppRole>>();
+            
+            if (Configuration["AppDataInitialization:DropDataBase"] == "True")
+            {
+                Console.WriteLine("DropDataBase");
+                DAL.App.EF.Helpers.DataInitializers.DeleteDataBase(ctx);
+            }
+            if (Configuration["AppDataInitialization:MigrateDataBase"] == "True")
+            {
+                Console.WriteLine("MigrateDataBase");
+                DAL.App.EF.Helpers.DataInitializers.MigrateDataBase(ctx);
+            }
+            if (Configuration["AppDataInitialization:SeedIdentity"] == "True")
+            {
+                Console.WriteLine("SeedIdentity");
+                DAL.App.EF.Helpers.DataInitializers.SeedIdentity(userManager, roleManager);
+            }
+            if (Configuration.GetValue<bool>("AppDataInitialization:SeedData"))
+            {
+                Console.WriteLine("SeedData");
+                DAL.App.EF.Helpers.DataInitializers.SeedData(ctx);
+            }
+            
+            
+            
+            
+            
 
         }
     }

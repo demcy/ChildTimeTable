@@ -18,13 +18,13 @@
       "projectName": "Contracts.DAL.Base",
       "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj",
       "packagesPath": "/Users/kira/.nuget/packages/",
-      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/obj/",
+      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/obj",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kira/.nuget/NuGet/NuGet.Config"
+        "/Users/kira/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -54,13 +54,7 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true,
-        "frameworkReferences": {
-          "NETStandard.Library": {
-            "privateAssets": "all"
-          }
-        },
-        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        "warn": true
       }
     }
   }
