@@ -13,7 +13,6 @@ namespace Domain
     public class Notification<TKey> : DomainEntity<TKey>
         where TKey : struct, IEquatable<TKey>
     {
-        //public int NotificationId { get; set; }
         public virtual string Body { get; set; } = default!;
         public virtual bool Status { get; set; } = default!;
 
