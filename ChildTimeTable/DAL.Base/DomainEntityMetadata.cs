@@ -10,6 +10,6 @@ namespace DAL.Base
         public virtual string? ChangedBy { get; set; }
         public virtual DateTime ChangedAt { get; set; } = DateTime.Now;
         public virtual string? DeletedBy { get; set; }
-        public virtual DateTime? DeletedAt { get; set; } = DateTime.Now;
+        public virtual DateTime? DeletedAt { get; set; }
     }
 }

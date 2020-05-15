@@ -7,6 +7,7 @@
       <e p="_Solution Items" t="Include" />
       <e p="BLL" t="Include" />
       <e p="BLL.Base" t="IncludeRecursive">
+        <e p="BaseBLL.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="BLL.Base.csproj" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
@@ -16,17 +17,28 @@
             </e>
           </e>
         </e>
+        <e p="Services" t="Include">
+          <e p="BaseEntityService.cs" t="Include" />
+          <e p="BaseService.cs" t="Include" />
+        </e>
       </e>
       <e p="ChildTimeTable.sln" t="IncludeFlat" />
       <e p="Contracts.BLL.Base" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.BLL.Base.csproj" t="IncludeRecursive" />
+        <e p="IBaseBLL.cs" t="Include" />
+        <e p="Mappers" t="Include">
+          <e p="IBaseBLLMapper.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
               <e p="Contracts.BLL.Base.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
+        </e>
+        <e p="Services" t="Include">
+          <e p="IBaseService.cs" t="Include" />
         </e>
       </e>
       <e p="Contracts.DAL.App" t="IncludeRecursive">

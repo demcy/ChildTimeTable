@@ -1,11 +1,49 @@
 {
   "version": 3,
   "targets": {
-    ".NETStandard,Version=v2.1": {}
+    ".NETStandard,Version=v2.1": {
+      "Contracts.BLL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Contracts.DAL.Base": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Contracts.BLL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.BLL.Base.dll": {}
+        }
+      },
+      "Contracts.DAL.Base/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Contracts.DAL.Base.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Contracts.DAL.Base.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "Contracts.BLL.Base/1.0.0": {
+      "type": "project",
+      "path": "../Contracts.BLL.Base/Contracts.BLL.Base.csproj",
+      "msbuildProject": "../Contracts.BLL.Base/Contracts.BLL.Base.csproj"
+    },
+    "Contracts.DAL.Base/1.0.0": {
+      "type": "project",
+      "path": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj",
+      "msbuildProject": "../Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    ".NETStandard,Version=v2.1": []
+    ".NETStandard,Version=v2.1": [
+      "Contracts.BLL.Base >= 1.0.0",
+      "Contracts.DAL.Base >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "/Users/kira/.nuget/packages/": {},
@@ -18,13 +56,13 @@
       "projectName": "BLL.Base",
       "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj",
       "packagesPath": "/Users/kira/.nuget/packages/",
-      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/obj",
+      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kira/.config/NuGet/NuGet.Config"
+        "/Users/kira/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -34,7 +72,14 @@
       },
       "frameworks": {
         "netstandard2.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
+              "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj"
+            },
+            "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
+              "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -54,7 +99,13 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }
