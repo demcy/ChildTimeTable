@@ -6,11 +6,11 @@ using DAL.Base;
 
 namespace Domain
 {
-    public class Location : Location<Guid>, IDomainEntity
+    public class Location : Location<Guid>, IDomainEntityBaseMetadata
     {
         
     }
-    public class Location<TKey> : DomainEntity<TKey>
+    public class Location<TKey> : DomainEntityBaseMetadata<TKey>
         where TKey : struct, IEquatable<TKey>
     {
         public virtual string LocationValue { get; set; } = default!;

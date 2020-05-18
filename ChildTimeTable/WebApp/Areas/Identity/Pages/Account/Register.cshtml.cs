@@ -104,7 +104,7 @@ namespace WebApp.Areas.Identity.Pages.Account
                     UserName = Input.Email,
                     FirstName = Input.FirstName,
                     LastName = Input.LastName,
-                    PersonType = Input.PersonType,
+                    //PersonType = Input.PersonType,
                     Email = Input.Email
                 };
                 var result = await _userManager.CreateAsync(user, Input.Password);
@@ -118,7 +118,7 @@ namespace WebApp.Areas.Identity.Pages.Account
                 string logo = logos[rnd.Next(logos.Count)];
                 Person p = new Person();
                 p.AppUserId = user.Id;
-                p.PersonType = user.PersonType;
+                //p.PersonType = user.PersonType;
                 p.FirstName = Input.FirstName;
                 p.LastName = Input.LastName;
                 p.FamilyId = f.Id;

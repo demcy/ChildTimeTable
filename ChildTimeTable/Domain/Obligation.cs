@@ -6,11 +6,11 @@ using DAL.Base;
 
 namespace Domain
 {
-    public class Obligation : Obligation<Guid>, IDomainEntity
+    public class Obligation : Obligation<Guid>, IDomainEntityBaseMetadata
     {
             
     }
-    public class Obligation<TKey> : DomainEntity
+    public class Obligation<TKey> : DomainEntityBaseMetadata
     {
         public virtual string Body { get; set; } = default!;
 

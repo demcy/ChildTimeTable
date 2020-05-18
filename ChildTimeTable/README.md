@@ -13,12 +13,12 @@ dotnet aspnet-codegenerator controller -name TimesController -actions -m Time -d
 dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Family -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 
 
-dotnet aspnet-codegenerator controller -name PersonsController -actions -m Person -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
-dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Family -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
-dotnet aspnet-codegenerator controller -name NotificationsController -actions -m Notification -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
-dotnet aspnet-codegenerator controller -name ObligationsController -actions -m Obligation -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
-dotnet aspnet-codegenerator controller -name LocationsController -actions -m Location -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
-dotnet aspnet-codegenerator controller -name TimesController -actions -m Time -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name PersonsController -actions -m Domain.Person -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name FamiliesController -actions -m Domain.Family -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name NotificationsController -actions -m Domain.Notification -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name ObligationsController -actions -m Domain.Obligation -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name LocationsController -actions -m Domain.Location -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
+dotnet aspnet-codegenerator controller -name TimesController -actions -m Domain.Time -dc ApplicationDbContext -outDir ApiControllers -api --useAsyncActions  -f
 
 public async Task<IActionResult> Index()
         {

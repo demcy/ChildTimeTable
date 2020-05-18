@@ -1,3 +1,14 @@
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/bin/Debug/netstandard2.1/DAL.Base.deps.json
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/bin/Debug/netstandard2.1/DAL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/bin/Debug/netstandard2.1/DAL.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/bin/Debug/netstandard2.1/Contracts.DAL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/bin/Debug/netstandard2.1/Contracts.DAL.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/obj/Debug/netstandard2.1/DAL.Base.csprojAssemblyReference.cache
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/obj/Debug/netstandard2.1/DAL.Base.AssemblyInfoInputs.cache
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/obj/Debug/netstandard2.1/DAL.Base.AssemblyInfo.cs
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/obj/Debug/netstandard2.1/DAL.Base.csproj.CopyComplete
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/obj/Debug/netstandard2.1/DAL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/temp/AspSolution/DAL.Base/obj/Debug/netstandard2.1/DAL.Base.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/bin/Debug/netstandard2.1/DAL.Base.deps.json
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/bin/Debug/netstandard2.1/DAL.Base.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/bin/Debug/netstandard2.1/DAL.Base.pdb

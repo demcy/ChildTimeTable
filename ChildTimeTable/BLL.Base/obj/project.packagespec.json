@@ -20,9 +20,6 @@
         "projectReferences": {
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj"
-          },
-          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
-            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
           }
         }
       }
@@ -35,6 +32,12 @@
   },
   "frameworks": {
     "netstandard2.1": {
+      "dependencies": {
+        "AutoMapper": {
+          "target": "Package",
+          "version": "[9.0.0, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",

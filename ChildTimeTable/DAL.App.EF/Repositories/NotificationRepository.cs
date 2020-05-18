@@ -4,30 +4,39 @@ using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
 using Contracts.DAL.App.Repositories;
+using DAL.Base.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
+using Notification = DAL.App.DTO.Notification;
 
 namespace DAL.App.EF.Repositories
 {
-    public class NotificationRepository: EFBaseRepository<Notification, ApplicationDbContext>, INotificationRepository
+    public class NotificationRepository : EFBaseRepository<ApplicationDbContext, Domain.Notification, DAL.App.DTO.Notification>, INotificationRepository
     {
-        public NotificationRepository(ApplicationDbContext dbContext) : base(dbContext)
+        public NotificationRepository(ApplicationDbContext dbContext) : base(dbContext, new BaseDALMapper<Domain.Notification, DAL.App.DTO.Notification>())
         {
         }
 
-        /*public async override Task<IEnumerable<Notification>> AllAsync()
+
+        public Task<IEnumerable<Notification>> AllAsync(Guid? userId = null)
         {
-            //RepoDbSet.Include()
+            throw new NotImplementedException();
+        }
 
-            DbSet<Person> personDbSet = RepoDbContext.Set<Person>();
+        public Task<Notification> FirstOrDefaultAsync(Guid id, Guid? userId = null)
+        {
+            throw new NotImplementedException();
+        }
 
-            var person = personDbSet.Single(p => p.Id == id);
-            var x = RepoDbSet
-                .Include(n => n.Recipient)
-                .Where(item => item.RecipientId == person.Id)
-                .Include(n => n.Sender);
-            return await x.ToListAsync();
-        }*/
+        public Task<bool> ExistsAsync(Guid id, Guid? userId = null)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task DeleteAsync(Guid id, Guid? userId = null)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

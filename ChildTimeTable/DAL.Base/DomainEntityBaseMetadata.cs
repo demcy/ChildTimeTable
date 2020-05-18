@@ -3,20 +3,18 @@ using Contracts.DAL.Base;
 
 namespace DAL.Base
 {
-    public abstract class DomainEntity: DomainEntity<Guid>
+    public abstract class DomainEntityBaseMetadata :  DomainEntityBaseMetadata<Guid>
     {
-        
     }
-    
-    public abstract class DomainEntity<TKey>: IDomainEntity<TKey> 
-        where TKey : struct, IEquatable<TKey>
+
+    public abstract class DomainEntityBaseMetadata<TKey> :  IDomainEntityBaseMetadata<TKey> 
+        where TKey : IEquatable<TKey>
     {
         public virtual TKey Id { get; set; } = default!;
         public virtual string? CreatedBy { get; set; }
         public virtual DateTime CreatedAt { get; set; }
         public virtual string? ChangedBy { get; set; }
         public virtual DateTime ChangedAt { get; set; }
-        public virtual string? DeletedBy { get; set; }
-        public virtual DateTime? DeletedAt { get; set; }
     }
+
 }

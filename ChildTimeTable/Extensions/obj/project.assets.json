@@ -146,7 +146,7 @@
       ]
     },
     "Microsoft.IdentityModel.JsonWebTokens/6.5.1": {
-      "sha512": "6tCltlZUY16am/HXbwfxWYqeCEhRpNKbUQWKLpGsqMSwcNbGoG2BzZhA97DFdwfcXaLuo3oO0LjO0FUKTBopWg==",
+      "sha512": "zOnP8Hv6JcA+E2qeHGVo6KM7lV7J9kj2a/+VasTTqZ1mkLhnxTLpX7oZ3n8HJ7hZXuG2KY3P/EaCt6eApM30kQ==",
       "type": "package",
       "path": "microsoft.identitymodel.jsonwebtokens/6.5.1",
       "files": [
@@ -163,7 +163,7 @@
       ]
     },
     "Microsoft.IdentityModel.Logging/6.5.1": {
-      "sha512": "URnSa+BrHzPBfrB66ycjJIFuDUBh1NA+nduzv94vUsySbRXp8s3X5oubaX1F7dfuIGdXAQ/mEYHDkPXkLOVQ1g==",
+      "sha512": "iujlW4mgBKaib0gB3wbJLCCRhaNmxt504O5aGMdIH0JLIjCw+LbX+q3SFf3u0C29rYErvQQ9xeAtGywjvSGLxg==",
       "type": "package",
       "path": "microsoft.identitymodel.logging/6.5.1",
       "files": [
@@ -180,7 +180,7 @@
       ]
     },
     "Microsoft.IdentityModel.Tokens/6.5.1": {
-      "sha512": "kdE/JZPgiryo0eecQqtFV/HvpwRF5bXBBPjB06d5RZ0qpTC6lqWsrWnlffeBdvzqmGivkjVSofopXjjqy9ddrA==",
+      "sha512": "+kKU5tbizQmXee6iYJwqxROInlohMYhKYbLa37BUnU/YBhCvPapi2iywE4bVgno2NOF78p7VBERd/s+gYM/9dA==",
       "type": "package",
       "path": "microsoft.identitymodel.tokens/6.5.1",
       "files": [
@@ -197,7 +197,7 @@
       ]
     },
     "System.IdentityModel.Tokens.Jwt/6.5.1": {
-      "sha512": "SxQV8+bYCtWKEyUNBx3ksBo1U1SyKpYyb9D3xMvByrF1ChMDzvYZB6UiRTmpl5j+ow8/6jEv3hi6jZZcRJQswA==",
+      "sha512": "2t8+04Ozz4vX10X1h+lqV8X7PkLUSRTr+kRY4QNpAeTUngqGqv180A1JDK2piGEKCvNbm6xGGkajL9STgI0JJA==",
       "type": "package",
       "path": "system.identitymodel.tokens.jwt/6.5.1",
       "files": [
@@ -294,13 +294,13 @@
       "projectName": "Extensions",
       "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj",
       "packagesPath": "/Users/kira/.nuget/packages/",
-      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj",
+      "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/kira/.config/NuGet/NuGet.Config"
+        "/Users/kira/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netstandard2.1"
@@ -340,7 +340,13 @@
           "net48"
         ],
         "assetTargetFallback": true,
-        "warn": true
+        "warn": true,
+        "frameworkReferences": {
+          "NETStandard.Library": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
       }
     }
   }

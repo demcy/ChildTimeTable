@@ -4,6 +4,312 @@
     "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/WebApp.csproj": {}
   },
   "projects": {
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj",
+        "projectName": "BLL.App.DTO",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/BLL.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/BLL.App.csproj",
+        "projectName": "BLL.App",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/BLL.App.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/Contracts.BLL.App.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/Contracts.BLL.App.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj",
+        "projectName": "BLL.Base",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/Contracts.BLL.App.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/Contracts.BLL.App.csproj",
+        "projectName": "Contracts.BLL.App",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/Contracts.BLL.App.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj",
+        "projectName": "Contracts.BLL.Base",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
     "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -30,6 +336,9 @@
             "projectReferences": {
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj"
               },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
@@ -98,6 +407,69 @@
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.Extensions.Identity.Stores": {
+              "target": "Package",
+              "version": "[3.1.3, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj",
+        "projectName": "DAL.App.DTO",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
           "imports": [
             "net461",
             "net462",
@@ -144,6 +516,9 @@
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj"
               },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj"
+              },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj"
               },
@@ -164,19 +539,15 @@
           "dependencies": {
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.2, )"
-            },
-            "Pomelo.EntityFrameworkCore.MySql": {
-              "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -240,9 +611,13 @@
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.3, )"
             }
           },
           "imports": [
@@ -371,7 +746,7 @@
           "dependencies": {
             "Microsoft.Extensions.Identity.Stores": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             },
             "System.ComponentModel.Annotations": {
               "target": "Package",
@@ -596,6 +971,12 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/BLL.App.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/BLL.App.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/Contracts.BLL.App.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/Contracts.BLL.App.csproj"
+              },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj"
               },
@@ -629,35 +1010,39 @@
             },
             "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             },
             "Microsoft.AspNetCore.Identity.UI": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Versioning": {
+              "target": "Package",
+              "version": "[4.1.1, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             },
             "Microsoft.EntityFrameworkCore.Sqlite": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "target": "Package",
-              "version": "[3.1.2, )"
+              "version": "[3.1.4, )"
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[3.1.1, )"
+              "version": "[3.1.2, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

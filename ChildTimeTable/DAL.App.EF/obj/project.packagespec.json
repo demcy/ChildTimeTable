@@ -21,6 +21,9 @@
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/Contracts.DAL.App.csproj"
           },
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj"
+          },
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj"
           },
@@ -41,19 +44,15 @@
       "dependencies": {
         "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
           "target": "Package",
-          "version": "[3.1.2, )"
+          "version": "[3.1.3, )"
         },
         "Microsoft.EntityFrameworkCore": {
           "target": "Package",
-          "version": "[3.1.2, )"
+          "version": "[3.1.3, )"
         },
         "Microsoft.EntityFrameworkCore.SqlServer": {
           "target": "Package",
-          "version": "[3.1.2, )"
-        },
-        "Pomelo.EntityFrameworkCore.MySql": {
-          "target": "Package",
-          "version": "[3.1.1, )"
+          "version": "[3.1.3, )"
         }
       },
       "imports": [

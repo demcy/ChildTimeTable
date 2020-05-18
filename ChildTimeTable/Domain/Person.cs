@@ -11,12 +11,16 @@ using System.ComponentModel.DataAnnotations;
 namespace Domain
 {
 
-    public class Person : Person<Guid>, IDomainEntity
+    
+
+    
+    public class Person : Person<Guid, AppUser>, IDomainEntityBaseMetadata, IDomainEntityUser<AppUser>
     {
         
     }
-    public class Person<TKey> : DomainEntity<TKey>
-        where TKey : struct, IEquatable<TKey>
+    public class Person<TKey, TUser> : DomainEntityBaseMetadata<TKey>, IDomainEntityUser<TKey, TUser>
+        where TKey : IEquatable<TKey>
+        where TUser : AppUser<TKey>
     {
         [MinLength(1)] [MaxLength(64)]
         [Display(Name = nameof(FirstName), ResourceType = typeof(Resources.Domain.Person))]
@@ -25,10 +29,6 @@ namespace Domain
         [Display(Name = nameof(LastName), ResourceType = typeof(Resources.Domain.Person))]
         public virtual string LastName { get; set; } = default!;
         public virtual string Logo { get; set; } = default!;
-        
-        public virtual TKey AppUserId { get; set; }
-        public virtual AppUser? AppUser { get; set; }
-        
         public virtual TKey FamilyId { get; set; }
         public virtual Family? Family { get; set; }
         
@@ -47,6 +47,8 @@ namespace Domain
         public virtual ICollection<Obligation>? ChildObligations { get; set; }
         
         public virtual ICollection<Location>? Locations { get; set; }
-    
+
+        public TKey AppUserId { get; set; } = default!;
+        public TUser? AppUser { get; set; }
     }
 }

@@ -6,11 +6,11 @@ using DAL.Base;
 
 namespace Domain
 {
-    public class Notification : Notification<Guid>, IDomainEntity
+    public class Notification : Notification<Guid>, IDomainEntityBaseMetadata
         {
             
         }
-    public class Notification<TKey> : DomainEntity<TKey>
+    public class Notification<TKey> : DomainEntityBaseMetadata<TKey>
         where TKey : struct, IEquatable<TKey>
     {
         public virtual string Body { get; set; } = default!;

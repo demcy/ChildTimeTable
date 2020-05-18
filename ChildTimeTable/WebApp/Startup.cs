@@ -5,8 +5,11 @@ using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BLL.App;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Contracts.DAL.App.Repositories;
+using Contracts.DAL.Base;
 using DAL.App.EF;
 using DAL.App.EF.Repositories;
 using Domain.Identity;
@@ -16,6 +19,7 @@ using Microsoft.AspNetCore.Identity.UI;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Localization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -23,6 +27,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using WebApp.Helpers;
 
 
 namespace WebApp
@@ -44,7 +49,9 @@ namespace WebApp
                 options.UseSqlServer(
                     Configuration.GetConnectionString("AzureSqlConnection")));
 
+            services.AddScoped<IUserNameProvider, UserNameProvider>();
             services.AddScoped<IAppUnitOfWork, AppUnitOfWork>();
+            //services.AddScoped<IAppBLL, AppBLL>();
 
             services.AddDefaultIdentity<AppUser>(options=>options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<AppRole>()
@@ -88,6 +95,13 @@ namespace WebApp
 
                 // These are the cultures the app supports for UI strings
                 options.SupportedUICultures = supportedCultures;
+            });
+
+            services.AddApiVersioning(options =>
+            {
+                options.ReportApiVersions = true;
+                //options.DefaultApiVersion = new ApiVersion(1,0);
+                //options.AssumeDefaultVersionWhenUnspecified = false;
             });
         }
 
@@ -147,12 +161,12 @@ namespace WebApp
             if (Configuration["AppDataInitialization:DropDataBase"] == "True")
             {
                 Console.WriteLine("DropDataBase");
-                DAL.App.EF.Helpers.DataInitializers.DeleteDataBase(ctx);
+                DAL.App.EF.Helpers.DataInitializers.DeleteDatabase(ctx);
             }
             if (Configuration["AppDataInitialization:MigrateDataBase"] == "True")
             {
                 Console.WriteLine("MigrateDataBase");
-                DAL.App.EF.Helpers.DataInitializers.MigrateDataBase(ctx);
+                DAL.App.EF.Helpers.DataInitializers.MigrateDatabase(ctx);
             }
             if (Configuration["AppDataInitialization:SeedIdentity"] == "True")
             {

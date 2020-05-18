@@ -6,7 +6,10 @@
 
     <ItemGroup>
       <ProjectReference Include="..\Contracts.BLL.Base\Contracts.BLL.Base.csproj" />
-      <ProjectReference Include="..\Contracts.DAL.Base\Contracts.DAL.Base.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="9.0.0" />
     </ItemGroup>
 
 </Project>

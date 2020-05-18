@@ -16,9 +16,9 @@ namespace Domain.Identity
         [MaxLength(128)] [MinLength(1)] public string FirstName { get; set; } = default!;
         [MaxLength(128)] [MinLength(1)] public string LastName { get; set; } = default!;
 
-        public virtual PersonType PersonType { get; set; } = default!;
+        //public virtual PersonType PersonType { get; set; } = default!;
 
-        public virtual ICollection<Person>? Persons { get; set; }
+        //public virtual ICollection<Person>? Persons { get; set; }
         
             
                 

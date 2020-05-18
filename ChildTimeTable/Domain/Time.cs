@@ -5,11 +5,11 @@ using DAL.Base;
 
 namespace Domain
 {
-    public class Time : Time<Guid>, IDomainEntity
+    public class Time : Time<Guid>, IDomainEntityBaseMetadata
     {
         
     }
-    public class Time<TKey> : DomainEntity
+    public class Time<TKey> : DomainEntityBaseMetadata
     {
         public virtual DateTime StartTime { get; set; } = default!;
         public virtual DateTime EndTime { get; set; } = default!;
