@@ -218,7 +218,8 @@
       },
       "BLL.App.DTO/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0"
+          "Contracts.DAL.Base": "1.0.0",
+          "Resources": "1.0.0"
         },
         "runtime": {
           "BLL.App.DTO.dll": {}
@@ -230,6 +231,16 @@
         },
         "runtime": {
           "Contracts.DAL.Base.dll": {}
+        }
+      },
+      "Resources/1.0.0": {
+        "runtime": {
+          "Resources.dll": {}
+        },
+        "resources": {
+          "ru/Resources.resources.dll": {
+            "locale": "ru"
+          }
         }
       }
     }
@@ -379,6 +390,11 @@
       "sha512": ""
     },
     "Contracts.DAL.Base/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Resources/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

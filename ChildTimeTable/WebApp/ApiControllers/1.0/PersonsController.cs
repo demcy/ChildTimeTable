@@ -32,7 +32,14 @@ namespace WebApp.ApiControllers._1._0
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
         {
-            var persons = await _bll.Persons.AllAsync(User.UserGuidId());
+            var persons = (await _bll.Persons.AllAsync(User.UserGuidId()))
+                .Select(bllEntity=> new Person()
+                {
+                    Id = bllEntity.Id,
+                    FirstName = bllEntity.FirstName,
+                    LastName = bllEntity.LastName,
+                    LocationCount = bllEntity.LocationCount
+                });
             return Ok(persons);
         }
     

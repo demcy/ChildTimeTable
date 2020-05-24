@@ -15,6 +15,9 @@ namespace DAL.App.DTO
         where TKey : IEquatable<TKey>
     {
         public TKey Id { get; set; } = default!;
+        
+        //public string Description { get; set; }
+        
         public virtual string FirstName { get; set; } = default!;
         public virtual string LastName { get; set; } = default!;
         public virtual TKey AppUserId{ get; set; } = default!;
@@ -41,6 +44,8 @@ namespace DAL.App.DTO
         public virtual string FirstName { get; set; } = default!;
         public virtual string LastName { get; set; } = default!;
         public virtual int LocationCount { get; set; }
+        
+        //public string Description { get; set; }
     }
 
     

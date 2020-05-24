@@ -225,7 +225,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0"
+          "Contracts.DAL.Base": "1.0.0",
+          "Resources": "1.0.0"
         },
         "compile": {
           "bin/placeholder/BLL.App.DTO.dll": {}

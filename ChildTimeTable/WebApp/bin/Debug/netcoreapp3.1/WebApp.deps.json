@@ -2829,7 +2829,8 @@
       },
       "BLL.App.DTO/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0"
+          "Contracts.DAL.Base": "1.0.0",
+          "Resources": "1.0.0"
         },
         "runtime": {
           "BLL.App.DTO.dll": {}
@@ -2997,9 +2998,6 @@
         "resources": {
           "ru/Resources.resources.dll": {
             "locale": "ru"
-          },
-          "en/Resources.resources.dll": {
-            "locale": "en"
           }
         },
         "compile": {

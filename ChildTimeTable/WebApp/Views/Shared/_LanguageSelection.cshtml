@@ -14,7 +14,9 @@
     <div class="dropdown-menu">
         @foreach (var item in cultureItems)
         {
-            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="@item.Value" asp-route-returnUrl="@Context.Request.Path@Context.Request.QueryString">@item.Text</a> 
+            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="SetLanguage" asp-route-culture="@item.Value" 
+               asp-route-returnUrl="@Context.Request.Path@Context.Request.QueryString">@item.Text
+                </a>
         }
         
 

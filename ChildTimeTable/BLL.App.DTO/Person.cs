@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using BLL.App.DTO.Identity;
 using Contracts.DAL.Base;
@@ -16,11 +17,17 @@ namespace BLL.App.DTO
     {
         public TKey Id { get; set; }
         
+        
+        //public string Description { get; set; }
+        [Display(Name = nameof(FirstName), Prompt = nameof(FirstName) + "_Prompt", ResourceType = typeof(Resources.BLL.App.DTO.Person))]
         public virtual string FirstName { get; set; } = default!;
+        
+        [Display(Name = nameof(LastName), ResourceType = typeof(Resources.BLL.App.DTO.Person))]
         public virtual string LastName { get; set; } = default!;
         public virtual string Logo { get; set; } = default!;
         public virtual TKey FamilyId { get; set; }
         public virtual Family? Family { get; set; }
+        [Display(Name = nameof(PersonType), ResourceType = typeof(Resources.BLL.App.DTO.Person))]
         public virtual PersonType PersonType { get; set; } = default!;
         
         [InverseProperty(nameof(Notification.Sender))]

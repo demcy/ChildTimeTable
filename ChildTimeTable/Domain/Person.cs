@@ -17,7 +17,10 @@ namespace Domain
         where TKey : IEquatable<TKey>
         where TUser: AppUser<TKey>
     {
-        [MinLength(1)] [MaxLength(64)]
+        //public TKey DescriptionId { get; set; } = default!;
+        //public MultiLangString? Description { get; set; }
+        
+        [MinLength(1, ErrorMessageResourceName = "ErrorMessage_MinLength", ErrorMessageResourceType = typeof(Resources.Common))] [MaxLength(64)]
         [Display(Name = nameof(FirstName), ResourceType = typeof(Resources.Domain.Person))]
         public virtual string FirstName { get; set; } = default!;
         [MinLength(1)] [MaxLength(64)] 

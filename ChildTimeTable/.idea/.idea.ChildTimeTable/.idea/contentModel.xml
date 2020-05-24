@@ -247,6 +247,7 @@
           <e p="AppUser.cs" t="Include" />
         </e>
         <e p="Location.cs" t="Include" />
+        <e p="MultiLangString.cs" t="Include" />
         <e p="Notification.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -260,6 +261,7 @@
         <e p="Person.cs" t="Include" />
         <e p="PersonType.cs" t="Include" />
         <e p="Time.cs" t="Include" />
+        <e p="Translation.cs" t="Include" />
       </e>
       <e p="Extensions" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -297,9 +299,17 @@
       <e p="README.md" t="Include" />
       <e p="Resources" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
+        <e p="BLL.App.DTO" t="Include">
+          <e p="Person.Designer.cs" t="Include" />
+          <e p="Person.resx" t="Include" />
+          <e p="Person.ru.resx" t="Include" />
+        </e>
+        <e p="Common.Designer.cs" t="Include" />
+        <e p="Common.resx" t="Include" />
+        <e p="Common.ru.Designer.cs" t="Include" />
+        <e p="Common.ru.resx" t="Include" />
         <e p="Domain" t="Include">
           <e p="Person.Designer.cs" t="Include" />
-          <e p="Person.en.resx" t="Include" />
           <e p="Person.resx" t="Include" />
           <e p="Person.ru.resx" t="Include" />
         </e>
@@ -316,7 +326,6 @@
           <e p="Owners" t="Include" />
           <e p="Shared" t="Include">
             <e p="_Layout.Designer.cs" t="Include" />
-            <e p="_Layout.en.resx" t="Include" />
             <e p="_Layout.resx" t="Include" />
             <e p="_Layout.ru.resx" t="Include" />
           </e>

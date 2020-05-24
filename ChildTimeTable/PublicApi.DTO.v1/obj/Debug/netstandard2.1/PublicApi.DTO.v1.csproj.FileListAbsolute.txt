@@ -11,3 +11,6 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.csproj.CopyComplete
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/obj/Debug/netstandard2.1/PublicApi.DTO.v1.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/Resources.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/Resources.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/ru/Resources.resources.dll

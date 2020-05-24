@@ -26,6 +26,7 @@ namespace DAL.App.EF.Repositories
                 .Where(p => p.AppUserId == userId)
                 .Select(dbEntity=> new PersonDisplay()
                 {
+                    Id = dbEntity.Id,
                     FirstName = dbEntity.FirstName,
                     LastName = dbEntity.LastName,
                     LocationCount = dbEntity.Locations.Count

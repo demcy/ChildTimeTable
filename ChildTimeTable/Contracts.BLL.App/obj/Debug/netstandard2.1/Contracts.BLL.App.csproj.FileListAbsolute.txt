@@ -47,7 +47,6 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/bin/Debug/netstandard2.1/Domain.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/bin/Debug/netstandard2.1/Resources.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/bin/Debug/netstandard2.1/ru/Resources.resources.dll
-/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/bin/Debug/netstandard2.1/en/Resources.resources.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/obj/Debug/netstandard2.1/Contracts.BLL.App.csprojAssemblyReference.cache
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/obj/Debug/netstandard2.1/Contracts.BLL.App.AssemblyInfoInputs.cache
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.App/obj/Debug/netstandard2.1/Contracts.BLL.App.AssemblyInfo.cs

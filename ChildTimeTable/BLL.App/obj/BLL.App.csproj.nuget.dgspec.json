@@ -30,6 +30,9 @@
             "projectReferences": {
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Resources/Resources.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Resources/Resources.csproj"
               }
             }
           }
