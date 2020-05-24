@@ -1,0 +1,158 @@
+@model IEnumerable<Domain.Obligation>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<table style="width: 100%">
+    <tr>
+        <td>
+            <button type="button" class="btn btn-outline-info" onclick="location.href='@Url.Action("Index", "Obligations", new {dt = ViewBag.Data.AddDays(-1)})'" >&#8810;</button>
+        </td>
+        <td>
+            <h3 style="text-align: center">@ViewBag.Data.ToString("d MMMM")</h3>
+        </td>
+        <td>
+            <button type="button" class="btn btn-outline-info" onclick="location.href='@Url.Action("Index", "Obligations", new {dt = ViewBag.Data.AddDays(1)})'">&#8811;</button>
+        </td>
+                    
+    </tr>
+</table>
+
+
+
+<h4>Tasks for me:</h4>
+@{
+    int i = 0;
+    string linkI = "t";
+    string switchI = "s";
+}
+@foreach (var item in Model.Where(o => o.ChildId == ViewBag.User))
+{
+    linkI += i;
+    switchI += i;
+    <div class="input-group d-flex">
+        @if (item.Status)
+        {
+            <button type="button" class="btn btn-success flex-fill" data-toggle="collapse" data-target="#@linkI">
+                <div class="row">
+                    <div class="col-3">
+                        @item.Time.StartTime.ToString("HH:mm") - @item.Time.EndTime.ToString("HH:mm")
+                    </div>
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Body)
+                    </div>
+                </div>
+            </button>
+        }
+        else
+        {
+            <button type="button" class="btn btn-warning flex-fill" data-toggle="collapse" data-target="#@linkI">
+                <div class="row">
+                    <div class="col-3">
+                        @item.Time.StartTime.ToString("HH:mm") - @item.Time.EndTime.ToString("HH:mm")
+                    </div>
+                    <div>
+                        @Html.DisplayFor(modelItem => item.Body)
+                    </div>
+                </div>
+            </button>
+        }
+        
+            
+        <div class="input-group-append">
+            @using (Html.BeginForm("ChangeStatus", "Obligations", new {id = item.Id}))
+            {
+                <label class="switch">
+                    @if (item.Status)
+                    {
+                        <input type="checkbox" onchange="setTimeout(function() {
+                            formDelay(@i)
+                        }, 400)" checked>
+                    }
+                    else
+                    {
+                        <input type="checkbox" onchange="setTimeout(function() {
+                            formDelay(@i)
+                        }, 400)">
+                    }
+                    <span class="slider round"></span>
+                </label>
+            }
+
+        </div>
+    </div>
+    <div id="@linkI" class="collapse">
+        <dl>
+            <dt>From</dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.Parent.FirstName) @Html.DisplayFor(modelItem => item.Parent.LastName)
+            </dd>
+            <dt>Location</dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.Location.LocationValue)
+            </dd>
+            <dt>Type</dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.ObligationType)
+            </dd>
+        </dl>
+    </div>
+    i++;
+}
+<h4>My tasks:</h4>
+@foreach (var item in Model.Where(o => o.ParentId == ViewBag.User))
+{
+    linkI += i;
+    switchI += i;
+    <div class="input-group d-flex">
+        <button type="button" class="btn btn-info flex-fill" data-toggle="collapse" data-target="#@linkI">
+            <div class="row">
+                <div class="col-3">
+                    @item.Time.StartTime.ToString("HH:mm") - @item.Time.EndTime.ToString("HH:mm")
+                </div>
+                <div>
+                    @Html.DisplayFor(modelItem => item.Body)
+                </div>
+            </div>
+        </button>
+        <div class="input-group-append">
+            <a class="btn btn-outline-info" asp-action="Edit" asp-route-id="@item.Id">Edit</a>
+            <a class="btn btn-outline-info" asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+        </div>
+        
+    </div>
+    <div id="@linkI" class="collapse">
+        <dl>
+            <dt>To</dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.Child.FirstName) @Html.DisplayFor(modelItem => item.Child.LastName)
+            </dd>
+            <dt>Location</dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.Location.LocationValue)
+            </dd>
+            <dt>Type</dt>
+            <dd>
+                @Html.DisplayFor(modelItem => item.ObligationType)
+            </dd>
+        </dl>
+    </div>
+    i++;
+}
+@if (ViewBag.Today)
+{
+    <p>
+        <a asp-action="Create" asp-route-dt="@ViewBag.Data">Create New</a>
+    </p>
+}
+
+
+@section Scripts {
+    <script>
+        function formDelay(i) { 
+            let statusForm = document.getElementsByTagName('form')[i+1];       
+            statusForm.submit();
+    }
+    </script>
+}
