@@ -114,6 +114,7 @@ namespace WebApp.ApiControllers._1._0
             _bll.Persons.Remove(person);
             await _bll.SaveChangesAsync();
             return Ok(person);
+            
         }
 
         
