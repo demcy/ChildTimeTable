@@ -26,6 +26,7 @@ namespace DAL.App.EF.Helpers
                 if (role == null)
                 {
                     role = new AppRole();
+                    
                     role.Name = roleName;
                     var result = roleManager.CreateAsync(role).Result;
                     if (!result.Succeeded)

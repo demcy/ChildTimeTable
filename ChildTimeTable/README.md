@@ -2,6 +2,7 @@ dotnet ef migrations add InitialDbCreation --project DAL.App.EF --startup-projec
 dotnet ef database update --project DAL.App.EF --startup-project WebApp
 dotnet ef database drop --project DAL.App.EF --startup-project WebApp
 
+
 dotnet aspnet-codegenerator controller -name PersonsController -actions -m Person -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 dotnet aspnet-codegenerator controller -name NotificationsController -actions -m Notification -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f
 dotnet aspnet-codegenerator controller -name ObligationsController -actions -m Obligation -dc ApplicationDbContext -outDir Controllers --useDefaultLayout --useAsyncActions --referenceScriptLibraries -f

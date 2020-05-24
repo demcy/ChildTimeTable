@@ -38,5 +38,7 @@ namespace BLL.App.DTO
 
         public TKey AppUserId { get; set; }
         public AppUser<TKey>? AppUser { get; set; }
+        
+        public virtual int LocationCount { get; set; }
     }
 }

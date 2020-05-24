@@ -20,6 +20,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Localization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 using Microsoft.Extensions.Configuration;
@@ -27,7 +28,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using WebApp.Helpers;
+
 
 
 namespace WebApp
@@ -47,11 +50,11 @@ namespace WebApp
             
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(
-                    Configuration.GetConnectionString("AzureSqlConnection")));
+                    Configuration.GetConnectionString("ValueSqlConnection")));
 
             services.AddScoped<IUserNameProvider, UserNameProvider>();
             services.AddScoped<IAppUnitOfWork, AppUnitOfWork>();
-            //services.AddScoped<IAppBLL, AppBLL>();
+            services.AddScoped<IAppBLL, AppBLL>();
 
             services.AddDefaultIdentity<AppUser>(options=>options.SignIn.RequireConfirmedAccount = true)
                 .AddRoles<AppRole>()
@@ -60,8 +63,22 @@ namespace WebApp
                 .AddDefaultUI()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();*/
+            
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddHttpContextAccessor();
+            
+            services.AddCors(options =>
+            {
+                options.AddPolicy("CorsAllowAll",
+                    builder =>
+                    {
+                        builder.AllowAnyOrigin();
+                        builder.AllowAnyHeader();
+                        builder.AllowAnyMethod();
+                    });
+            });
             
             // =============== JWT support ===============
             JwtSecurityTokenHandler.DefaultInboundClaimTypeMap.Clear(); // => remove default claims
@@ -103,10 +120,14 @@ namespace WebApp
                 //options.DefaultApiVersion = new ApiVersion(1,0);
                 //options.AssumeDefaultVersionWhenUnspecified = false;
             });
+            
+            services.AddVersionedApiExplorer( options => options.GroupNameFormat = "'v'VVV" );
+            services.AddTransient<IConfigureOptions<SwaggerGenOptions>, ConfigureSwaggerOptions>();
+            services.AddSwaggerGen();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IApiVersionDescriptionProvider provider)
         {
             UpdateDatabase(app, env, Configuration);
             
@@ -132,7 +153,23 @@ namespace WebApp
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
+            app.UseCors("CorsAllowAll");
+
             app.UseRouting();
+
+            app.UseSwagger();
+            app.UseSwaggerUI(
+                options =>
+                {
+                    foreach ( var description in provider.ApiVersionDescriptions )
+                    {
+                        options.SwaggerEndpoint(
+                            $"/swagger/{description.GroupName}/swagger.json",
+                            description.GroupName.ToUpperInvariant() );
+                    }
+                }
+                
+                );
 
             app.UseAuthentication();
             app.UseAuthorization();

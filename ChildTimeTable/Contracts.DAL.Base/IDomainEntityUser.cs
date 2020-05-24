@@ -13,6 +13,6 @@ namespace Contracts.DAL.Base
         where TUser : IdentityUser<TKey>
     {
         public TKey AppUserId { get; set; }
-        public TUser AppUser { get; set; }
+        public TUser? AppUser { get; set; }
     }
 }

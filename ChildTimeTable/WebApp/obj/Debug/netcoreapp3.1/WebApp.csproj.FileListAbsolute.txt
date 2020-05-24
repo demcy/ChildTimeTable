@@ -513,3 +513,9 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/BLL.Base.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Contracts.BLL.Base.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/DAL.App.DTO.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.AspNetCore.Mvc.Versioning.ApiExplorer.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Microsoft.OpenApi.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.Swagger.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.xml

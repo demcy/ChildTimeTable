@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
@@ -19,15 +20,15 @@ namespace WebApp.Controllers
     [Authorize(Roles = "User")]
     public class PersonsController : Controller
     {
-        private readonly IAppUnitOfWork _uow;
+        private readonly IAppBLL _bll;
         private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _env;
 
-        public PersonsController(ApplicationDbContext context, IWebHostEnvironment env, IAppUnitOfWork uow)
+        public PersonsController(ApplicationDbContext context, IWebHostEnvironment env, IAppBLL bll)
         {
             _context = context;
             _env = env;
-            _uow = uow;
+            _bll = bll;
         }
 
         

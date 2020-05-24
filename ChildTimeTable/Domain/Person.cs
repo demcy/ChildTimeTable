@@ -1,26 +1,21 @@
-﻿﻿using System;
-using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
- using System.ComponentModel.DataAnnotations.Schema;
- using Contracts.DAL.Base;
- using DAL.Base;
- using Domain.Identity;
- using Microsoft.AspNetCore.Identity;
+using System.ComponentModel.DataAnnotations.Schema;
+using Contracts.DAL.Base;
+using DAL.Base;
+using Domain.Identity;
 
 namespace Domain
 {
-
-    
-
-    
     public class Person : Person<Guid, AppUser>, IDomainEntityBaseMetadata, IDomainEntityUser<AppUser>
     {
         
     }
+
     public class Person<TKey, TUser> : DomainEntityBaseMetadata<TKey>, IDomainEntityUser<TKey, TUser>
         where TKey : IEquatable<TKey>
-        where TUser : AppUser<TKey>
+        where TUser: AppUser<TKey>
     {
         [MinLength(1)] [MaxLength(64)]
         [Display(Name = nameof(FirstName), ResourceType = typeof(Resources.Domain.Person))]

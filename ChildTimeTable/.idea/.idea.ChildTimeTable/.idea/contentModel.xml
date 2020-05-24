@@ -184,8 +184,8 @@
           <e p="DataInitializers.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
-          <e p="20200518151036_InitialDbCreation.cs" t="Include" />
-          <e p="20200518151036_InitialDbCreation.Designer.cs" t="Include" />
+          <e p="20200523151154_InitialDbCreation.cs" t="Include" />
+          <e p="20200523151154_InitialDbCreation.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -278,6 +278,9 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="FamilyDTO.cs" t="Include" />
         <e p="LocationDTO.cs" t="Include" />
+        <e p="Mappers" t="Include">
+          <e p="DTOMapper.cs" t="Include" />
+        </e>
         <e p="NotificationDTO.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -287,7 +290,7 @@
           </e>
         </e>
         <e p="ObligationDTO.cs" t="Include" />
-        <e p="PersonDTO.cs" t="Include" />
+        <e p="Person.cs" t="Include" />
         <e p="PublicApi.DTO.v1.csproj" t="IncludeRecursive" />
         <e p="TimeDTO.cs" t="Include" />
       </e>
@@ -321,15 +324,12 @@
       </e>
       <e p="WebApp" t="IncludeRecursive">
         <e p="ApiControllers" t="Include">
-          <e p="FamiliesController.cs" t="Include" />
-          <e p="Identity" t="Include">
-            <e p="AccountController.cs" t="Include" />
+          <e p="1.0" t="Include">
+            <e p="Identity" t="Include">
+              <e p="AccountController.cs" t="Include" />
+            </e>
+            <e p="PersonsController.cs" t="Include" />
           </e>
-          <e p="LocationsController.cs" t="Include" />
-          <e p="NotificationsController.cs" t="Include" />
-          <e p="ObligationsController.cs" t="Include" />
-          <e p="PersonsController.cs" t="Include" />
-          <e p="TimesController.cs" t="Include" />
         </e>
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />

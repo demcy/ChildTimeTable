@@ -1,9 +1,14 @@
+
 using System;
 using System.IO;
 using System.Reflection;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Options;
+using Microsoft.OpenApi.Models;
+using Swashbuckle.AspNetCore.SwaggerGen;
 
-/*namespace WebApp.Helpers
+namespace WebApp.Helpers
 {
     public class ConfigureSwaggerOptions : IConfigureOptions<SwaggerGenOptions>{
         readonly IApiVersionDescriptionProvider _provider;
@@ -15,7 +20,7 @@ using Microsoft.Extensions.Options;
                 options.SwaggerDoc(
                     description.GroupName,
                     new OpenApiInfo(){
-                        Title = $"Owners and Animals API {description.ApiVersion}",
+                        Title = $"Persons API {description.ApiVersion}",
                         Version = description.ApiVersion.ToString()
                     });
             }
@@ -27,4 +32,4 @@ using Microsoft.Extensions.Options;
 
         }
     }
-}*/
+}

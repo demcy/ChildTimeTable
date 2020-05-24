@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BLL.App.DTO;
 using BLL.Base.Mappers;
@@ -19,24 +20,17 @@ namespace BLL.App.Services
         {
         }
 
-        public Task<IEnumerable<Person>> AllAsync(Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IEnumerable<BLL.App.DTO.Person>> AllAsync(Guid? userId = null)=>
+            (await ServiceRepository.AllAsync(userId)).Select( dalEntity => Mapper.Map(dalEntity) );
+        
 
-        public Task<Person> FirstOrDefaultAsync(Guid id, Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<BLL.App.DTO.Person> FirstOrDefaultAsync(Guid id, Guid? userId = null)=>
+            Mapper.Map(await ServiceRepository.FirstOrDefaultAsync(id, userId));
 
-        public Task<bool> ExistsAsync(Guid id, Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<bool> ExistsAsync(Guid id, Guid? userId = null)=>
+            await ServiceRepository.ExistsAsync(id, userId);
 
-        public Task DeleteAsync(Guid id, Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task DeleteAsync(Guid id, Guid? userId = null)=>
+            await ServiceRepository.DeleteAsync(id, userId);
     }
 }

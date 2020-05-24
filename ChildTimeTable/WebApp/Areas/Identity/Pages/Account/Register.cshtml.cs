@@ -27,6 +27,8 @@ namespace WebApp.Areas.Identity.Pages.Account
     public class RegisterModel : PageModel
     {
         private readonly SignInManager<AppUser> _signInManager;
+        private readonly RoleManager<AppRole> _roleManager;
+        
         private readonly ApplicationDbContext _context;
         private readonly UserManager<AppUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
@@ -39,7 +41,8 @@ namespace WebApp.Areas.Identity.Pages.Account
             ILogger<RegisterModel> logger,
             IEmailSender emailSender,
             ApplicationDbContext context,
-            IWebHostEnvironment env)
+            IWebHostEnvironment env, 
+            RoleManager<AppRole> roleManager)
         {
             _userManager = userManager;
             _signInManager = signInManager;
@@ -47,6 +50,7 @@ namespace WebApp.Areas.Identity.Pages.Account
             _emailSender = emailSender;
             _context = context;
             _env = env;
+            _roleManager = roleManager;
         }
 
         [BindProperty]
@@ -108,6 +112,10 @@ namespace WebApp.Areas.Identity.Pages.Account
                     Email = Input.Email
                 };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+                var role = new AppRole();
+                role.Name = "User";
+                await _roleManager.CreateAsync(role);
+
                 result = _userManager.AddToRoleAsync(user, "User").Result;
                 Family f = new Family();
                 _context.Add(f);
@@ -118,7 +126,7 @@ namespace WebApp.Areas.Identity.Pages.Account
                 string logo = logos[rnd.Next(logos.Count)];
                 Person p = new Person();
                 p.AppUserId = user.Id;
-                //p.PersonType = user.PersonType;
+                p.PersonType = Input.PersonType;
                 p.FirstName = Input.FirstName;
                 p.LastName = Input.LastName;
                 p.FamilyId = f.Id;
