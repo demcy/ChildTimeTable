@@ -4,6 +4,7 @@
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/extResources" t="IncludeRecursive" />
     <e p="$USER_HOME$/Library/Caches/JetBrains/Rider2020.1/resharper-host/local/Transient/ReSharperHost/v201/SolutionCaches/_ChildTimeTable.1008672766.00" t="ExcludeRecursive" />
     <e p="$PROJECT_DIR$" t="IncludeFlat">
+      <e p=".gitignore" t="Include" />
       <e p="_Solution Items" t="Include" />
       <e p="BLL" t="Include" />
       <e p="BLL.App" t="IncludeRecursive">
@@ -436,7 +437,113 @@
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="PersonModel.cs" t="Include" />
         </e>
+        <e p="node_modules/@types" t="IncludeRecursive">
+          <e p="anymatch" t="IncludeRecursive" />
+          <e p="bootstrap" t="IncludeRecursive" />
+          <e p="events" t="IncludeRecursive" />
+          <e p="jquery" t="IncludeRecursive" />
+          <e p="lodash" t="IncludeRecursive" />
+          <e p="minimatch" t="IncludeRecursive" />
+          <e p="node" t="IncludeRecursive" />
+          <e p="sizzle" t="IncludeRecursive" />
+          <e p="source-list-map" t="IncludeRecursive" />
+          <e p="tapable" t="IncludeRecursive" />
+          <e p="uglify-js" t="IncludeRecursive" />
+          <e p="webpack-sources" t="IncludeRecursive" />
+        </e>
+        <e p="node_modules/bootstrap" t="IncludeRecursive" />
+        <e p="node_modules/chalk" t="IncludeRecursive" />
+        <e p="node_modules/chokidar" t="IncludeRecursive" />
+        <e p="node_modules/cldr-core" t="IncludeRecursive" />
+        <e p="node_modules/cldr-dates-modern" t="IncludeRecursive" />
+        <e p="node_modules/cldr-numbers-modern" t="IncludeRecursive" />
+        <e p="node_modules/clean-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules/commander" t="IncludeRecursive" />
+        <e p="node_modules/copy-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules/css-loader" t="IncludeRecursive" />
+        <e p="node_modules/exports-loader" t="IncludeRecursive" />
+        <e p="node_modules/file-loader" t="IncludeRecursive" />
+        <e p="node_modules/flatpickr" t="IncludeRecursive" />
+        <e p="node_modules/font-awesome" t="IncludeRecursive" />
+        <e p="node_modules/fsevents" t="IncludeRecursive" />
+        <e p="node_modules/globalize" t="IncludeRecursive" />
+        <e p="node_modules/html-webpack-plugin" t="IncludeRecursive" />
+        <e p="node_modules/jquery" t="IncludeRecursive" />
+        <e p="node_modules/jquery-validation" t="IncludeRecursive" />
+        <e p="node_modules/jquery-validation-unobtrusive" t="IncludeRecursive" />
+        <e p="node_modules/lodash" t="IncludeRecursive" />
+        <e p="node_modules/mini-css-extract-plugin" t="IncludeRecursive" />
+        <e p="node_modules/moment" t="IncludeRecursive" />
+        <e p="node_modules/popper.js" t="IncludeRecursive" />
+        <e p="node_modules/pretty-error" t="IncludeRecursive" />
+        <e p="node_modules/script-loader" t="IncludeRecursive" />
+        <e p="node_modules/source-map" t="IncludeRecursive" />
+        <e p="node_modules/style-loader" t="IncludeRecursive" />
+        <e p="node_modules/terser" t="IncludeRecursive" />
+        <e p="node_modules/ts-loader" t="IncludeRecursive" />
+        <e p="node_modules/tslib" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.dom.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.dom.iterable.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.collection.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.core.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.generator.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.iterable.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.proxy.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.reflect.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.symbol.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2015.symbol.wellknown.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2016.array.include.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2016.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2016.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2017.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2017.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2017.intl.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2017.object.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2017.sharedmemory.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2017.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2017.typedarrays.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2018.asyncgenerator.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2018.asynciterable.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2018.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2018.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2018.intl.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2018.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2018.regexp.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2019.array.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2019.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2019.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2019.object.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2019.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2019.symbol.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2020.bigint.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2020.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2020.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2020.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2020.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es2020.symbol.wellknown.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es5.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.es6.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.array.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.asynciterable.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.bigint.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.full.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.intl.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.promise.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.string.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.esnext.symbol.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.scripthost.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.webworker.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/typescript/lib/lib.webworker.importscripts.d.ts" t="IncludeRecursive" />
+        <e p="node_modules/upath" t="IncludeRecursive" />
+        <e p="node_modules/url-loader" t="IncludeRecursive" />
+        <e p="node_modules/webpack" t="IncludeRecursive" />
+        <e p="node_modules/webpack-cli" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">
@@ -445,12 +552,15 @@
             </e>
           </e>
         </e>
+        <e p="package-lock.json" t="Include" />
+        <e p="package.json" t="Include" />
         <e p="Program.cs" t="Include" />
         <e p="Properties" t="Include">
           <e p="launchSettings.json" t="Include" />
         </e>
         <e p="ScaffoldingReadMe.txt" t="Include" />
         <e p="Startup.cs" t="Include" />
+        <e p="tsconfig.json" t="Include" />
         <e p="Views" t="Include">
           <e p="_ViewImports.cshtml" t="Include" />
           <e p="_ViewStart.cshtml" t="Include" />
@@ -479,11 +589,58 @@
           </e>
         </e>
         <e p="WebApp.csproj" t="IncludeRecursive" />
+        <e p="webpack.config.js" t="Include" />
         <e p="wwwroot" t="Include">
           <e p="css" t="Include">
             <e p="site.css" t="Include" />
           </e>
           <e p="daniel-cheung-ZqqlOZyGG7g-unsplash.jpg" t="Include" />
+          <e p="dist" t="Include">
+            <e p="1e59d2330b4c6deb84b340635ed36249.ttf" t="Include" />
+            <e p="20fd1704ea223900efa9fd4e869efb08.woff2" t="Include" />
+            <e p="8b43027f47b20503057dfbbaa9401fef.eot" t="Include" />
+            <e p="c1e38fd9e0e74ba58f7a2b77ef29fdd3.svg" t="Include" />
+            <e p="cldr-core" t="Include">
+              <e p="supplemental" t="Include">
+                <e p="likelySubtags.json" t="Include" />
+                <e p="numberingSystems.json" t="Include" />
+                <e p="timeData.json" t="Include" />
+                <e p="weekData.json" t="Include" />
+              </e>
+            </e>
+            <e p="cldr-dates-modern" t="Include">
+              <e p="main" t="Include">
+                <e p="en" t="Include">
+                  <e p="ca-generic.json" t="Include" />
+                  <e p="ca-gregorian.json" t="Include" />
+                  <e p="dateFields.json" t="Include" />
+                  <e p="timeZoneNames.json" t="Include" />
+                </e>
+                <e p="ru" t="Include">
+                  <e p="ca-generic.json" t="Include" />
+                  <e p="ca-gregorian.json" t="Include" />
+                  <e p="dateFields.json" t="Include" />
+                  <e p="timeZoneNames.json" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="cldr-numbers-modern" t="Include">
+              <e p="main" t="Include">
+                <e p="en" t="Include">
+                  <e p="currencies.json" t="Include" />
+                  <e p="numbers.json" t="Include" />
+                </e>
+                <e p="ru" t="Include">
+                  <e p="currencies.json" t="Include" />
+                  <e p="numbers.json" t="Include" />
+                </e>
+              </e>
+            </e>
+            <e p="f691f37e57f04c152e2315ab7dbad881.woff" t="Include" />
+            <e p="jquery.validate.globalize.js" t="Include" />
+            <e p="site.css" t="Include" />
+            <e p="site.js" t="Include" />
+          </e>
           <e p="favicon.ico" t="Include" />
           <e p="Icons" t="Include">
             <e p="001-lego.png" t="Include" />
@@ -568,7 +725,9 @@
             <e p="080-priest.png" t="Include" />
           </e>
           <e p="js" t="Include">
-            <e p="site.js" t="Include" />
+            <e p="jquery.validate.globalize.js" t="Include" />
+            <e p="site - Copy.js" t="Include" />
+            <e p="site.ts" t="Include" />
           </e>
           <e p="lib" t="Include">
             <e p="bootstrap" t="Include">

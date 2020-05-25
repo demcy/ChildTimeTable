@@ -13,6 +13,7 @@ using Domain;
 using Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
+using WebApp.Models;
 
 
 namespace WebApp.Controllers
@@ -74,6 +75,8 @@ namespace WebApp.Controllers
             var person =  await _context.Persons.FindAsync(personId);
             List<string> logos = _env.WebRootFileProvider.GetDirectoryContents("Icons")
                 .Select(item=>item.Name).ToList();
+            var vm = new PersonModel();
+            vm.AppUserIdSelectList = new SelectList(_context.Users, nameof(Person.Id), "Id", person.AppUserId);
             ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", person.AppUserId);
             ViewData["FamilyId"] = new SelectList(_context.Families, "Id", "Id", person.FamilyId);
             ViewBag.Logo = person.Logo;

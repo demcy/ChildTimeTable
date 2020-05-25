@@ -518,3 +518,6 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.xml
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/package-lock.json
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/package.json
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/tsconfig.json
