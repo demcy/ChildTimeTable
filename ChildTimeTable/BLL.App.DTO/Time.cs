@@ -15,6 +15,6 @@ namespace BLL.App.DTO
         public virtual DateTime StartTime { get; set; } = default!;
         public virtual DateTime EndTime { get; set; } = default!;
 
-        public virtual ICollection<Obligation>? Obligations { get; set; }
+        //public virtual ICollection<Obligation>? Obligations { get; set; }
     }
 }

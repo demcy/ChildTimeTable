@@ -125,10 +125,12 @@ namespace WebApp.Areas.Identity.Pages.Account
                 Random rnd = new Random();
                 string logo = logos[rnd.Next(logos.Count)];
                 Person p = new Person();
+                p.AppUser = user;
                 p.AppUserId = user.Id;
                 p.PersonType = Input.PersonType;
                 p.FirstName = Input.FirstName;
                 p.LastName = Input.LastName;
+                p.Family = f;
                 p.FamilyId = f.Id;
                 p.Logo = "/Icons/" + logo;
                 _context.Add(p);

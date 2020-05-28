@@ -1,4 +1,6 @@
-using Domain;
+#nullable enable
+using System.Collections.Generic;
+using BLL.App.DTO;
 using Microsoft.AspNetCore.Mvc.Rendering;
 
 namespace WebApp.Models
@@ -6,7 +8,6 @@ namespace WebApp.Models
     public class PersonModel
     {
         public Person Person { get; set; } = default!;
-
-        public SelectList? AppUserIdSelectList { get; set; }
+        public List<string>? LogoList { get; set; }
     }
 }

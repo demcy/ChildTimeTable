@@ -154,6 +154,9 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj"
+              },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj"
               }

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Contracts.DAL.Base;
 using DAL.App.DTO.Identity;
@@ -15,15 +16,10 @@ namespace DAL.App.DTO
         where TKey : IEquatable<TKey>
     {
         public TKey Id { get; set; } = default!;
-        
-        //public string Description { get; set; }
-        
         public virtual string FirstName { get; set; } = default!;
         public virtual string LastName { get; set; } = default!;
-        public virtual TKey AppUserId{ get; set; } = default!;
-        public virtual AppUser<TKey>? AppUser { get; set; }
         public virtual string Logo { get; set; } = default!;
-        public virtual TKey FamilyId { get; set; }
+        public virtual TKey FamilyId { get; set; } = default!;
         public virtual Family? Family { get; set; }
         public virtual PersonType PersonType { get; set; } = default!;
         [InverseProperty(nameof(Notification.Sender))]
@@ -35,7 +31,11 @@ namespace DAL.App.DTO
         [InverseProperty(nameof(Obligation.Child))]
         public virtual ICollection<Obligation>? ChildObligations { get; set; }
         public virtual ICollection<Location>? Locations { get; set; }
+        public TKey AppUserId { get; set; } = default!;
+        public AppUser<TKey>? AppUser { get; set; }
         public virtual int LocationCount { get; set; }
+        public virtual int UnreadMessages { get; set; } = default!;
+        public virtual int Messages { get; set; } = default!;
     }
 
     public class PersonDisplay
@@ -43,7 +43,12 @@ namespace DAL.App.DTO
         public Guid Id { get; set; } = default!;
         public virtual string FirstName { get; set; } = default!;
         public virtual string LastName { get; set; } = default!;
-        public virtual int LocationCount { get; set; }
+        public virtual int LocationCount { get; set; } = default!;
+        
+        public virtual string Logo { get; set; } = default!;
+        
+        public virtual int UnreadMessages { get; set; } = default!;
+        public virtual int Messages { get; set; } = default!;
         
         //public string Description { get; set; }
     }

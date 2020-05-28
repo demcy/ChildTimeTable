@@ -15,6 +15,8 @@ namespace Contracts.DAL.App.Repositories
         where TDALEntity : class, IDomainBaseEntity<TKey>, new() 
         where TKey : IEquatable<TKey>
     {
+        Task<List<DateTime>> DatesList(Guid? userId = null);
+        Task<IEnumerable<TDALEntity>> AllPerDay(DateTime dt, Guid? userId = null);
         Task<IEnumerable<TDALEntity>> AllAsync(Guid? userId = null);
         Task<TDALEntity> FirstOrDefaultAsync(Guid id, Guid? userId = null);
 

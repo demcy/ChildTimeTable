@@ -18,7 +18,19 @@ namespace DAL.App.EF.Repositories
         {
         }
 
+        public async Task<IEnumerable<Notification>> AllImportant(Guid? userId = null)
+        {
+            if (userId == null)
+            {
+                return await base.AllAsync();
+            }
 
+            var personId = RepoDbContext.Persons.First(p => p.AppUserId == userId).Id;
+            var b =(await RepoDbSet.Where(n => n.RecipientId == personId)
+                .ToListAsync()).Select(dbEntity => Mapper.Map(dbEntity));
+            return b;
+        }
+        
         public Task<IEnumerable<Notification>> AllAsync(Guid? userId = null)
         {
             throw new NotImplementedException();

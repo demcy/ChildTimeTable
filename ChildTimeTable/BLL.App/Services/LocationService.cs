@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BLL.App.DTO;
 using BLL.Base.Mappers;
@@ -16,6 +17,16 @@ namespace BLL.App.Services
             : base(unitOfWork, new BaseBLLMapper<DAL.App.DTO.Location, Location>(), unitOfWork.Locations)
         {
         }
+        public async Task<IEnumerable<Location>> AllForPerson(Guid? userId = null)=>
+            (await ServiceRepository.AllForPerson(userId)).Select( dalEntity => Mapper.Map(dalEntity) );
+        
+        public async Task<bool> ExistsValue(string locationValue, Guid? userId = null)=>
+            await ServiceRepository.ExistsValue(locationValue, userId);
+        
+        public async Task<Location> LocationByValue(string locationValue, Guid? userId = null)=>
+            Mapper.Map(await ServiceRepository.LocationByValue(locationValue, userId));
+        
+
 
         public Task<IEnumerable<Location>> AllAsync(Guid? userId = null)
         {

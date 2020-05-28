@@ -1,4 +1,4 @@
-@model IEnumerable<Domain.Person>
+@model PersonDataModel
 
 @{
     ViewData["Title"] = "Index";
@@ -14,7 +14,7 @@
             </tr>
             </thead>
             <tbody>
-            @foreach (var item in Model) {
+            @foreach (var item in Model.Persons!) {
                 <tr>
                     <td>
                         <img src="@Html.DisplayFor(modelItem => item.Logo)" alt="logo" width="64" height="64"/>
@@ -52,15 +52,7 @@
             
             <table class="table">
                 <thead>
-                <tr>
-                    <th>Mon</th>
-                    <th>Tue</th>
-                    <th>Wed</th>
-                    <th>Thu</th>
-                    <th>Fri</th>
-                    <th>Sat</th>
-                    <th>Sun</th>
-                </tr>
+                <tr id="weekDay"></tr>
                 </thead>
                 <tbody id="calendar-body"></tbody>
             </table>
@@ -76,23 +68,27 @@
                         <div class="input-group-prepend">
                             <span class="input-group-text">&#64;</span>
                         </div>
-                        <input name="email" type="email" class="form-control"/>
+                        <input name="email" type="email" class="form-control" required/>
                     </div>
-                    <input type="submit" class="btn btn-success btn-block" value="Send invitation" onclick="closeNewPerson()"/>
+                    <input type="submit" class="btn btn-success btn-block" value="Send invitation"/>
                     <button type="button" class="btn btn-primary" style="position: absolute; right: 5px; top: 5px" onclick="closeNewPerson()">X</button>
-                            
+                           
                 </div>
                 
             }
 @section Scripts {
+    <script src="~/js/calendar.js"></script>
     <script>
-    document.body.onload = () => newDutyDays(@Html.Raw(Json.Serialize(ViewData["Dates"])));
+    //document.body.onload = () => changeCultureInfo('@System.Globalization.CultureInfo.CurrentCulture.Name');
+    //changeCultureInfo('@System.Globalization.CultureInfo.CurrentCulture.Name');
+    document.body.onload = () => 
+        newDutyDays(@Html.Raw(Json.Serialize(Model.DatesList)), '@System.Globalization.CultureInfo.CurrentCulture.Name');
     
-    if('@ViewBag.Unread' === '0'){
+    if('@Model.UnreadMessages' === '0'){
         localStorage.setItem('x','');
     }
     else{
-        localStorage.setItem('x','@ViewBag.Unread');
+        localStorage.setItem('x','@Model.UnreadMessages');
     }
     
     notificationBadge.innerText=localStorage.getItem('x');

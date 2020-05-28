@@ -1,4 +1,4 @@
-@model IEnumerable<Domain.Obligation>
+@model ObligationDataModel
 
 @{
     ViewData["Title"] = "Index";
@@ -7,13 +7,13 @@
 <table style="width: 100%">
     <tr>
         <td>
-            <button type="button" class="btn btn-outline-info" onclick="location.href='@Url.Action("Index", "Obligations", new {dt = ViewBag.Data.AddDays(-1)})'" >&#8810;</button>
+            <button type="button" class="btn btn-outline-info" onclick="location.href='@Url.Action("Index", "Obligations", new {dt = Model.Date.AddDays(-1)})'" >&#8810;</button>
         </td>
         <td>
-            <h3 style="text-align: center">@ViewBag.Data.ToString("d MMMM")</h3>
+            <h3 style="text-align: center">@Model.Date.ToString("d MMMM")</h3>
         </td>
         <td>
-            <button type="button" class="btn btn-outline-info" onclick="location.href='@Url.Action("Index", "Obligations", new {dt = ViewBag.Data.AddDays(1)})'">&#8811;</button>
+            <button type="button" class="btn btn-outline-info" onclick="location.href='@Url.Action("Index", "Obligations", new {dt = Model.Date.AddDays(1)})'">&#8811;</button>
         </td>
                     
     </tr>
@@ -27,7 +27,7 @@
     string linkI = "t";
     string switchI = "s";
 }
-@foreach (var item in Model.Where(o => o.ChildId == ViewBag.User))
+@foreach (var item in Model.Obligations!.Where(o => o.ChildId == ViewBag.User))
 {
     linkI += i;
     switchI += i;
@@ -37,7 +37,7 @@
             <button type="button" class="btn btn-success flex-fill" data-toggle="collapse" data-target="#@linkI">
                 <div class="row">
                     <div class="col-3">
-                        @item.Time.StartTime.ToString("HH:mm") - @item.Time.EndTime.ToString("HH:mm")
+                        @item!.Time.StartTime.ToString("HH:mm") - @item!.Time.EndTime.ToString("HH:mm")
                     </div>
                     <div>
                         @Html.DisplayFor(modelItem => item.Body)
@@ -50,7 +50,7 @@
             <button type="button" class="btn btn-warning flex-fill" data-toggle="collapse" data-target="#@linkI">
                 <div class="row">
                     <div class="col-3">
-                        @item.Time.StartTime.ToString("HH:mm") - @item.Time.EndTime.ToString("HH:mm")
+                        @item!.Time.StartTime.ToString("HH:mm") - @item!.Time.EndTime.ToString("HH:mm")
                     </div>
                     <div>
                         @Html.DisplayFor(modelItem => item.Body)
@@ -101,7 +101,7 @@
     i++;
 }
 <h4>My tasks:</h4>
-@foreach (var item in Model.Where(o => o.ParentId == ViewBag.User))
+@foreach (var item in Model.Obligations.Where(o => o.ParentId == Model.PersonId))
 {
     linkI += i;
     switchI += i;
@@ -109,7 +109,7 @@
         <button type="button" class="btn btn-info flex-fill" data-toggle="collapse" data-target="#@linkI">
             <div class="row">
                 <div class="col-3">
-                    @item.Time.StartTime.ToString("HH:mm") - @item.Time.EndTime.ToString("HH:mm")
+                    @item!.Time.StartTime.ToString("HH:mm") - @item!.Time.EndTime.ToString("HH:mm")
                 </div>
                 <div>
                     @Html.DisplayFor(modelItem => item.Body)
@@ -140,10 +140,10 @@
     </div>
     i++;
 }
-@if (ViewBag.Today)
+@if (Model.Today)
 {
     <p>
-        <a asp-action="Create" asp-route-dt="@ViewBag.Data">Create New</a>
+        <a asp-action="Create" asp-route-dt="@Model.Date">Create New</a>
     </p>
 }
 

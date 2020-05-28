@@ -11,10 +11,9 @@ namespace DAL.App.DTO
     public class Location<TKey> : IDomainBaseEntity<TKey>
         where TKey : IEquatable<TKey>
     {
-        public TKey Id { get; set; }
+        public TKey Id { get; set; } = default!;
         public virtual string LocationValue { get; set; } = default!;
-        
-        public virtual TKey PersonId { get; set; }
+        public virtual TKey PersonId { get; set; } = default!;
         public virtual Person? Person { get; set; }
 
         public virtual ICollection<Obligation>? Obligations { get; set; }

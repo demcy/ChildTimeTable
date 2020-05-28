@@ -8,12 +8,58 @@ using DAL.Base.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Microsoft.EntityFrameworkCore;
 
+
 namespace DAL.App.EF.Repositories
 {
     public class PersonRepository : EFBaseRepository<ApplicationDbContext, Domain.Person, DAL.App.DTO.Person>, IPersonRepository
     {
         public PersonRepository(ApplicationDbContext dbContext) : base(dbContext, new BaseDALMapper<Domain.Person, DAL.App.DTO.Person>())
         {
+        }
+
+        public async Task<Person> PersonByName(string fullName)
+        {
+            return Mapper.Map(await RepoDbSet.Where(p => p.FirstName + " " + p.LastName == fullName).FirstOrDefaultAsync());
+        }
+        public async Task<Person> OnePerson(Guid? userId = null)
+        {
+            return Mapper.Map(await RepoDbSet.Where(p => p.AppUserId == userId)
+                //.Include(p=>p.Family)
+                .FirstOrDefaultAsync());
+        }
+        
+        public async Task<Person> RecipientPerson(string email)
+        {
+            return Mapper.Map(await RepoDbSet.Where(p => p.AppUser.UserName == email).FirstOrDefaultAsync());
+        }
+        
+        public async Task<bool> ExistAny(string email)
+        {
+            return await RepoDbSet.AnyAsync(p => p.AppUser.UserName == email);
+        }
+
+        public async Task<IEnumerable<DAL.App.DTO.Person>> AllFamilyPersons(Guid? userId = null)
+        {
+            if (userId == null)
+            {
+                return await base.AllAsync(); // base is not actually needed, using it for clarity
+            }
+
+            var familyId = RepoDbSet.First(p => p.AppUserId == userId).FamilyId;
+            return (await RepoDbSet
+                    .Where(p => p.FamilyId == familyId)
+                    .Select(dbEntity=> new PersonDisplay()
+                    {
+                        Id = dbEntity.Id,
+                        FirstName = dbEntity.FirstName,
+                        LastName = dbEntity.LastName,
+                        Logo = dbEntity.Logo,
+                        UnreadMessages = dbEntity.RecipientNotifications.Where(n=>n.Status==false)!.Count()
+                    })
+                    .ToListAsync())
+                .Select(dbEntity => Mapper.Map<PersonDisplay,DAL.App.DTO.Person>(dbEntity));
+        
+            
         }
         public async Task<IEnumerable<DAL.App.DTO.Person>> AllAsync(Guid? userId = null)
         {
@@ -29,6 +75,7 @@ namespace DAL.App.EF.Repositories
                     Id = dbEntity.Id,
                     FirstName = dbEntity.FirstName,
                     LastName = dbEntity.LastName,
+                    Logo = dbEntity.Logo,
                     LocationCount = dbEntity.Locations.Count
                 })
                 .ToListAsync())
@@ -46,6 +93,7 @@ namespace DAL.App.EF.Repositories
             return Mapper.Map(await query.FirstOrDefaultAsync());
         }
 
+        
         public async Task<bool> ExistsAsync(Guid id, Guid? userId = null)
         {
             if (userId == null)
@@ -61,6 +109,8 @@ namespace DAL.App.EF.Repositories
             var person = await FirstOrDefaultAsync(id, userId);
             base.Remove(person);
         }
+        
+        
        
     }
 }

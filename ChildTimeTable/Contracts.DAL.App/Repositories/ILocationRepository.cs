@@ -15,6 +15,9 @@ namespace Contracts.DAL.App.Repositories
         where TDALEntity : class, IDomainBaseEntity<TKey>, new() 
         where TKey : IEquatable<TKey>
     {
+        Task<IEnumerable<TDALEntity>> AllForPerson(Guid? userId = null);
+        Task<bool> ExistsValue(string locationValue, Guid? userId = null);
+        Task<TDALEntity> LocationByValue(string locationValue, Guid? userId = null);
         Task<IEnumerable<TDALEntity>> AllAsync(Guid? userId = null);
         Task<TDALEntity> FirstOrDefaultAsync(Guid id, Guid? userId = null);
 

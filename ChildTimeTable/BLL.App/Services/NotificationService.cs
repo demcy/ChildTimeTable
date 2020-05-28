@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using BLL.App.DTO;
 using BLL.Base.Mappers;
@@ -17,24 +18,18 @@ namespace BLL.App.Services
         {
         }
 
-        public Task<IEnumerable<Notification>> AllAsync(Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<Notification> FirstOrDefaultAsync(Guid id, Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task<bool> ExistsAsync(Guid id, Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task DeleteAsync(Guid id, Guid? userId = null)
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<IEnumerable<Notification>> AllImportant(Guid? userId = null)=>
+            (await ServiceRepository.AllImportant(userId)).Select( dalEntity => Mapper.Map(dalEntity) );
+        public async Task<IEnumerable<Notification>> AllAsync(Guid? userId = null)=>
+            (await ServiceRepository.AllAsync(userId)).Select( dalEntity => Mapper.Map(dalEntity) );
+        
+        public async Task<Notification> FirstOrDefaultAsync(Guid id, Guid? userId = null)=>
+            Mapper.Map(await ServiceRepository.FirstOrDefaultAsync(id, userId));
+        
+        public async Task<bool> ExistsAsync(Guid id, Guid? userId = null)=>
+            await ServiceRepository.ExistsAsync(id, userId);
+        
+        public async Task DeleteAsync(Guid id, Guid? userId = null)=>
+            await ServiceRepository.DeleteAsync(id, userId);
     }
 }

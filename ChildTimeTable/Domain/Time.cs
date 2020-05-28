@@ -14,6 +14,7 @@ namespace Domain
     {
         [DataType(DataType.DateTime)]
         public virtual DateTime StartTime { get; set; } = default!;
+        
         [DataType(DataType.DateTime)]
         public virtual DateTime EndTime { get; set; } = default!;
 

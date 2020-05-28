@@ -17,7 +17,22 @@ namespace DAL.App.EF.Repositories
         {
         }
 
-
+        public async Task<List<DateTime>> DatesList(Guid? userId = null)
+        {
+            var personId = RepoDbContext.Persons.First(p => p.AppUserId == userId).Id;
+            return await RepoDbSet.Where(o => o.ParentId == personId || o.ChildId == personId)
+                .Select(o => o.Time).Select(t => t.StartTime).ToListAsync();
+        }
+        
+        public async Task<IEnumerable<Obligation>> AllPerDay(DateTime dt ,Guid? userId = null)
+        {
+            var personId = RepoDbContext.Persons.First(p => p.AppUserId == userId).Id;
+            return (await RepoDbSet.Where(o=>o.Time.StartTime.Day==dt.Day)
+                .Where(o=>o.ParentId==personId || o.ChildId==personId)
+                .OrderBy(o=>o.Time.StartTime).ToListAsync())
+                .Select(dbEntity => Mapper.Map(dbEntity));
+        }
+        
         public Task<IEnumerable<Obligation>> AllAsync(Guid? userId = null)
         {
             throw new NotImplementedException();

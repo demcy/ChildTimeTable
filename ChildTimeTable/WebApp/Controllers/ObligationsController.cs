@@ -3,35 +3,38 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using BLL.App.DTO;
+using Contracts.BLL.App;
 using Contracts.DAL.App.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL.App.EF;
 using DAL.App.EF.Repositories;
-using Domain;
+
 using Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using WebApp.Models;
 
 namespace WebApp.Controllers
 {
     [Authorize(Roles = "User")]
     public class ObligationsController : Controller
     {
-        private readonly ApplicationDbContext _context;
+        private readonly IAppBLL _bll;
 
-        public ObligationsController(ApplicationDbContext context)
+        public ObligationsController(IAppBLL bll)
         {
-            _context = context;
+            _bll = bll;
         }
-        
-        
-        public ActionResult ChangeStatus(Guid? id)
+
+
+        public ActionResult ChangeStatus(Guid id)
         {
-            var obligation = _context.Obligations.Single(o => o.Id == id);
+            var obligation = _bll.Obligations.Find(id);
             obligation.Status = !obligation.Status;
-            _context.SaveChanges();
+            _bll.SaveChanges();
             return RedirectToAction("Index", "Obligations");
         }
 
@@ -42,7 +45,14 @@ namespace WebApp.Controllers
             {
                 dt = DateTime.Today;
             }
-            var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
+            var vm = new ObligationDataModel();
+            vm.Obligations = await _bll.Obligations.AllPerDay(dt, User.UserGuidId());
+            vm.Date = dt;
+            DateTime today = DateTime.Today;
+            vm.Today = dt >= today;
+            vm.PersonId = (await _bll.Persons.OnePerson(User.UserGuidId())).Id;
+            return View(vm);
+            /*var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
             var applicationDbContext = _context.Obligations
                 .Where(o=>o.Time.StartTime.Day==dt.Day)
                 .Where(o=>o.ParentId==personId || o.ChildId==personId)
@@ -55,30 +65,36 @@ namespace WebApp.Controllers
             ViewBag.Data = dt;
             DateTime today = DateTime.Today;
             ViewBag.Today = dt >= today;
-            return View(await applicationDbContext.ToListAsync());
+            return View(await applicationDbContext.ToListAsync());*/
         }
 
         
 
         // GET: Obligations/Create
-        public IActionResult Create(DateTime dt)
+        public async Task<IActionResult> Create(DateTime dt)
         {
-            //var userId = User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value;
-            var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
+            var vm = new ObligationModel();
+            string htmlData = dt.ToString("yyyy-MM-dd") + "T00:00";
+            vm.Data = htmlData;
+            vm.LocationValues = new SelectList(await _bll.Locations.AllForPerson(User.UserGuidId()),
+                nameof(BLL.App.DTO.Location.LocationValue),
+                nameof(BLL.App.DTO.Location.LocationValue));
+            List<string> fullNames = (await _bll.Persons.AllFamilyPersons(User.UserGuidId()))
+                .Select( p => p.FirstName + " " + p.LastName).ToList();
+            vm.FullNames = fullNames.Select(x=>new SelectListItem(){Text = x.ToString()});
+            return View(vm);
+            /*var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
             var familyId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).FamilyId;
-            //ViewData["ChildId"] = new SelectList(_context.Persons, "Id", "Id");
             List<string> fullNames = _context.Persons
                 .Where(p=>p.FamilyId==familyId)
                 .Select( p => p.FirstName + " " + p.LastName).ToList();
             ViewData["FullName"] = fullNames.Select(x=>new SelectListItem(){Text = x.ToString()});
-            //ViewData["LocationId"] = new SelectList(_context.Locations, "Id", "Id");
             ViewData["LocationValue"] = new SelectList(_context.Locations.Where(l=>l.PersonId==personId), "LocationValue", "LocationValue");
-            //ViewData["LocationValue"] = new SelectList(_context.Locations, "LocationValue", "LocationValue");
             ViewData["ParentId"] = new SelectList(_context.Persons, "Id", "Id");
             ViewData["TimeId"] = new SelectList(_context.Times, "Id", "Id");
             string htmlData = dt.ToString("yyyy-MM-dd") + "T00:00";
             ViewBag.Data = htmlData;
-            return View();
+            return View();*/
         }
 
         // POST: Obligations/Create
@@ -86,11 +102,61 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Body,Status,LocationId,TimeId,ObligationType,ParentId,ChildId,CreatedBy,CreatedAt,DeletedBy,DeletedAt,Id")] Obligation obligation, Time time, Location location, string fullName)
+        public async Task<IActionResult> Create(Obligation obligation, Time time, string fullName)
         {
-            
-            var user = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
-            //var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
+            var user = await _bll.Persons.OnePerson(User.UserGuidId());
+            obligation.ParentId = user.Id;
+            ModelState.SetModelValue("ParentId", new ValueProviderResult(user.Id.ToString()));
+            var child = await _bll.Persons.PersonByName(fullName);
+            obligation.ChildId = child.Id;
+            ModelState.SetModelValue("ChildId", new ValueProviderResult(child.Id.ToString()));
+            Time t = new Time();
+            t.StartTime = time.StartTime;
+            t.EndTime = time.EndTime;
+            _bll.Times.Add(t);
+            await _bll.SaveChangesAsync();
+            obligation.TimeId = t.Id;
+            ModelState.SetModelValue("TimeId", new ValueProviderResult(t.Id.ToString()));
+            Guid locationId;
+            Location l;
+            if (await _bll.Locations.ExistsValue(obligation.Location!.LocationValue, User.UserGuidId()))
+            {
+                l = await _bll.Locations.LocationByValue(obligation.Location.LocationValue, User.UserGuidId());
+                locationId = l.Id;
+            }
+            else
+            {
+                l = new Location();
+                l.LocationValue = obligation.Location.LocationValue;
+                l.Person = user;
+                l.PersonId = user.Id;
+                _bll.Locations.Add(l);
+                await _bll.SaveChangesAsync();
+                locationId = l.Id;
+            }
+            obligation.Location = l;
+            obligation.LocationId = locationId;
+            ModelState.SetModelValue("LocationId", new ValueProviderResult(locationId.ToString()));
+            obligation.Status = false;
+            ModelState.SetModelValue("Status", new ValueProviderResult("false"));
+            await TryUpdateModelAsync(obligation);
+            if (ModelState.IsValid)
+            {
+                _bll.Obligations.Add(obligation);
+                await _bll.SaveChangesAsync();
+                Notification n = new Notification();
+                n.SenderId = user.Id;
+                n.RecipientId = child.Id;
+                n.Status = false;
+                n.Body = user.FirstName + " " + user.LastName + " give you new obligation on " + t.StartTime.ToString("d MMMM");
+                _bll.Notifications.Add(n);
+                await _bll.SaveChangesAsync();
+                return RedirectToAction("Index", "Persons");
+            }
+            var vm = new ObligationModel();
+            vm.Obligation = obligation;
+            return View(vm);
+            /*var user = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
             obligation.ParentId = user.Id;
             ModelState.SetModelValue("ParentId", new ValueProviderResult(user.Id.ToString()));
             var childId = _context.Persons.Single(p => p.FirstName + " " + p.LastName == fullName).Id;
@@ -148,7 +214,7 @@ namespace WebApp.Controllers
             ViewData["LocationId"] = new SelectList(_context.Locations, "Id", "Id", obligation.LocationId);
             ViewData["ParentId"] = new SelectList(_context.Persons, "Id", "Id", obligation.ParentId);
             ViewData["TimeId"] = new SelectList(_context.Times, "Id", "Id", obligation.TimeId);
-            return View(obligation);
+            return View(obligation);*/
         }
 
         // GET: Obligations/Edit/5
@@ -158,7 +224,21 @@ namespace WebApp.Controllers
             {
                 return NotFound();
             }
-            //var userId = User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value;
+            var obligation = await _bll.Obligations.FindAsync(id);
+            var vm = new ObligationModel();
+            vm.Obligation = obligation;
+            vm.StartTime = obligation.Time!.StartTime.ToString("yyyy-MM-ddTHH:mm");
+            vm.EndTime = obligation.Time.EndTime.ToString("yyyy-MM-ddTHH:mm");
+            vm.LocationValue = obligation.Location!.LocationValue;
+            vm.LocationValues = new SelectList(await _bll.Locations.AllForPerson(User.UserGuidId()),
+                nameof(BLL.App.DTO.Location.LocationValue),
+                nameof(BLL.App.DTO.Location.LocationValue));
+            List<string> fullNames = (await _bll.Persons.AllFamilyPersons(User.UserGuidId()))
+                .Select( p => p.FirstName + " " + p.LastName).ToList();
+            vm.FullNames = fullNames.Select(x=>new SelectListItem(){Text = x.ToString()});
+            vm.ChildIndex = fullNames.FindIndex(item => item == obligation.Child!.FirstName + " " + obligation.Child.LastName);
+            return View(vm);
+            /*//var userId = User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value;
             var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
             var familyId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).FamilyId;
             var obligation = await _context.Obligations.FindAsync(id);
@@ -183,7 +263,7 @@ namespace WebApp.Controllers
             ViewBag.EndTime = obligation.Time.EndTime.ToString("yyyy-MM-ddTHH:mm");
             ViewData["ParentId"] = new SelectList(_context.Persons, "Id", "Id", obligation.ParentId);
             //ViewData["TimeId"] = new SelectList(_context.Times, "Id", "Id", obligation.TimeId);
-            return View(obligation);
+            return View(obligation);*/
         }
 
         // POST: Obligations/Edit/5
@@ -191,13 +271,48 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(Guid? id, [Bind("Body,Status,LocationId,TimeId,ObligationType,ParentId,ChildId,CreatedBy,CreatedAt,DeletedBy,DeletedAt,Id,Time,Parent")] Obligation obligation, Time time, Location location, string fullName)
+        public async Task<IActionResult> Edit(Guid? id, Obligation obligation, Time time, Location location, string fullName)
         {
             if (id != obligation.Id)
             {
                 return NotFound();
             }
             time.Id =  obligation.TimeId;
+            if (obligation.Time!.StartTime != time.StartTime || obligation.Time.EndTime != time.EndTime)
+            {
+                _bll.Times.Update(obligation.Time);
+                await _bll.SaveChangesAsync();
+            }
+            obligation.Time = time;
+            
+            if (await _bll.Locations.ExistsValue(location.LocationValue, User.UserGuidId()))
+            {
+                obligation.Location = await _bll.Locations.LocationByValue(location.LocationValue, User.UserGuidId());
+            }
+            else
+            {
+                Location l = new Location();
+                l.LocationValue = location.LocationValue;
+                //l.Person = obligation.Parent;
+                l.PersonId = obligation.ParentId;
+                _bll.Locations.Add(l);
+                await _bll.SaveChangesAsync();
+                obligation.Location = l;
+            }
+
+            var childId = (await _bll.Persons.PersonByName(fullName)).Id;
+            obligation.ChildId = childId;
+            //var errors = ModelState.Values.SelectMany(v => v.Errors);
+            if (ModelState.IsValid)
+            {
+                _bll.Obligations.Update(obligation);
+                await _bll.SaveChangesAsync();
+                return RedirectToAction(nameof(Index));
+            }
+            var vm = new ObligationModel();
+            vm.Obligation = obligation;
+            return View(vm);
+            /*time.Id =  obligation.TimeId;
             if (obligation.Time.StartTime != time.StartTime || obligation.Time.EndTime != time.EndTime)
             {
                 _context.Update(obligation.Time);
@@ -234,7 +349,7 @@ namespace WebApp.Controllers
             ViewData["LocationId"] = new SelectList(_context.Locations, "Id", "Id", obligation.LocationId);
             ViewData["ParentId"] = new SelectList(_context.Persons, "Id", "Id", obligation.ParentId);
             ViewData["TimeId"] = new SelectList(_context.Times, "Id", "Id", obligation.TimeId);
-            return View(obligation);
+            return View(obligation);*/
         }
 
         // GET: Obligations/Delete/5
@@ -263,11 +378,10 @@ namespace WebApp.Controllers
         //[HttpPost, ActionName("Delete")]
         //[ValidateAntiForgeryToken]
         //public async Task<IActionResult> DeleteConfirmed(string id)
-        public async Task<IActionResult> Delete(string id)
+        public async Task<IActionResult> Delete(Guid id)
         {
-            var obligation = await _context.Obligations.FindAsync(id);
-            _context.Obligations.Remove(obligation);
-            await _context.SaveChangesAsync();
+            _bll.Obligations.Remove(id);
+            await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }
 

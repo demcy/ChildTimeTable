@@ -27,7 +27,7 @@ namespace Domain
         [Display(Name = nameof(LastName), ResourceType = typeof(Resources.Domain.Person))]
         public virtual string LastName { get; set; } = default!;
         public virtual string Logo { get; set; } = default!;
-        public virtual TKey FamilyId { get; set; }
+        public virtual TKey FamilyId { get; set; } = default!;
         public virtual Family? Family { get; set; }
         
         [Display(Name = nameof(PersonType), ResourceType = typeof(Resources.Domain.Person))]

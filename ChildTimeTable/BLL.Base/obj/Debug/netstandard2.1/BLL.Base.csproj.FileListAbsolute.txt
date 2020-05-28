@@ -24,3 +24,8 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/obj/Debug/netstandard2.1/BLL.Base.csproj.CopyComplete
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/obj/Debug/netstandard2.1/BLL.Base.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/obj/Debug/netstandard2.1/BLL.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/bin/Debug/netstandard2.1/BLL.App.DTO.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/bin/Debug/netstandard2.1/Resources.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/bin/Debug/netstandard2.1/BLL.App.DTO.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/bin/Debug/netstandard2.1/Resources.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/bin/Debug/netstandard2.1/ru/Resources.resources.dll

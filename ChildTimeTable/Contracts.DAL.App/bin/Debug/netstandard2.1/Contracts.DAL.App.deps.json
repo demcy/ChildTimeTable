@@ -260,9 +260,6 @@
         "resources": {
           "ru/Resources.resources.dll": {
             "locale": "ru"
-          },
-          "en/Resources.resources.dll": {
-            "locale": "en"
           }
         }
       }

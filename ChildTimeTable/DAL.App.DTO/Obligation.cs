@@ -18,7 +18,7 @@ namespace DAL.App.DTO
 
         
         public virtual TKey LocationId { get; set; } = default!;
-        public virtual Location? Location { get; set; }
+        //public virtual Location? Location { get; set; }
 
         
         public virtual TKey TimeId { get; set; } = default!;

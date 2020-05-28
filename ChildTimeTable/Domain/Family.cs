@@ -17,5 +17,6 @@ namespace Domain
         where TKey : struct, IEquatable<TKey>
     {
         public virtual ICollection<Person>? Persons { get; set; }
+        
     }
 }

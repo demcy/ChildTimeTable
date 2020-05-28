@@ -1,15 +1,16 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using BLL.App.DTO;
 using Contracts.BLL.App;
 using Contracts.DAL.App;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using DAL.App.EF;
-using Domain;
 using Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Hosting;
@@ -22,20 +23,30 @@ namespace WebApp.Controllers
     public class PersonsController : Controller
     {
         private readonly IAppBLL _bll;
-        private readonly ApplicationDbContext _context;
         private readonly IWebHostEnvironment _env;
 
-        public PersonsController(ApplicationDbContext context, IWebHostEnvironment env, IAppBLL bll)
+        public PersonsController(IAppBLL bll, IWebHostEnvironment env)
         {
-            _context = context;
-            _env = env;
             _bll = bll;
+            _env = env;
         }
 
-        
-        public ActionResult NotificationCreate(string email)
+
+        public async Task<IActionResult> NotificationCreate(string email)
         {
-            if (_context.Persons.Any(person => person.AppUser.UserName == email))
+            if (await _bll.Persons.ExistAny(email))
+            {
+                var sender = await _bll.Persons.OnePerson(User.UserGuidId());
+                string name = sender.FirstName + " " + sender.LastName;
+                Notification n = new Notification();
+                n.SenderId = sender.Id;
+                n.RecipientId = (await _bll.Persons.RecipientPerson(email)).Id;
+                n.Status = false;
+                n.Body = name + " invite you to his/her family";
+                _bll.Notifications.Add(n);
+                await _bll.SaveChangesAsync();
+            }
+            /*if (_context.Persons.Any(person => person.AppUser.UserName == email))
             {
                 //var userId = User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value;
                 var sender = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
@@ -47,14 +58,14 @@ namespace WebApp.Controllers
                 n.Body = name + " invite you to his/her family";
                 _context.Add(n);
                 _context.SaveChanges();
-            }
+            }*/
             return RedirectToAction("Index", "Persons");
         }
         
         // GET: Persons
         public async Task<IActionResult> Index()
         {
-            var person = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
+            /*var person = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
             var unreadN = _context.Notifications.Count(n => n.RecipientId == person.Id && n.Status==false);
             var applicationDbContext = _context.Persons
                 .Include(p => p.AppUser)
@@ -64,14 +75,20 @@ namespace WebApp.Controllers
                 .Select(o => o.Time).Select(t => t.StartTime).ToList();
             ViewData["Dates"] = dates;
             ViewBag.Unread = unreadN;
-            return View(await applicationDbContext.ToListAsync());
+            return View(await applicationDbContext.ToListAsync());*/
+            var vm = new PersonDataModel();
+            vm.DatesList = await _bll.Obligations.DatesList(User.UserGuidId());
+            vm.UnreadMessages = (await _bll.Persons.OnePerson(User.UserGuidId())).UnreadMessages;
+            //var applicationDbContext = await _bll.Persons.AllFamilyPersons(User.UserGuidId());
+            vm.Persons = await _bll.Persons.AllFamilyPersons(User.UserGuidId());
+            return View(vm);
         }
         
         
         // GET: Persons/Edit/5
         public async Task<IActionResult> Edit()
         {
-            var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
+            /*var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
             var person =  await _context.Persons.FindAsync(personId);
             List<string> logos = _env.WebRootFileProvider.GetDirectoryContents("Icons")
                 .Select(item=>item.Name).ToList();
@@ -80,26 +97,32 @@ namespace WebApp.Controllers
             ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", person.AppUserId);
             ViewData["FamilyId"] = new SelectList(_context.Families, "Id", "Id", person.FamilyId);
             ViewBag.Logo = person.Logo;
-            ViewData["Logos"] = logos;
-            return View(person);
+            ViewData["Logos"] = logos;*/
+            var vm = new PersonModel();
+            vm.Person = await _bll.Persons.OnePerson(User.UserGuidId());
+            vm.LogoList = _env.WebRootFileProvider.GetDirectoryContents("Icons")
+                .Select(item=>item.Name).ToList();
+            //var person = await _bll.Persons.OnePerson(User.UserGuidId());
+            return View(vm);
+            
         }
-
+        
         // POST: Persons/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit([Bind("FirstName,LastName,Logo,AppUserId,FamilyId,PersonType,CreatedBy,CreatedAt,DeletedBy,DeletedAt,Id")] Person person)
+        public async Task<IActionResult> Edit(PersonModel vm)
         {
             if (ModelState.IsValid)
             {
-                _context.Update(person);
-                await _context.SaveChangesAsync();
+                _bll.Persons.Update(vm.Person);
+                await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", person.AppUserId);
-            ViewData["FamilyId"] = new SelectList(_context.Families, "Id", "Id", person.FamilyId);
-            return View(person);
+            //ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", person.AppUserId);
+            //ViewData["FamilyId"] = new SelectList(_context.Families, "Id", "Id", person.FamilyId);
+            return View(vm);
         }
 
         

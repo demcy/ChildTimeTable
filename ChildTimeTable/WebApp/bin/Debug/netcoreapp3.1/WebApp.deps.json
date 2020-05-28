@@ -2842,6 +2842,7 @@
       "BLL.Base/1.0.0": {
         "dependencies": {
           "AutoMapper": "9.0.0",
+          "BLL.App.DTO": "1.0.0",
           "Contracts.BLL.Base": "1.0.0"
         },
         "runtime": {
