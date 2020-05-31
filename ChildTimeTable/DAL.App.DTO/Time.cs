@@ -1,20 +1,16 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Contracts.DAL.Base;
 
 namespace DAL.App.DTO
 {
-    public class Time : Time<Guid>, IDomainBaseEntity
+    public class Time : IDomainEntityId
     {
-    }
-
-    public class Time<TKey> : IDomainBaseEntity<TKey>
-        where TKey : IEquatable<TKey>
-    {
-        public TKey Id { get; set; } = default!;
-        public virtual DateTime StartTime { get; set; } = default!;
-        public virtual DateTime EndTime { get; set; } = default!;
-
-        //public virtual ICollection<Obligation>? Obligations { get; set; }
+        public Guid Id { get; set; } 
+        public DateTime StartTime { get; set; } = default!;
+        public DateTime EndTime { get; set; } = default!;
+        [JsonIgnore]
+        public ICollection<Obligation>? Obligations { get; set; }
     }
 }

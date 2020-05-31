@@ -1,11 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "7Yu+73+mLoY2rz6u+U/Jp3+cXqwHSqVK0UHqriw+QX2ZYSw7UVR6zYhjKSKogiBj5r2u0r3adcj6o4nzBPmLjw==",
+  "dgSpecHash": "/7P+JPr33bkmHK8FNMK/4mJkXnJ0wfS9oCp3897CvOuLH5Ze4KU0gBqyW2gjg7hOf7kDXcI00frSjFRH+nzr5A==",
   "success": true,
   "projectFilePath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj",
   "expectedPackageFiles": [
     "/Users/kira/.nuget/packages/microsoft.aspnetcore.cryptography.internal/3.1.3/microsoft.aspnetcore.cryptography.internal.3.1.3.nupkg.sha512",
     "/Users/kira/.nuget/packages/microsoft.aspnetcore.cryptography.keyderivation/3.1.3/microsoft.aspnetcore.cryptography.keyderivation.3.1.3.nupkg.sha512",
+    "/Users/kira/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.0/microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
     "/Users/kira/.nuget/packages/microsoft.extensions.caching.abstractions/3.1.3/microsoft.extensions.caching.abstractions.3.1.3.nupkg.sha512",
     "/Users/kira/.nuget/packages/microsoft.extensions.configuration/3.1.3/microsoft.extensions.configuration.3.1.3.nupkg.sha512",
     "/Users/kira/.nuget/packages/microsoft.extensions.configuration.abstractions/3.1.3/microsoft.extensions.configuration.abstractions.3.1.3.nupkg.sha512",
@@ -18,11 +19,14 @@
     "/Users/kira/.nuget/packages/microsoft.extensions.logging.abstractions/3.1.3/microsoft.extensions.logging.abstractions.3.1.3.nupkg.sha512",
     "/Users/kira/.nuget/packages/microsoft.extensions.options/3.1.3/microsoft.extensions.options.3.1.3.nupkg.sha512",
     "/Users/kira/.nuget/packages/microsoft.extensions.primitives/3.1.3/microsoft.extensions.primitives.3.1.3.nupkg.sha512",
-    "/Users/kira/.nuget/packages/system.buffers/4.4.0/system.buffers.4.4.0.nupkg.sha512",
+    "/Users/kira/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
     "/Users/kira/.nuget/packages/system.componentmodel.annotations/4.7.0/system.componentmodel.annotations.4.7.0.nupkg.sha512",
-    "/Users/kira/.nuget/packages/system.memory/4.5.2/system.memory.4.5.2.nupkg.sha512",
-    "/Users/kira/.nuget/packages/system.numerics.vectors/4.4.0/system.numerics.vectors.4.4.0.nupkg.sha512",
-    "/Users/kira/.nuget/packages/system.runtime.compilerservices.unsafe/4.7.1/system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512"
+    "/Users/kira/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/kira/.nuget/packages/system.runtime.compilerservices.unsafe/4.7.1/system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+    "/Users/kira/.nuget/packages/system.text.encodings.web/4.7.1/system.text.encodings.web.4.7.1.nupkg.sha512",
+    "/Users/kira/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
+    "/Users/kira/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
   ],
   "logs": []
 }

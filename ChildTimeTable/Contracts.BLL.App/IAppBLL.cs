@@ -13,5 +13,9 @@ namespace Contracts.BLL.App
         public IObligationService Obligations { get; }
         public IPersonService Persons { get; }
         public ITimeService Times { get; }
+        ILangStrService LangStrs { get; }
+        ILangStrTranslationService LangStrTranslation { get; }
+        ITrackPointService TrackPoints { get; }
+        ITrackService Tracks { get; }
     }
 }

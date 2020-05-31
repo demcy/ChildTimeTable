@@ -1,22 +1,18 @@
-#nullable enable
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Contracts.DAL.Base;
 
 namespace BLL.App.DTO
 {
-    public class Location : Location<Guid>, IDomainBaseEntity
+    public class Location : IDomainEntityId
     {
-    }
-
-    public class Location<TKey> : IDomainBaseEntity<TKey>
-        where TKey : IEquatable<TKey>
-    {
-        public TKey Id { get; set; } = default!;
-        public virtual string LocationValue { get; set; } = default!;
-        public virtual TKey PersonId { get; set; } = default!;
-        public virtual Person? Person { get; set; }
-
-        public virtual ICollection<Obligation>? Obligations { get; set; }
+        public Guid Id { get; set; }
+        public string LocationValue { get; set; } = default!;
+        public Guid PersonId { get; set; } = default!;
+        [JsonIgnore]
+        public Person? Person { get; set; }
+        [JsonIgnore]
+        public ICollection<Obligation>? Obligations { get; set; }
     }
 }

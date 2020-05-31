@@ -27,8 +27,8 @@
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.EF/DAL.App.EF.csproj"
           },
-          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
-            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj"
           },
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Extensions/Extensions.csproj"
@@ -41,11 +41,6 @@
           }
         }
       }
-    },
-    "warningProperties": {
-      "warnAsError": [
-        "NU1605"
-      ]
     }
   },
   "frameworks": {

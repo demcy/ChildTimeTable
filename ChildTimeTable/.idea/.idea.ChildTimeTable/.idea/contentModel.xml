@@ -11,6 +11,19 @@
         <e p="AppBLL.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="BLL.App.csproj" t="IncludeRecursive" />
+        <e p="Mappers" t="Include">
+          <e p="BLLMapper.cs" t="Include" />
+          <e p="FamilyServiceMapper.cs" t="Include" />
+          <e p="LangStrServiceMapper.cs" t="Include" />
+          <e p="LangStrTranslationServiceMapper.cs" t="Include" />
+          <e p="LocationServiceMapper.cs" t="Include" />
+          <e p="NotificationServiceMapper.cs" t="Include" />
+          <e p="ObligationServiceMapper.cs" t="Include" />
+          <e p="PersonServiceMapper.cs" t="Include" />
+          <e p="TimeServiceMapper.cs" t="Include" />
+          <e p="TrackPointServiceMapper.cs" t="Include" />
+          <e p="TrackServiceMapper.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -20,11 +33,15 @@
         </e>
         <e p="Services" t="Include">
           <e p="FamilyService.cs" t="Include" />
+          <e p="LangStrService.cs" t="Include" />
+          <e p="LangStrTranslationService.cs" t="Include" />
           <e p="LocationService.cs" t="Include" />
           <e p="NotificationService.cs" t="Include" />
           <e p="ObligationService.cs" t="Include" />
           <e p="PersonService.cs" t="Include" />
           <e p="TimeService.cs" t="Include" />
+          <e p="TrackPointService.cs" t="Include" />
+          <e p="TrackService.cs" t="Include" />
         </e>
       </e>
       <e p="BLL.App.DTO" t="IncludeRecursive">
@@ -35,6 +52,8 @@
           <e p="AppRole.cs" t="Include" />
           <e p="AppUser.cs" t="Include" />
         </e>
+        <e p="LangStr.cs" t="Include" />
+        <e p="LangStrTranslation.cs" t="Include" />
         <e p="Location.cs" t="Include" />
         <e p="Notification.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -47,15 +66,18 @@
         <e p="Obligation.cs" t="Include" />
         <e p="ObligationType.cs" t="Include" />
         <e p="Person.cs" t="Include" />
+        <e p="PersonDisplay.cs" t="Include" />
         <e p="PersonType.cs" t="Include" />
         <e p="Time.cs" t="Include" />
+        <e p="Track.cs" t="Include" />
+        <e p="TrackPoint.cs" t="Include" />
       </e>
       <e p="BLL.Base" t="IncludeRecursive">
         <e p="BaseBLL.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="BLL.Base.csproj" t="IncludeRecursive" />
         <e p="Mappers" t="Include">
-          <e p="BaseBLLMapper.cs" t="Include" />
+          <e p="BaseMapper.cs" t="Include" />
           <e p="IdentityMapper.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -75,6 +97,18 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.BLL.App.csproj" t="IncludeRecursive" />
         <e p="IAppBLL.cs" t="Include" />
+        <e p="Mappers" t="Include">
+          <e p="IFamilyServiceMapper.cs" t="Include" />
+          <e p="ILangStrServiceMapper.cs" t="Include" />
+          <e p="ILangStrTranslationServiceMapper.cs" t="Include" />
+          <e p="ILocationServiceMapper.cs" t="Include" />
+          <e p="INotificationServiceMapper.cs" t="Include" />
+          <e p="IObligationServiceMapper.cs" t="Include" />
+          <e p="IPersonServiceMapper.cs" t="Include" />
+          <e p="ITimeServiceMapper.cs" t="Include" />
+          <e p="ITrackPointServiceMapper.cs" t="Include" />
+          <e p="ITrackServiceMapper.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -84,11 +118,15 @@
         </e>
         <e p="Services" t="Include">
           <e p="IFamilyService.cs" t="Include" />
+          <e p="ILangStrService.cs" t="Include" />
+          <e p="ILangStrTranslationService.cs" t="Include" />
           <e p="ILocationService.cs" t="Include" />
           <e p="INotificationService.cs" t="Include" />
           <e p="IObligationService.cs" t="Include" />
           <e p="IPersonService.cs" t="Include" />
           <e p="ITimeService.cs" t="Include" />
+          <e p="ITrackPointService.cs" t="Include" />
+          <e p="ITrackService.cs" t="Include" />
         </e>
       </e>
       <e p="Contracts.BLL.Base" t="IncludeRecursive">
@@ -96,7 +134,7 @@
         <e p="Contracts.BLL.Base.csproj" t="IncludeRecursive" />
         <e p="IBaseBLL.cs" t="Include" />
         <e p="Mappers" t="Include">
-          <e p="IBaseBLLMapper.cs" t="Include" />
+          <e p="IBaseMapper.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -106,6 +144,7 @@
           </e>
         </e>
         <e p="Services" t="Include">
+          <e p="IBaseEntityService.cs" t="Include" />
           <e p="IBaseService.cs" t="Include" />
         </e>
       </e>
@@ -122,24 +161,40 @@
         </e>
         <e p="Repositories" t="Include">
           <e p="IFamilyRepository .cs" t="Include" />
+          <e p="IFamilyRepositoryCustom.cs" t="Include" />
+          <e p="ILangStrRepository.cs" t="Include" />
+          <e p="ILangStrRepositoryCustom.cs" t="Include" />
+          <e p="ILangStrTranslationRepository.cs" t="Include" />
+          <e p="ILangStrTranslationRepositoryCustom.cs" t="Include" />
           <e p="ILocationRepository.cs" t="Include" />
+          <e p="ILocationRepositoryCustom.cs" t="Include" />
           <e p="INotificationRepository.cs" t="Include" />
+          <e p="INotificationRepositoryCustom.cs" t="Include" />
           <e p="IObligationRepository.cs" t="Include" />
+          <e p="IObligationRepositoryCustom.cs" t="Include" />
           <e p="IPersonRepository.cs" t="Include" />
+          <e p="IPersonRepositoryCustom.cs" t="Include" />
           <e p="ITimeRepository.cs" t="Include" />
+          <e p="ITimeRepositoryCustom.cs" t="Include" />
+          <e p="ITrackPointRepository.cs" t="Include" />
+          <e p="ITrackPointRepositoryCustom.cs" t="Include" />
+          <e p="ITrackRepository.cs" t="Include" />
+          <e p="ITrackRepositoryCustom.cs" t="Include" />
         </e>
       </e>
       <e p="Contracts.DAL.Base" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
         <e p="Contracts.DAL.Base.csproj" t="IncludeRecursive" />
+        <e p="IBaseEntityTracker.cs" t="Include" />
         <e p="IBaseUnitOfWork.cs" t="Include" />
         <e p="IDomainBaseEntity.cs" t="Include" />
         <e p="IDomainEntityBaseMetadata.cs" t="Include" />
+        <e p="IDomainEntityId.cs" t="Include" />
         <e p="IDomainEntityMetadata.cs" t="Include" />
         <e p="IDomainEntityUser.cs" t="Include" />
         <e p="IUserNameProvider.cs" t="Include" />
         <e p="Mappers" t="Include">
-          <e p="IBaseDALMapper.cs" t="Include" />
+          <e p="IBaseMapper.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
@@ -161,6 +216,8 @@
           <e p="AppRole.cs" t="Include" />
           <e p="AppUser.cs" t="Include" />
         </e>
+        <e p="LangStr.cs" t="Include" />
+        <e p="LangStrTranslation.cs" t="Include" />
         <e p="Location.cs" t="Include" />
         <e p="Notification.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
@@ -173,20 +230,26 @@
         <e p="Obligation.cs" t="Include" />
         <e p="ObligationType.cs" t="Include" />
         <e p="Person.cs" t="Include" />
+        <e p="PersonDisplay.cs" t="Include" />
         <e p="PersonType.cs" t="Include" />
         <e p="Time.cs" t="Include" />
+        <e p="Track.cs" t="Include" />
+        <e p="TrackPoint.cs" t="Include" />
       </e>
       <e p="DAL.App.EF" t="IncludeRecursive">
-        <e p="AppDbContext.cs" t="Include" />
+        <e p="ApplicationDbContext.cs" t="Include" />
         <e p="AppUnitOfWork.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.App.EF.csproj" t="IncludeRecursive" />
         <e p="Helpers" t="Include">
           <e p="DataInitializers.cs" t="Include" />
         </e>
+        <e p="Mappers" t="Include">
+          <e p="DALMapper.cs" t="Include" />
+        </e>
         <e p="Migrations" t="Include">
-          <e p="20200523151154_InitialDbCreation.cs" t="Include" />
-          <e p="20200523151154_InitialDbCreation.Designer.cs" t="Include" />
+          <e p="20200529193903_InitialDbCreation.cs" t="Include" />
+          <e p="20200529193903_InitialDbCreation.Designer.cs" t="Include" />
           <e p="ApplicationDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="obj" t="ExcludeRecursive">
@@ -198,20 +261,25 @@
         </e>
         <e p="Repositories" t="Include">
           <e p="FamilyRepository.cs" t="Include" />
+          <e p="LangStrRepository.cs" t="Include" />
+          <e p="LangStrTranslationRepository.cs" t="Include" />
           <e p="LocationRepository.cs" t="Include" />
           <e p="NotificationRepository.cs" t="Include" />
           <e p="ObligationRepository.cs" t="Include" />
           <e p="PersonRepository.cs" t="Include" />
           <e p="TimeRepository.cs" t="Include" />
+          <e p="TrackPointRepository.cs" t="Include" />
+          <e p="TrackRepository.cs" t="Include" />
         </e>
       </e>
       <e p="DAL.Base" t="IncludeRecursive">
         <e p="BaseUnitOfWork.cs" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.Base.csproj" t="IncludeRecursive" />
-        <e p="DomainBaseEntity.cs" t="Include" />
-        <e p="DomainEntityBaseMetadata.cs" t="Include" />
-        <e p="DomainEntityMetadata.cs" t="Include" />
+        <e p="Mappers" t="Include">
+          <e p="BaseMapper.cs" t="Include" />
+          <e p="IdentityMapper.cs" t="Include" />
+        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -224,10 +292,6 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="DAL.Base.EF.csproj" t="IncludeRecursive" />
         <e p="EFBaseUnitOfWork.cs" t="Include" />
-        <e p="Mappers" t="Include">
-          <e p="BaseDALMapper.cs" t="Include" />
-          <e p="IdentityMapper.cs" t="Include" />
-        </e>
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -239,21 +303,24 @@
           <e p="EFBaseRepository.cs" t="Include" />
         </e>
       </e>
-      <e p="Domain" t="IncludeRecursive">
+      <e p="Directory.Build.props" t="Include" />
+      <e p="Domain" t="Include" />
+      <e p="Domain.App" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Domain.csproj" t="IncludeRecursive" />
+        <e p="Domain.App.csproj" t="IncludeRecursive" />
         <e p="Family.cs" t="Include" />
         <e p="Identity" t="Include">
           <e p="AppRole.cs" t="Include" />
           <e p="AppUser.cs" t="Include" />
         </e>
+        <e p="LangStr.cs" t="Include" />
+        <e p="LangStrTranslation.cs" t="Include" />
         <e p="Location.cs" t="Include" />
-        <e p="MultiLangString.cs" t="Include" />
         <e p="Notification.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
-              <e p="Domain.AssemblyInfo.cs" t="Include" />
+              <e p="Domain.App.AssemblyInfo.cs" t="Include" />
             </e>
           </e>
         </e>
@@ -262,7 +329,23 @@
         <e p="Person.cs" t="Include" />
         <e p="PersonType.cs" t="Include" />
         <e p="Time.cs" t="Include" />
-        <e p="Translation.cs" t="Include" />
+        <e p="Track.cs" t="Include" />
+        <e p="TrackPoint.cs" t="Include" />
+      </e>
+      <e p="Domain.Base" t="IncludeRecursive">
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Domain.Base.csproj" t="IncludeRecursive" />
+        <e p="DomainEntityId.cs" t="Include" />
+        <e p="DomainEntityIdMetadata.cs" t="Include" />
+        <e p="DomainEntityIdMetadataUser.cs" t="Include" />
+        <e p="DomainEntityIdUser.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netstandard2.1" t="Include">
+              <e p="Domain.Base.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
       </e>
       <e p="Extensions" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
@@ -279,12 +362,29 @@
       <e p="packages" t="ExcludeRecursive" />
       <e p="PublicApi.DTO.v1" t="IncludeRecursive">
         <e p="bin" t="ExcludeRecursive" />
-        <e p="FamilyDTO.cs" t="Include" />
-        <e p="LocationDTO.cs" t="Include" />
-        <e p="Mappers" t="Include">
-          <e p="DTOMapper.cs" t="Include" />
+        <e p="CultureDTO.cs" t="Include" />
+        <e p="Family.cs" t="Include" />
+        <e p="Identity" t="Include">
+          <e p="AppRole.cs" t="Include" />
+          <e p="AppUser.cs" t="Include" />
+          <e p="JwtResponseDTO.cs" t="Include" />
+          <e p="LoginDTO.cs" t="Include" />
+          <e p="RegisterDTO.cs" t="Include" />
         </e>
-        <e p="NotificationDTO.cs" t="Include" />
+        <e p="Location.cs" t="Include" />
+        <e p="Mappers" t="Include">
+          <e p="BaseMapper.cs" t="Include" />
+          <e p="FamilyMapper.cs" t="Include" />
+          <e p="LocationMapper.cs" t="Include" />
+          <e p="NotificationMapper.cs" t="Include" />
+          <e p="ObligationMapper.cs" t="Include" />
+          <e p="PersonMapper.cs" t="Include" />
+          <e p="TimeMapper.cs" t="Include" />
+          <e p="TrackMapper.cs" t="Include" />
+          <e p="TrackPointMapper.cs" t="Include" />
+        </e>
+        <e p="MessageDTO.cs" t="Include" />
+        <e p="Notification.cs" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netstandard2.1" t="Include">
@@ -292,10 +392,13 @@
             </e>
           </e>
         </e>
-        <e p="ObligationDTO.cs" t="Include" />
+        <e p="Obligation.cs" t="Include" />
         <e p="Person.cs" t="Include" />
+        <e p="PersonCreate.cs" t="Include" />
         <e p="PublicApi.DTO.v1.csproj" t="IncludeRecursive" />
-        <e p="TimeDTO.cs" t="Include" />
+        <e p="Time.cs" t="Include" />
+        <e p="Track.cs" t="Include" />
+        <e p="TrackPoint.cs" t="Include" />
       </e>
       <e p="README.md" t="Include" />
       <e p="Resources" t="IncludeRecursive">

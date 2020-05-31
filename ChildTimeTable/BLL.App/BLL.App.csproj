@@ -5,10 +5,9 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\BLL.App.DTO\BLL.App.DTO.csproj" />
-      <ProjectReference Include="..\BLL.Base\BLL.Base.csproj" />
-      <ProjectReference Include="..\Contracts.BLL.App\Contracts.BLL.App.csproj" />
-      <ProjectReference Include="..\DAL.App.EF\DAL.App.EF.csproj" />
+        <ProjectReference Include="..\BLL.Base\BLL.Base.csproj" />
+        <ProjectReference Include="..\Contracts.BLL.App\Contracts.BLL.App.csproj" />
+        <ProjectReference Include="..\DAL.App.EF\DAL.App.EF.csproj" />
     </ItemGroup>
 
 </Project>

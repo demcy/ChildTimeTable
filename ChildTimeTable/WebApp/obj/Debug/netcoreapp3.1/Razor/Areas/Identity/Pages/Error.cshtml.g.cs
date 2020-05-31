@@ -35,13 +35,13 @@ using WebApp.Areas.Identity.Pages;
 #nullable disable
 #nullable restore
 #line 5 "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/Areas/Identity/Pages/_ViewImports.cshtml"
-using Domain.Identity;
+using Domain.App.Identity;
 
 #line default
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"f6ebae86d40004d00768c35aea29f9fd0820dc4a", @"/Areas/Identity/Pages/Error.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2f27f3c6693a5db931734f4945488b4452369d2", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fc6c5f197f2470604a9f4df0664ef2af14adfee", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Error : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
         #pragma warning disable 1998

@@ -7,14 +7,13 @@ using Contracts.DAL.Base;
 using Contracts.DAL.Base.Repositories;
 using DAL.App.EF.Repositories;
 using DAL.Base.EF;
-using DAL.Base.EF.Mappers;
 using DAL.Base.EF.Repositories;
 using Domain;
 using Microsoft.EntityFrameworkCore;
 
 namespace DAL.App.EF
 {
-    public class AppUnitOfWork : EFBaseUnitOfWork<ApplicationDbContext>, IAppUnitOfWork
+    public class AppUnitOfWork : EFBaseUnitOfWork<Guid, ApplicationDbContext>, IAppUnitOfWork
     {
         public AppUnitOfWork(ApplicationDbContext uowDbContext) : base(uowDbContext)
         {
@@ -34,14 +33,18 @@ namespace DAL.App.EF
             GetRepository<ILocationRepository>(()=> new LocationRepository(UOWDbContext));
         public ITimeRepository Times => 
             GetRepository<ITimeRepository>(()=> new TimeRepository(UOWDbContext));
-
-
-        /*public IBaseRepository<Location> Locations =>
-            GetRepository<IBaseRepository<Location>>(()=> 
-                new EFBaseRepository<ApplicationDbContext, Domain.Location, DAL.App.DTO.Location>(UOWDbContext, 
-                new BaseDALMapper<Domain.Location, DAL.App.DTO.Location>()));
-        */
         
-        
-        }
+        public ILangStrRepository LangStrs =>
+            GetRepository<ILangStrRepository>(() => new LangStrRepository(UOWDbContext));
+
+        public ILangStrTranslationRepository LangStrTranslations =>
+            GetRepository<ILangStrTranslationRepository>(() => new LangStrTranslationRepository(UOWDbContext));
+
+        public ITrackPointRepository TrackPoints =>
+            GetRepository<ITrackPointRepository>(() => new TrackPointRepository(UOWDbContext));
+
+        public ITrackRepository Tracks =>
+            GetRepository<ITrackRepository>(() => new TrackRepository(UOWDbContext));
+
+    }
 }

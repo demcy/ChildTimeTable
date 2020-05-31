@@ -30,11 +30,11 @@ namespace WebApp.Controllers
         }
 
 
-        public ActionResult ChangeStatus(Guid id)
+        public async Task<ActionResult> ChangeStatus(Guid id)
         {
-            var obligation = _bll.Obligations.Find(id);
+            var obligation = await _bll.Obligations.FirstOrDefaultAsync(id);
             obligation.Status = !obligation.Status;
-            _bll.SaveChanges();
+            await _bll.SaveChangesAsync();
             return RedirectToAction("Index", "Obligations");
         }
 
@@ -102,7 +102,7 @@ namespace WebApp.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create(Obligation obligation, Time time, string fullName)
+        public async Task<IActionResult> Create(Obligation obligation, string fullName)
         {
             var user = await _bll.Persons.OnePerson(User.UserGuidId());
             obligation.ParentId = user.Id;
@@ -111,8 +111,8 @@ namespace WebApp.Controllers
             obligation.ChildId = child.Id;
             ModelState.SetModelValue("ChildId", new ValueProviderResult(child.Id.ToString()));
             Time t = new Time();
-            t.StartTime = time.StartTime;
-            t.EndTime = time.EndTime;
+            t.StartTime = obligation.Time!.StartTime;
+            t.EndTime = obligation.Time!.EndTime;
             _bll.Times.Add(t);
             await _bll.SaveChangesAsync();
             obligation.TimeId = t.Id;
@@ -218,13 +218,14 @@ namespace WebApp.Controllers
         }
 
         // GET: Obligations/Edit/5
-        public async Task<IActionResult> Edit(Guid? id)
+        public async Task<IActionResult> Edit(Guid id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-            var obligation = await _bll.Obligations.FindAsync(id);
+
+            var obligation = await _bll.Obligations.FirstOrDefaultAsync(id);
             var vm = new ObligationModel();
             vm.Obligation = obligation;
             vm.StartTime = obligation.Time!.StartTime.ToString("yyyy-MM-ddTHH:mm");
@@ -280,7 +281,7 @@ namespace WebApp.Controllers
             time.Id =  obligation.TimeId;
             if (obligation.Time!.StartTime != time.StartTime || obligation.Time.EndTime != time.EndTime)
             {
-                _bll.Times.Update(obligation.Time);
+                await _bll.Times.UpdateAsync(obligation.Time);
                 await _bll.SaveChangesAsync();
             }
             obligation.Time = time;
@@ -305,7 +306,7 @@ namespace WebApp.Controllers
             //var errors = ModelState.Values.SelectMany(v => v.Errors);
             if (ModelState.IsValid)
             {
-                _bll.Obligations.Update(obligation);
+                await _bll.Obligations.UpdateAsync(obligation);
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
@@ -380,7 +381,7 @@ namespace WebApp.Controllers
         //public async Task<IActionResult> DeleteConfirmed(string id)
         public async Task<IActionResult> Delete(Guid id)
         {
-            _bll.Obligations.Remove(id);
+            await _bll.Obligations.RemoveAsync(id);
             await _bll.SaveChangesAsync();
             return RedirectToAction(nameof(Index));
         }

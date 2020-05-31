@@ -29,11 +29,6 @@
           "netstandard2.1": {
             "projectReferences": {}
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -92,16 +87,15 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "System.ComponentModel.Annotations": {
               "target": "Package",
               "version": "[4.7.0, )"

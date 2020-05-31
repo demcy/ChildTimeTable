@@ -26,15 +26,16 @@
           }
         }
       }
-    },
-    "warningProperties": {
-      "warnAsError": [
-        "NU1605"
-      ]
     }
   },
   "frameworks": {
     "netstandard2.1": {
+      "dependencies": {
+        "System.Text.Json": {
+          "target": "Package",
+          "version": "[4.7.2, )"
+        }
+      },
       "imports": [
         "net461",
         "net462",

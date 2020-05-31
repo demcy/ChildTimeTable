@@ -28,7 +28,7 @@ namespace Resources.Domain {
         public static System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.Equals(null, resourceMan)) {
-                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Resources.Domain.Person", typeof(Person).Assembly);
+                    System.Resources.ResourceManager temp = new System.Resources.ResourceManager("Resources.Domain.App.Person", typeof(Person).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

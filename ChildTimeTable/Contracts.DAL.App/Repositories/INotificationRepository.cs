@@ -7,24 +7,9 @@ using DAL.App.DTO;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface INotificationRepository : INotificationRepository<Guid, Notification>, IBaseRepository<Notification>
+    public interface INotificationRepository : IBaseRepository<Notification>, INotificationRepositoryCustom
     {
-    }
-
-    public interface INotificationRepository<TKey, TDALEntity> : IBaseRepository<TKey,TDALEntity> 
-        where TDALEntity : class, IDomainBaseEntity<TKey>, new() 
-        where TKey : IEquatable<TKey>
-    {
-        Task<IEnumerable<TDALEntity>> AllImportant(Guid? userId = null);
-        Task<IEnumerable<TDALEntity>> AllAsync(Guid? userId = null);
-        Task<TDALEntity> FirstOrDefaultAsync(Guid id, Guid? userId = null);
-
-        Task<bool> ExistsAsync(Guid id, Guid? userId = null);
-        Task DeleteAsync(Guid id, Guid? userId = null);
-        
+        Task<IEnumerable<Notification>> AllImportant(Guid? userId = null);
         
     }
-    
-
-    
 }

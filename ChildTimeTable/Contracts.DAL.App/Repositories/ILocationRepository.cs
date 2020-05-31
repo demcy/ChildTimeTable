@@ -7,24 +7,11 @@ using DAL.App.DTO;
 
 namespace Contracts.DAL.App.Repositories
 {
-    public interface ILocationRepository : ILocationRepository<Guid, Location>, IBaseRepository<Location>
+    public interface ILocationRepository : IBaseRepository<Location>, ILocationRepositoryCustom
     {
-    }
-
-    public interface ILocationRepository<TKey, TDALEntity> : IBaseRepository<TKey,TDALEntity> 
-        where TDALEntity : class, IDomainBaseEntity<TKey>, new() 
-        where TKey : IEquatable<TKey>
-    {
-        Task<IEnumerable<TDALEntity>> AllForPerson(Guid? userId = null);
+        Task<IEnumerable<Location>> AllForPerson(Guid? userId = null);
         Task<bool> ExistsValue(string locationValue, Guid? userId = null);
-        Task<TDALEntity> LocationByValue(string locationValue, Guid? userId = null);
-        Task<IEnumerable<TDALEntity>> AllAsync(Guid? userId = null);
-        Task<TDALEntity> FirstOrDefaultAsync(Guid id, Guid? userId = null);
-
-        Task<bool> ExistsAsync(Guid id, Guid? userId = null);
-        Task DeleteAsync(Guid id, Guid? userId = null);
-        
-        
+        Task<Location> LocationByValue(string locationValue, Guid? userId = null);
     }
     
 

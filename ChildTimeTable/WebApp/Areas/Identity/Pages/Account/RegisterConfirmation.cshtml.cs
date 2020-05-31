@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Authorization;
 using System.Text;
 using System.Threading.Tasks;
-using Domain.Identity;
+using Domain.App.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -22,11 +22,11 @@ namespace WebApp.Areas.Identity.Pages.Account
             _sender = sender;
         }
 
-        public string Email { get; set; }
+        public string Email { get; set; } = default!;
 
-        public bool DisplayConfirmAccountLink { get; set; }
+        public bool DisplayConfirmAccountLink { get; set; } = default!;
 
-        public string EmailConfirmationUrl { get; set; }
+        public string EmailConfirmationUrl { get; set; } = default!;
 
         public async Task<IActionResult> OnGetAsync(string email)
         {

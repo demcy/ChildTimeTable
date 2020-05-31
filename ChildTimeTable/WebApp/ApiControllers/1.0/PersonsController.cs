@@ -30,7 +30,7 @@ namespace WebApp.ApiControllers._1._0
 
         // GET: api/Persons
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
+        /*public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
         {
             var persons = (await _bll.Persons.AllAsync(User.UserGuidId()))
                 .Select(bllEntity=> new Person()
@@ -41,7 +41,7 @@ namespace WebApp.ApiControllers._1._0
                     LocationCount = bllEntity.LocationCount
                 });
             return Ok(persons);
-        }
+        }*/
     
         // GET: api/Persons/5
         /// <summary>
@@ -69,7 +69,7 @@ namespace WebApp.ApiControllers._1._0
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutPerson(Guid id, PersonEdit personEdit)
+        /*public async Task<IActionResult> PutPerson(Guid id, PersonEdit personEdit)
         {
             if (id != personEdit.Id)
             {
@@ -88,7 +88,7 @@ namespace WebApp.ApiControllers._1._0
             _bll.Persons.Update(person);
             await _bll.SaveChangesAsync();
             return NoContent();
-        }
+        }*/
 
         // POST: api/Persons
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
@@ -109,8 +109,8 @@ namespace WebApp.ApiControllers._1._0
         }
 
         // DELETE: api/Persons/5
-        [HttpDelete("{id}")]
-        public async Task<ActionResult<BLL.App.DTO.Person>> DeletePerson(Guid id)
+        //[HttpDelete("{id}")]
+        /*public async Task<ActionResult<BLL.App.DTO.Person>> DeletePerson(Guid id)
         {
             var person = await _bll.Persons.FirstOrDefaultAsync(id, User.UserGuidId());
             if (person == null)
@@ -122,7 +122,7 @@ namespace WebApp.ApiControllers._1._0
             await _bll.SaveChangesAsync();
             return Ok(person);
             
-        }
+        }*/
 
         
     }

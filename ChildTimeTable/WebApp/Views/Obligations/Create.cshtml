@@ -1,4 +1,5 @@
 @using System.Collections
+@using BLL.App.DTO
 @using Domain
 @model ObligationModel
 
@@ -13,25 +14,25 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <label asp-for="Obligation.Time.StartTime" class="control-label"></label>
-                <input asp-for="Obligation.Time.StartTime" class="form-control" value="@Model.Data"/>
-                <span asp-validation-for="Obligation.Time.StartTime" class="text-danger"></span>
+                <label asp-for="Obligation.Time!.StartTime" class="control-label"></label>
+                <input asp-for="Obligation.Time!.StartTime" class="form-control" value="@Model.Data"/>
+                <span asp-validation-for="Obligation.Time!.StartTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Obligation.Time.EndTime" class="control-label"></label>
-                <input asp-for="Obligation.Time.EndTime" class="form-control" value="@Model.Data"/>
-                <span asp-validation-for="Obligation.Time.EndTime" class="text-danger"></span>
+                <label asp-for="Obligation.Time!.EndTime" class="control-label"></label>
+                <input asp-for="Obligation.Time!.EndTime" class="form-control" value="@Model.Data"/>
+                <span asp-validation-for="Obligation.Time!.EndTime" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Obligation.Location.LocationValue" class="control-label">Location</label>
-                <input asp-for="Obligation.Location.LocationValue" class="form-control" list="Locations"/>
+                <label asp-for="Obligation.Location!.LocationValue" class="control-label">Location</label>
+                <input asp-for="Obligation.Location!.LocationValue" class="form-control" list="Locations"/>
                 <datalist id="Locations">
                     @foreach (SelectListItem location in Model.LocationValues!)
                     {
                         <option value="@location.Value"/>
                     }
                 </datalist>
-                <span asp-validation-for="Obligation.Location.LocationValue" class="text-danger"></span>
+                <span asp-validation-for="Obligation.Location!.LocationValue" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <label asp-for="Obligation.ObligationType" class="control-label"></label>

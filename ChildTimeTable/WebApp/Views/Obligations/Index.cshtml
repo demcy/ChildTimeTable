@@ -27,7 +27,7 @@
     string linkI = "t";
     string switchI = "s";
 }
-@foreach (var item in Model.Obligations!.Where(o => o.ChildId == ViewBag.User))
+@foreach (var item in Model.Obligations!.Where(o => o.ChildId == Model.PersonId))
 {
     linkI += i;
     switchI += i;
@@ -37,7 +37,7 @@
             <button type="button" class="btn btn-success flex-fill" data-toggle="collapse" data-target="#@linkI">
                 <div class="row">
                     <div class="col-3">
-                        @item!.Time.StartTime.ToString("HH:mm") - @item!.Time.EndTime.ToString("HH:mm")
+                        @item.Time!.StartTime.ToString("HH:mm") - @item.Time!.EndTime.ToString("HH:mm")
                     </div>
                     <div>
                         @Html.DisplayFor(modelItem => item.Body)
@@ -50,7 +50,7 @@
             <button type="button" class="btn btn-warning flex-fill" data-toggle="collapse" data-target="#@linkI">
                 <div class="row">
                     <div class="col-3">
-                        @item!.Time.StartTime.ToString("HH:mm") - @item!.Time.EndTime.ToString("HH:mm")
+                        @item.Time!.StartTime.ToString("HH:mm") - @item.Time!.EndTime.ToString("HH:mm")
                     </div>
                     <div>
                         @Html.DisplayFor(modelItem => item.Body)
@@ -86,11 +86,11 @@
         <dl>
             <dt>From</dt>
             <dd>
-                @Html.DisplayFor(modelItem => item.Parent.FirstName) @Html.DisplayFor(modelItem => item.Parent.LastName)
+                @Html.DisplayFor(modelItem => item.Parent!.FirstName) @Html.DisplayFor(modelItem => item.Parent!.LastName)
             </dd>
             <dt>Location</dt>
             <dd>
-                @Html.DisplayFor(modelItem => item.Location.LocationValue)
+                @Html.DisplayFor(modelItem => item.Location!.LocationValue)
             </dd>
             <dt>Type</dt>
             <dd>
@@ -109,7 +109,7 @@
         <button type="button" class="btn btn-info flex-fill" data-toggle="collapse" data-target="#@linkI">
             <div class="row">
                 <div class="col-3">
-                    @item!.Time.StartTime.ToString("HH:mm") - @item!.Time.EndTime.ToString("HH:mm")
+                    @item.Time!.StartTime.ToString("HH:mm") - @item.Time!.EndTime.ToString("HH:mm")
                 </div>
                 <div>
                     @Html.DisplayFor(modelItem => item.Body)
@@ -126,11 +126,11 @@
         <dl>
             <dt>To</dt>
             <dd>
-                @Html.DisplayFor(modelItem => item.Child.FirstName) @Html.DisplayFor(modelItem => item.Child.LastName)
+                @Html.DisplayFor(modelItem => item.Child!.FirstName) @Html.DisplayFor(modelItem => item.Child!.LastName)
             </dd>
             <dt>Location</dt>
             <dd>
-                @Html.DisplayFor(modelItem => item.Location.LocationValue)
+                @Html.DisplayFor(modelItem => item.Location!.LocationValue)
             </dd>
             <dt>Type</dt>
             <dd>

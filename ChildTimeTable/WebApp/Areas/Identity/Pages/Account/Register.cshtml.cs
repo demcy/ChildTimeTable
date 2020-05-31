@@ -9,9 +9,10 @@ using System.Text.Encodings.Web;
 using System.Threading.Tasks;
 using DAL.App.EF;
 using Domain;
+using Domain.App;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
-using Domain.Identity;
+using Domain.App.Identity;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -53,51 +54,51 @@ namespace WebApp.Areas.Identity.Pages.Account
             _roleManager = roleManager;
         }
 
-        [BindProperty]
-        public InputModel Input { get; set; }
+        [BindProperty] public InputModel Input { get; set; } = default!;
 
-        public string ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
 
-        public IList<AuthenticationScheme> ExternalLogins { get; set; }
+        public IList<AuthenticationScheme>? ExternalLogins { get; set; }
 
         public class InputModel
         {
             [Required]
             [EmailAddress]
             [Display(Name = "Email")]
-            public string Email { get; set; }
-            
+            public string Email { get; set; } = default!;
+
             [MaxLength(128)]
             [MinLength(1)]
             [Display(Name = "FirstName")]
-            public string FirstName { get; set; }
-            
+            public string FirstName { get; set; } = default!;
+
             [MaxLength(128)]
             [MinLength(1)]
             [Display(Name = "LastName")]
-            public string LastName { get; set; }
+            public string LastName { get; set; } = default!;
 
-            public PersonType PersonType { get; set; }
+            public PersonType PersonType { get; set; } = default!;
 
             [Required]
-            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+            [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.",
+                MinimumLength = 6)]
             [DataType(DataType.Password)]
             [Display(Name = "Password")]
-            public string Password { get; set; }
+            public string Password { get; set; } = default!;
 
             [DataType(DataType.Password)]
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
-            public string ConfirmPassword { get; set; }
+            public string ConfirmPassword { get; set; } = default!;
         }
 
-        public async Task OnGetAsync(string returnUrl = null)
+        public async Task OnGetAsync(string? returnUrl = null)
         {
             ReturnUrl = returnUrl;
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
         {
             returnUrl = returnUrl ?? Url.Content("~/");
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
@@ -114,6 +115,7 @@ namespace WebApp.Areas.Identity.Pages.Account
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 var role = new AppRole();
                 role.Name = "User";
+                role.DisplayName = "User";
                 await _roleManager.CreateAsync(role);
 
                 result = _userManager.AddToRoleAsync(user, "User").Result;

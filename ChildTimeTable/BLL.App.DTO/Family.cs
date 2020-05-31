@@ -1,18 +1,15 @@
 using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 using Contracts.DAL.Base;
-
 
 namespace BLL.App.DTO
 {
-    public class Family : Family<Guid>, IDomainBaseEntity
+    public class Family : IDomainEntityId
     {
-    }
-
-    public class Family<TKey> : IDomainBaseEntity<TKey>
-        where TKey : IEquatable<TKey>
-    {
-        public TKey Id { get; set; }
-        public virtual ICollection<Person>? Persons { get; set; }
+        public Guid Id { get; set; }
+        [JsonIgnore]
+        public ICollection<Person>? Persons { get; set; }
+        
     }
 }

@@ -18,29 +18,18 @@
     "frameworks": {
       "netstandard2.1": {
         "projectReferences": {
-          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj": {
-            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj"
-          },
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj"
+          },
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj"
           }
         }
       }
-    },
-    "warningProperties": {
-      "warnAsError": [
-        "NU1605"
-      ]
     }
   },
   "frameworks": {
     "netstandard2.1": {
-      "dependencies": {
-        "AutoMapper": {
-          "target": "Package",
-          "version": "[9.0.0, )"
-        }
-      },
       "imports": [
         "net461",
         "net462",

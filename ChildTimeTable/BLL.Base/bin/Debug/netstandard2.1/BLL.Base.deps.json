@@ -9,9 +9,8 @@
     ".NETStandard,Version=v2.1/": {
       "BLL.Base/1.0.0": {
         "dependencies": {
-          "AutoMapper": "9.0.0",
-          "BLL.App.DTO": "1.0.0",
-          "Contracts.BLL.Base": "1.0.0"
+          "Contracts.BLL.Base": "1.0.0",
+          "DAL.Base": "1.0.0"
         },
         "runtime": {
           "BLL.Base.dll": {}
@@ -312,15 +311,6 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "BLL.App.DTO/1.0.0": {
-        "dependencies": {
-          "Contracts.DAL.Base": "1.0.0",
-          "Resources": "1.0.0"
-        },
-        "runtime": {
-          "BLL.App.DTO.dll": {}
-        }
-      },
       "Contracts.BLL.Base/1.0.0": {
         "dependencies": {
           "Contracts.DAL.Base": "1.0.0"
@@ -337,14 +327,14 @@
           "Contracts.DAL.Base.dll": {}
         }
       },
-      "Resources/1.0.0": {
-        "runtime": {
-          "Resources.dll": {}
+      "DAL.Base/1.0.0": {
+        "dependencies": {
+          "AutoMapper": "9.0.0",
+          "Contracts.DAL.Base": "1.0.0",
+          "System.ComponentModel.Annotations": "4.7.0"
         },
-        "resources": {
-          "ru/Resources.resources.dll": {
-            "locale": "ru"
-          }
+        "runtime": {
+          "DAL.Base.dll": {}
         }
       }
     }
@@ -572,11 +562,6 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "BLL.App.DTO/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Contracts.BLL.Base/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -587,7 +572,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Resources/1.0.0": {
+    "DAL.Base/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

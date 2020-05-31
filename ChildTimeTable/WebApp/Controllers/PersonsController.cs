@@ -116,7 +116,7 @@ namespace WebApp.Controllers
         {
             if (ModelState.IsValid)
             {
-                _bll.Persons.Update(vm.Person);
+                await _bll.Persons.UpdateAsync(vm.Person);
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }

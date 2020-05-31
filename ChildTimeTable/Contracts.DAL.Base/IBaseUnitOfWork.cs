@@ -6,11 +6,10 @@ namespace Contracts.DAL.Base
 {
     public interface IBaseUnitOfWork
     {
-        //get thing done!
-        int SaveChanges();
         Task<int> SaveChangesAsync();
-
-        TRepository GetRepository<TRepository>(Func<TRepository> repoCreationMethod);
+        
+        TRepository GetRepository<TRepository>(Func<TRepository> repoCreationMethod)
+            where TRepository : class;
 
     }
 }

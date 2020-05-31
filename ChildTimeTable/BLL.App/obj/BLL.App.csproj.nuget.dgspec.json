@@ -36,15 +36,16 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -88,9 +89,6 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj": {
-                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj"
-              },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.Base/BLL.Base.csproj"
               },
@@ -102,11 +100,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -154,29 +147,18 @@
         "frameworks": {
           "netstandard2.1": {
             "projectReferences": {
-              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj": {
-                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App.DTO/BLL.App.DTO.csproj"
-              },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.BLL.Base/Contracts.BLL.Base.csproj"
+              },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj"
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
         "netstandard2.1": {
-          "dependencies": {
-            "AutoMapper": {
-              "target": "Package",
-              "version": "[9.0.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
@@ -231,11 +213,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -288,11 +265,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -346,16 +318,11 @@
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.App.DTO/DAL.App.DTO.csproj"
               },
-              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
-                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj"
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -404,11 +371,6 @@
           "netstandard2.1": {
             "projectReferences": {}
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -467,15 +429,16 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
         "netstandard2.1": {
+          "dependencies": {
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -528,16 +491,11 @@
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj"
               },
-              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
-                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj"
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -607,11 +565,6 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -674,16 +627,15 @@
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
         "netstandard2.1": {
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
             "System.ComponentModel.Annotations": {
               "target": "Package",
               "version": "[4.7.0, )"
@@ -708,14 +660,14 @@
         }
       }
     },
-    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj",
-        "projectName": "Domain",
-        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj",
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj",
+        "projectName": "Domain.App",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj",
         "packagesPath": "/Users/kira/.nuget/packages/",
-        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/obj/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
@@ -735,16 +687,14 @@
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base/DAL.Base.csproj"
               },
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.Base/Domain.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.Base/Domain.Base.csproj"
+              },
               "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Resources/Resources.csproj": {
                 "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Resources/Resources.csproj"
               }
             }
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {
@@ -757,6 +707,64 @@
             "System.ComponentModel.Annotations": {
               "target": "Package",
               "version": "[4.7.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.102/RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.Base/Domain.Base.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.Base/Domain.Base.csproj",
+        "projectName": "Domain.Base",
+        "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.Base/Domain.Base.csproj",
+        "packagesPath": "/Users/kira/.nuget/packages/",
+        "outputPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.Base/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/Users/kira/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {
+              "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj": {
+                "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.Base/Contracts.DAL.Base.csproj"
+              }
+            }
+          }
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "System.Text.Json": {
+              "target": "Package",
+              "version": "[4.7.2, )"
             }
           },
           "imports": [
@@ -803,11 +811,6 @@
           "netstandard2.1": {
             "projectReferences": {}
           }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
         }
       },
       "frameworks": {

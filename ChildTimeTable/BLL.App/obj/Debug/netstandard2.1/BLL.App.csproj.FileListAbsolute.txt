@@ -48,7 +48,6 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/DAL.App.EF.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/DAL.Base.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/DAL.Base.EF.dll
-/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Domain.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Resources.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/BLL.App.DTO.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/BLL.Base.pdb
@@ -60,7 +59,6 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/DAL.App.DTO.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/DAL.Base.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/DAL.Base.EF.pdb
-/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Domain.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Resources.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/ru/Resources.resources.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/obj/Debug/netstandard2.1/BLL.App.csprojAssemblyReference.cache
@@ -69,3 +67,7 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/obj/Debug/netstandard2.1/BLL.App.csproj.CopyComplete
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/obj/Debug/netstandard2.1/BLL.App.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/obj/Debug/netstandard2.1/BLL.App.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Domain.App.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Domain.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Domain.App.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/BLL.App/bin/Debug/netstandard2.1/Domain.Base.pdb

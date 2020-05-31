@@ -27,11 +27,9 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Contracts.DAL.Base.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/DAL.App.DTO.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/DAL.Base.dll
-/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Resources.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Contracts.DAL.Base.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/DAL.App.DTO.pdb
-/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/DAL.Base.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Resources.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/ru/Resources.resources.dll
@@ -41,3 +39,7 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.csproj.CopyComplete
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/obj/Debug/netstandard2.1/Contracts.DAL.App.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.App.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.App.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Contracts.DAL.App/bin/Debug/netstandard2.1/Domain.Base.pdb

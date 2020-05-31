@@ -4,7 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
-using Domain.Identity;
+using Domain.App.Identity;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -24,10 +24,9 @@ namespace WebApp.Areas.Identity.Pages.Account
             _logger = logger;
         }
 
-        [BindProperty]
-        public InputModel Input { get; set; }
+        [BindProperty] public InputModel Input { get; set; } = default!;
 
-        public string ReturnUrl { get; set; }
+        public string? ReturnUrl { get; set; }
 
         public class InputModel
         {
@@ -35,10 +34,10 @@ namespace WebApp.Areas.Identity.Pages.Account
             [Required]
             [DataType(DataType.Text)]
             [Display(Name = "Recovery Code")]
-            public string RecoveryCode { get; set; }
+            public string RecoveryCode { get; set; } = default!;
         }
 
-        public async Task<IActionResult> OnGetAsync(string returnUrl = null)
+        public async Task<IActionResult> OnGetAsync(string? returnUrl = null)
         {
             // Ensure the user has gone through the username & password screen first
             var user = await _signInManager.GetTwoFactorAuthenticationUserAsync();
@@ -52,7 +51,7 @@ namespace WebApp.Areas.Identity.Pages.Account
             return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(string returnUrl = null)
+        public async Task<IActionResult> OnPostAsync(string? returnUrl = null)
         {
             if (!ModelState.IsValid)
             {

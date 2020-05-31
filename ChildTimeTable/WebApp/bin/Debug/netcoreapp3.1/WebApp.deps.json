@@ -10,7 +10,7 @@
       "NETCOREAPP",
       "NETCOREAPP3_1"
     ],
-    "languageVersion": "",
+    "languageVersion": "latest",
     "platform": "",
     "allowUnsafe": false,
     "warningsAsErrors": false,
@@ -27,7 +27,7 @@
           "BLL.App": "1.0.0",
           "Contracts.BLL.App": "1.0.0",
           "DAL.App.EF": "1.0.0",
-          "Domain": "1.0.0",
+          "Domain.App": "1.0.0",
           "Extensions": "1.0.0",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "3.1.4",
           "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": "3.1.4",
@@ -2815,7 +2815,6 @@
       },
       "BLL.App/1.0.0": {
         "dependencies": {
-          "BLL.App.DTO": "1.0.0",
           "BLL.Base": "1.0.0",
           "Contracts.BLL.App": "1.0.0",
           "DAL.App.EF": "1.0.0"
@@ -2830,7 +2829,8 @@
       "BLL.App.DTO/1.0.0": {
         "dependencies": {
           "Contracts.DAL.Base": "1.0.0",
-          "Resources": "1.0.0"
+          "Resources": "1.0.0",
+          "System.Text.Json": "4.7.2"
         },
         "runtime": {
           "BLL.App.DTO.dll": {}
@@ -2841,9 +2841,8 @@
       },
       "BLL.Base/1.0.0": {
         "dependencies": {
-          "AutoMapper": "9.0.0",
-          "BLL.App.DTO": "1.0.0",
-          "Contracts.BLL.Base": "1.0.0"
+          "Contracts.BLL.Base": "1.0.0",
+          "DAL.Base": "1.0.0"
         },
         "runtime": {
           "BLL.Base.dll": {}
@@ -2880,7 +2879,7 @@
         "dependencies": {
           "Contracts.DAL.Base": "1.0.0",
           "DAL.App.DTO": "1.0.0",
-          "Domain": "1.0.0"
+          "Domain.App": "1.0.0"
         },
         "runtime": {
           "Contracts.DAL.App.dll": {}
@@ -2902,7 +2901,8 @@
       },
       "DAL.App.DTO/1.0.0": {
         "dependencies": {
-          "Contracts.DAL.Base": "1.0.0"
+          "Contracts.DAL.Base": "1.0.0",
+          "System.Text.Json": "4.7.2"
         },
         "runtime": {
           "DAL.App.DTO.dll": {}
@@ -2916,7 +2916,7 @@
           "Contracts.DAL.App": "1.0.0",
           "DAL.App.DTO": "1.0.0",
           "DAL.Base.EF": "1.0.0",
-          "Domain": "1.0.0",
+          "Domain.App": "1.0.0",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore": "3.1.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "3.1.4"
@@ -2930,6 +2930,7 @@
       },
       "DAL.Base/1.0.0": {
         "dependencies": {
+          "AutoMapper": "9.0.0",
           "Contracts.DAL.Base": "1.0.0",
           "System.ComponentModel.Annotations": "4.7.0"
         },
@@ -2954,18 +2955,31 @@
           "DAL.Base.EF.dll": {}
         }
       },
-      "Domain/1.0.0": {
+      "Domain.App/1.0.0": {
         "dependencies": {
           "DAL.Base": "1.0.0",
+          "Domain.Base": "1.0.0",
           "Microsoft.Extensions.Identity.Stores": "3.1.4",
           "Resources": "1.0.0",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
-          "Domain.dll": {}
+          "Domain.App.dll": {}
         },
         "compile": {
-          "Domain.dll": {}
+          "Domain.App.dll": {}
+        }
+      },
+      "Domain.Base/1.0.0": {
+        "dependencies": {
+          "Contracts.DAL.Base": "1.0.0",
+          "System.Text.Json": "4.7.2"
+        },
+        "runtime": {
+          "Domain.Base.dll": {}
+        },
+        "compile": {
+          "Domain.Base.dll": {}
         }
       },
       "Extensions/1.0.0": {
@@ -2982,7 +2996,10 @@
       },
       "PublicApi.DTO.v1/1.0.0": {
         "dependencies": {
+          "AutoMapper": "9.0.0",
           "BLL.App.DTO": "1.0.0",
+          "Contracts.DAL.Base": "1.0.0",
+          "DAL.Base": "1.0.0",
           "System.ComponentModel.Annotations": "4.7.0"
         },
         "runtime": {
@@ -6063,7 +6080,12 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Domain/1.0.0": {
+    "Domain.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Domain.Base/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

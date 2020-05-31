@@ -12,22 +12,33 @@ namespace BLL.App
 {
     public class AppBLL : BaseBLL<IAppUnitOfWork>, IAppBLL
     {
-        public AppBLL(IAppUnitOfWork unitOfWork) : base(unitOfWork)
+        public AppBLL(IAppUnitOfWork uow) : base(uow)
         {
         }
-        
+
+        public ILangStrService LangStrs =>
+            GetService<ILangStrService>(() => new LangStrService(UOW));
+
+        public ILangStrTranslationService LangStrTranslation =>
+            GetService<ILangStrTranslationService>(() => new LangStrTranslationService(UOW));
+
+        public ITrackPointService TrackPoints =>
+            GetService<ITrackPointService>(() => new TrackPointService(UOW));
+
+        public ITrackService Tracks =>
+            GetService<ITrackService>(() => new TrackService(UOW));
         public IFamilyService Families =>
-            GetService<IFamilyService>(() => new FamilyService(UnitOfWork));
+            GetService<IFamilyService>(() => new FamilyService(UOW));
         public ILocationService Locations =>
-            GetService<ILocationService>(() => new LocationService(UnitOfWork));
+            GetService<ILocationService>(() => new LocationService(UOW));
         public INotificationService Notifications =>
-            GetService<INotificationService>(() => new NotificationService(UnitOfWork));
+            GetService<INotificationService>(() => new NotificationService(UOW));
         public IObligationService Obligations =>
-            GetService<IObligationService>(() => new ObligationService(UnitOfWork));
+            GetService<IObligationService>(() => new ObligationService(UOW));
         public IPersonService Persons =>
-            GetService<IPersonService>(() => new PersonService(UnitOfWork));
+            GetService<IPersonService>(() => new PersonService(UOW));
         public ITimeService Times =>
-            GetService<ITimeService>(() => new TimeService(UnitOfWork));
+            GetService<ITimeService>(() => new TimeService(UOW));
 
         
     }

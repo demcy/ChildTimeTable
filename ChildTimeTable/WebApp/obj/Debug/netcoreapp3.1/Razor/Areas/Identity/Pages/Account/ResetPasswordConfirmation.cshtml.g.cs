@@ -35,7 +35,7 @@ using WebApp.Areas.Identity.Pages;
 #nullable disable
 #nullable restore
 #line 5 "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/Areas/Identity/Pages/_ViewImports.cshtml"
-using Domain.Identity;
+using Domain.App.Identity;
 
 #line default
 #line hidden
@@ -48,7 +48,7 @@ using WebApp.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"9fa2ad01473fa832304d2166b6c6d5536eb62725", @"/Areas/Identity/Pages/Account/ResetPasswordConfirmation.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2f27f3c6693a5db931734f4945488b4452369d2", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fc6c5f197f2470604a9f4df0664ef2af14adfee", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4aaf0565ac9a286b9a5ca546f5f75d7baa1c4fbf", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_ResetPasswordConfirmation : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
@@ -94,7 +94,7 @@ Write(ViewData["Title"]);
 #line hidden
 #nullable disable
             WriteLiteral("</h1>\r\n<p>\r\n    Your password has been reset. Please ");
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa2ad01473fa832304d2166b6c6d5536eb627254981", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("a", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "9fa2ad01473fa832304d2166b6c6d5536eb627254985", async() => {
                 WriteLiteral("click here to log in");
             }
             );

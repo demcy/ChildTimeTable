@@ -14,3 +14,5 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/Resources.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/Resources.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/ru/Resources.resources.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/DAL.Base.dll
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/PublicApi.DTO.v1/bin/Debug/netstandard2.1/DAL.Base.pdb

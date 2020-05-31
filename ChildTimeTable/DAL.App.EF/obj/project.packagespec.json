@@ -27,16 +27,11 @@
           "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj": {
             "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/DAL.Base.EF/DAL.Base.EF.csproj"
           },
-          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj": {
-            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain/Domain.csproj"
+          "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj": {
+            "projectPath": "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/Domain.App/Domain.App.csproj"
           }
         }
       }
-    },
-    "warningProperties": {
-      "warnAsError": [
-        "NU1605"
-      ]
     }
   },
   "frameworks": {

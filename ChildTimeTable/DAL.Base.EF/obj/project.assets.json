@@ -488,6 +488,7 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
         "dependencies": {
+          "AutoMapper": "9.0.0",
           "Contracts.DAL.Base": "1.0.0",
           "System.ComponentModel.Annotations": "4.7.0"
         },
@@ -1816,11 +1817,6 @@
             }
           }
         }
-      },
-      "warningProperties": {
-        "warnAsError": [
-          "NU1605"
-        ]
       }
     },
     "frameworks": {

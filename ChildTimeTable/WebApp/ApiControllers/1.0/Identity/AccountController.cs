@@ -1,14 +1,20 @@
 using System;
+using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
-using Domain.Identity;
 using Extensions;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using PublicApi.DTO.v1;
+using PublicApi.DTO.v1.Identity;
+using AppUser = BLL.App.DTO.Identity.AppUser;
 
 namespace WebApp.ApiControllers._1._0.Identity
 {
+    
     [ApiController]
     [ApiVersion( "1.0" )]
     [Route("api/v{version:apiVersion}/[controller]/[action]")]
@@ -18,6 +24,14 @@ namespace WebApp.ApiControllers._1._0.Identity
         private readonly UserManager<AppUser> _userManager;
         private readonly ILogger<AccountController> _logger;
         private readonly SignInManager<AppUser> _signInManager;
+        
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="configuration"></param>
+        /// <param name="userManager"></param>
+        /// <param name="signInManager"></param>
+        /// <param name="logger"></param>
         public AccountController(IConfiguration configuration, UserManager<AppUser> userManager, ILogger<AccountController> logger, SignInManager<AppUser> signInManager)
         {
             _configuration = configuration;
@@ -25,55 +39,113 @@ namespace WebApp.ApiControllers._1._0.Identity
             _logger = logger;
             _signInManager = signInManager;
         }
-        
+        /// <summary>
+        /// Endpoint for user log-in (jwt generation)
+        /// </summary>
+        /// <param name="dto">login data</param>
+        /// <returns></returns>
         [HttpPost]
-        public async Task<ActionResult<string>> Login([FromBody] LoginDTO model)
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(JwtResponseDTO))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(MessageDTO))]
+        public async Task<IActionResult> Login([FromBody] LoginDTO dto)
         {
-            var appUser = await _userManager.FindByEmailAsync(model.Email);
+            var appUser = await _userManager.FindByEmailAsync(dto.Email);
             if (appUser == null)
             {
-                _logger.LogInformation($"Web-Api login. User {model.Email} not found!");
-                return StatusCode(403);
+                _logger.LogInformation($"WebApi login. User {dto.Email} not found!");
+                return NotFound(new MessageDTO("User not found!"));
             }
 
-            var result = await _signInManager.CheckPasswordSignInAsync(appUser, model.PassWord, false);
+            var result = await _signInManager.CheckPasswordSignInAsync(appUser, dto.Password, false);
             if (result.Succeeded)
             {
                 var claimsPrincipal = await _signInManager.CreateUserPrincipalAsync(appUser); //get the User analog
-                var jwt = IdentityExtension.GenerateJWT(claimsPrincipal.Claims,
+                var jwt = IdentityExtension.GenerateJWT(
+                    claimsPrincipal.Claims
+                        .Append(new Claim(ClaimTypes.GivenName, appUser.FirstName))
+                        .Append(new Claim(ClaimTypes.Surname, appUser.LastName)),
                     _configuration["JWT:SigningKey"],
                     _configuration["JWT:Issuer"],
                     _configuration.GetValue<int>("JWT:ExpirationInDays")
                 );
-                _logger.LogInformation($"Token generated for user {model.Email}");
-                return Ok(new {token = jwt, status = "Logged in"});
+                _logger.LogInformation($"WebApi login. User {appUser.Email} logged in.");
+                return Ok(new JwtResponseDTO()
+                {
+                    Token = jwt, Status = $"User {appUser.Email} logged in.", FirstName = appUser.FirstName,
+                    LastName = appUser.LastName
+                });
+            }
+            _logger.LogInformation($"WebApi login. User {appUser.Email} failed login attempt!");
+            return NotFound(new MessageDTO("User not found!"));
+        }
+        
+        
+
+        
+        
+        
+        /// <summary>
+        /// Endpoint for user registration and immediate log-in (jwt generation) 
+        /// </summary>
+        /// <param name="dto">user data</param>
+        /// <returns></returns>
+        [HttpPost]
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(JwtResponseDTO))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(MessageDTO))]
+        [ProducesResponseType(StatusCodes.Status400BadRequest, Type = typeof(MessageDTO))]
+        public async Task<IActionResult> Register([FromBody] RegisterDTO dto)
+        {
+            var appUser = await _userManager.FindByEmailAsync(dto.Email);
+            if (appUser != null)
+            {
+                _logger.LogInformation($"WebApi register. User {dto.Email} already registered!");
+                return NotFound(new MessageDTO("User already registered!"));
             }
 
-            _logger.LogInformation($"Web-Api login. User {model.Email} attempted to log-in with bad password!");
-            return StatusCode(403);
-        }
+            appUser = new AppUser()
+            {
+                Email = dto.Email,
+                UserName = dto.Email,
+                FirstName = dto.FirstName,
+                LastName = dto.LastName,
+            };
+            var result = await _userManager.CreateAsync(appUser, dto.Password);
+            if (result.Succeeded)
+            {
+                _logger.LogInformation($"User {appUser.Email} created a new account with password.");
 
-        
-        
-        
-        [HttpPost]
-        public async Task<ActionResult<string>> Register([FromBody]RegisterDTO model)
-        {
-            throw new NotImplementedException();
-        }
-        
-        public class LoginDTO
-        {
-            public string Email { get; set; }
-            public string PassWord { get; set; }
-        }
+                var user = await _userManager.FindByEmailAsync(appUser.Email);
+                if (user != null)
+                {
+                    var claimsPrincipal = await _signInManager.CreateUserPrincipalAsync(user);
+                    var jwt = IdentityExtension.GenerateJWT(
+                        claimsPrincipal.Claims
+                            .Append(new Claim(ClaimTypes.GivenName, appUser.FirstName))
+                            .Append(new Claim(ClaimTypes.Surname, appUser.LastName)),
+                        _configuration["JWT:SigningKey"],
+                        _configuration["JWT:Issuer"],
+                        _configuration.GetValue<int>("JWT:ExpirationInDays")
+                    );
+                    _logger.LogInformation($"WebApi register. User {user.Email} logged in.");
+                    return Ok(new JwtResponseDTO()
+                    {
+                        Token = jwt, Status = $"User {user.Email} created and logged in.",
+                        FirstName = appUser.FirstName, LastName = appUser.LastName
+                    });
+                }
 
-        public class RegisterDTO
-        {
-            public string Email { get; set; }
-            public string PassWord { get; set; }
-            public string FirstName { get; set; }
-            public string LastName { get; set; }
+                _logger.LogInformation($"User {appUser.Email} not found after creation!");
+                return BadRequest(new MessageDTO("User not found after creation!"));
+            }
+
+            var errors = result.Errors.Select(error => error.Description).ToList();
+            return BadRequest(new MessageDTO() {Messages = errors});
         }
+        
+        
     }
 }

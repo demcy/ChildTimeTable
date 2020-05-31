@@ -35,7 +35,7 @@ using WebApp.Areas.Identity.Pages;
 #nullable disable
 #nullable restore
 #line 5 "/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/Areas/Identity/Pages/_ViewImports.cshtml"
-using Domain.Identity;
+using Domain.App.Identity;
 
 #line default
 #line hidden
@@ -48,7 +48,7 @@ using WebApp.Areas.Identity.Pages.Account;
 #line hidden
 #nullable disable
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"2c495c997d158e393bd526d9f7856bcd6f1f264c", @"/Areas/Identity/Pages/Account/RegisterConfirmation.cshtml")]
-    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"b2f27f3c6693a5db931734f4945488b4452369d2", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
+    [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"5fc6c5f197f2470604a9f4df0664ef2af14adfee", @"/Areas/Identity/Pages/_ViewImports.cshtml")]
     [global::Microsoft.AspNetCore.Razor.Hosting.RazorSourceChecksumAttribute(@"SHA1", @"4aaf0565ac9a286b9a5ca546f5f75d7baa1c4fbf", @"/Areas/Identity/Pages/Account/_ViewImports.cshtml")]
     public class Areas_Identity_Pages_Account_RegisterConfirmation : global::Microsoft.AspNetCore.Mvc.RazorPages.Page
     {
