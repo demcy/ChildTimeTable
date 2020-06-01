@@ -9,6 +9,7 @@ namespace WebApp.Models
     {
         public IEnumerable<Obligation>? Obligations { get; set; }
         public DateTime Date { get; set; } = default!;
+        public string HtmlDate { get; set; } = default!;
         public Boolean Today { get; set; } = default!;
         public Guid PersonId { get; set; } = default!;
     }

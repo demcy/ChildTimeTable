@@ -3,7 +3,16 @@
 @{
     ViewData["Title"] = "Index";
 }
-
+<div class="dropdown">
+    <button type="button" id="sas" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="sas">
+      <a class="dropdown-item" href="#">Link 1</a>
+      <a class="dropdown-item" href="#">Link 2</a>
+      <a class="dropdown-item" href="#">Link 3</a>
+    </div>
+  </div>
 <div class="row">
     <div class="col-4">
 
@@ -12,6 +21,7 @@
             <tr>
                 <h3>My Family</h3>
             </tr>
+            
             </thead>
             <tbody>
             @foreach (var item in Model.Persons!) {

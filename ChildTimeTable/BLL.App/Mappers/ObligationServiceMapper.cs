@@ -11,30 +11,41 @@ namespace BLL.App.Mappers
     {
         public ObligationServiceMapper()
         {
+            MapperConfigurationExpression.CreateMap<BLLAppDTO.Time, DALAppDTO.Time>();
             MapperConfigurationExpression.CreateMap<BLLAppDTO.Obligation, DALAppDTO.Obligation>()
                 .ForMember(item=>item.Location,
                     o=>o.Ignore())
                 .ForMember(item=>item.Time,
-                    o=> o.MapFrom(q=>q.Time))
-                //.ForMember(item=>item.Time,
-                //o=>o.Ignore())
+                    o=> 
+                        o.MapFrom(t=>t.Time))
                 .ForMember(item=>item.Parent,
                     o=>o.Ignore())
                 .ForMember(item=>item.Child,
                     o=>o.Ignore());
+
+            MapperConfigurationExpression.CreateMap<DALAppDTO.Time, BLLAppDTO.Time>();
             MapperConfigurationExpression.CreateMap<DALAppDTO.Obligation, BLLAppDTO.Obligation>()
                 .ForMember(item=>item.Location,
                     o=>o.Ignore())
-                //.ForMember(item=>item.Time,
-                //    o=>o.Ignore())
                 .ForMember(item=>item.Time,
-                    o=> o.MapFrom(q=>q.Time))
+                    o=> 
+                        o.MapFrom(t=>t.Time))
                 .ForMember(item=>item.Parent,
                     o=>o.Ignore())
                 .ForMember(item=>item.Child,
                     o=>o.Ignore());
             
             Mapper = new Mapper(new MapperConfiguration(MapperConfigurationExpression));
+        }
+        
+        public BLLAppDTO.Time MapTime1(DALAppDTO.Time inObject)
+        {
+            return Mapper.Map<BLLAppDTO.Time>(inObject);
+        }
+        
+        public DALAppDTO.Time MapTime2(BLLAppDTO.Time inObject)
+        {
+            return Mapper.Map<DALAppDTO.Time>(inObject);
         }
 
         

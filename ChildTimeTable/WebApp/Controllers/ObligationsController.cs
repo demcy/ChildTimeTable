@@ -48,6 +48,7 @@ namespace WebApp.Controllers
             var vm = new ObligationDataModel();
             vm.Obligations = await _bll.Obligations.AllPerDay(dt, User.UserGuidId());
             vm.Date = dt;
+            vm.HtmlDate = dt.ToString("yyyy-MM-dd");
             DateTime today = DateTime.Today;
             vm.Today = dt >= today;
             vm.PersonId = (await _bll.Persons.OnePerson(User.UserGuidId())).Id;
