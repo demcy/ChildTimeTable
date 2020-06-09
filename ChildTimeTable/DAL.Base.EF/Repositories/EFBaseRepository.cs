@@ -56,6 +56,7 @@ namespace DAL.Base.EF.Repositories
 
         public virtual async Task<IEnumerable<TDALEntity>> GetAllAsync(object? userId = null, bool noTracking = true)
         {
+            
             var query = PrepareQuery(userId, noTracking);
             var domainEntities = await query.ToListAsync();
             var result = domainEntities.Select(e => Mapper.Map(e));
@@ -71,6 +72,14 @@ namespace DAL.Base.EF.Repositories
             return result;
         }
 
+        /*public virtual void DetachEntity(TDALEntity entity)
+        {
+            //var entity = RepoDbSet.AsNoTracking().Single(item => item.Id.Equals(id));
+            //var entity = RepoDbSet.Single(item => item.Id.Equals(id));
+            RepoDbContext.Entry(entity).State = EntityState.Detached;
+        }*/
+        
+
         public virtual TDALEntity Add(TDALEntity entity)
         {
             var domainEntity = Mapper.Map(entity);
@@ -79,6 +88,8 @@ namespace DAL.Base.EF.Repositories
             var result = Mapper.Map(trackedDomainEntity);
             return result;
         }
+
+        
 
         public virtual async Task<TDALEntity> UpdateAsync(TDALEntity entity, object? userId = null)
         {

@@ -6,5 +6,6 @@ namespace Contracts.BLL.App.Mappers
 {
     public interface IObligationServiceMapper: IBaseMapper<DALAppDTO.Obligation, BLLAppDTO.Obligation>
     {
+        
     }
 }

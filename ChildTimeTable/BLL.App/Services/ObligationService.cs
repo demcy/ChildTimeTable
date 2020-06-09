@@ -25,7 +25,6 @@ namespace BLL.App.Services
 
         public async Task<IEnumerable<Obligation>> AllPerDay(DateTime dt, Guid? userId = null)
         {
-            var x = await UOW.Obligations.AllPerDay(dt, userId);
             return (await UOW.Obligations.AllPerDay(dt, userId))
                 .Select(e => Mapper.Map(e));
         }
@@ -33,6 +32,11 @@ namespace BLL.App.Services
         public async Task<List<DateTime>> DatesList(Guid? userId = null)
         {
             return (await UOW.Obligations.DatesList(userId));
+        }
+
+        public async Task<Obligation> EditOne(Guid id)
+        {
+            return Mapper.Map(await UOW.Obligations.EditOne(id));
         }
     }
     

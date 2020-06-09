@@ -11,8 +11,7 @@ let monthAndYear = document.getElementById('monthAndYear');
 let tbl = document.getElementById('calendar-body');
 let wd = document.getElementById('weekDay');
 let newPersonDiv = document.getElementById('newPerson-div');
-let notificationBadge = document.getElementById('notBadge');
-notificationBadge.innerText=localStorage.getItem('x');
+
 
 function newDutyDays(arrayDutyDates, cInfo) {
     for (let i = 0; i < arrayDutyDates.length; i++){

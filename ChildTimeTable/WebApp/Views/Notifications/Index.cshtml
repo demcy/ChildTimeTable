@@ -1,4 +1,4 @@
-@model IEnumerable<BLL.App.DTO.Notification>
+@model NotificationDataModel
 
 @{
     ViewData["Title"] = "Index";
@@ -7,7 +7,7 @@
 <h3>New Notifications</h3>
 
 <ul class="list-group list-group-flush">
-    @foreach (var item in Model) {
+    @foreach (var item in Model.Notifications!) {
         if (item.Status == false)
         {
             if (item.Body.Contains("obligation"))
@@ -41,7 +41,7 @@
 <h3>Old Notifications</h3>
 
 <ul class="list-group list-group-flush">
-    @foreach (var item in Model) {
+    @foreach (var item in Model.Notifications) {
         if (item.Status == true)
         {
             @using (Html.BeginForm("InvitationAccept", "Notifications"))
@@ -55,14 +55,15 @@
 </ul>
 
 @section Scripts {
+    <script src="~/js/notification.js"></script>
     <script>
     
-    if('@ViewBag.Unread' === '0'){
-        localStorage.setItem('x','');
-    }
-    else{
-        localStorage.setItem('x','@ViewBag.Unread');
-    }
+    if('@Model.UnreadMessages' === '0'){
+            localStorage.setItem('x','');
+        }
+        else{
+            localStorage.setItem('x','@Model.UnreadMessages');
+        }
     
     notificationBadge.innerText=localStorage.getItem('x');
     </script>

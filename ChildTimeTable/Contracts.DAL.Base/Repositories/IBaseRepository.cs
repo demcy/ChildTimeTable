@@ -27,5 +27,7 @@ namespace Contracts.DAL.Base.Repositories
         Task<TEntity> RemoveAsync(TEntity entity, object? userId = null);
         Task<TEntity> RemoveAsync(TKey id, object? userId = null);
         Task<bool> ExistsAsync(TKey id, object? userId = null);
+        //void DetachEntity(TEntity entity);
+        
     }
 }

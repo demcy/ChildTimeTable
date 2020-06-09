@@ -42,7 +42,9 @@ namespace DAL.App.EF.Repositories
                     PersonType = dbEntity.PersonType.ToString(),
                     UnreadMessages = dbEntity.RecipientNotifications
                         .Where(n => n.Status == false)!.Count()
-                }).FirstOrDefaultAsync());
+                })
+                .AsNoTracking()
+                .FirstOrDefaultAsync());
             
             /*return Mapper.Map(await RepoDbSet.Where(p => p.AppUserId == userId)
                 .FirstOrDefaultAsync());*/
@@ -63,7 +65,9 @@ namespace DAL.App.EF.Repositories
         
         public async Task<Person> PersonByName(string fullName)
         {
-            return Mapper.Map(await RepoDbSet.Where(p => p.FirstName + " " + p.LastName == fullName).FirstOrDefaultAsync());
+            return Mapper.Map(await RepoDbSet.Where(p => p.FirstName + " " + p.LastName == fullName)
+                .AsNoTracking()
+                .FirstOrDefaultAsync());
         }
         
         /*

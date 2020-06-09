@@ -1,0 +1,68 @@
+@using BLL.App.DTO
+@model ObligationModel
+@{
+    var showButtons = (bool)ViewData["ShowButtons"];
+    
+}
+<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+<div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Obligation.Time!.StartTime" class="control-label"></label>
+                <input asp-for="Obligation.Time!.StartTime" class="form-control" value="@Model.StartTime"/>
+                <span asp-validation-for="Obligation.Time!.StartTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Obligation.Time!.EndTime" class="control-label"></label>
+                <input asp-for="Obligation.Time!.EndTime" class="form-control" value="@Model.EndTime"/>
+                <span asp-validation-for="Obligation.Time!.EndTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Obligation.Location!.LocationValue" class="control-label">Location</label>
+                <input asp-for="Obligation.Location!.LocationValue" class="form-control" list="Locations" value="@Model.LocationValue"/>
+                <datalist id="Locations">
+                    @foreach (SelectListItem location in Model.LocationValues!)
+                    {
+                        <option value="@location.Value"/>
+                    }
+                </datalist>
+                <span asp-validation-for="Obligation.Location!.LocationValue" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Obligation.ObligationType" class="control-label"></label>
+                <select asp-for="Obligation.ObligationType" class="form-control" asp-items="@Html.GetEnumSelectList<ObligationType>()"></select>
+                <span asp-validation-for="Obligation.ObligationType" class="text-danger"></span>
+            </div>
+            @if (showButtons)
+            {
+                <div class="form-group form-check">
+                    <label class="form-check-label">
+                        <input class="form-check-input" asp-for="Obligation.Status"/> @Html.DisplayNameFor(model => model.Obligation.Status)
+                    </label>
+                </div>
+            }
+        </div>
+        <div class="col-md-8">
+            <div class="form-group">
+                <label class="control-label">To</label>
+                <select id="selectFullName" name="fullName" class="form-control" asp-items="Model.FullNames" ></select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Obligation.Body" class="control-label"></label>
+                <textarea asp-for="Obligation.Body" class="form-control" rows="5"></textarea>
+                <span asp-validation-for="Obligation.Body" class="text-danger"></span>
+            </div>
+            @if (showButtons)
+            {
+                <div class="form-group d-flex flex-row-reverse">
+                    <input type="submit" value="Save" class="btn btn-primary"/>
+                </div>
+            }
+            else
+            {
+                <div class="form-group d-flex flex-row-reverse">
+                    <input type="submit" value="Create" class="btn btn-primary"/>
+                </div>
+            }
+        </div>
+    </div>

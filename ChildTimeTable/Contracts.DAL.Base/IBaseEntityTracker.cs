@@ -14,5 +14,6 @@ namespace Contracts.DAL.Base
     {
         //Dictionary<IDomainEntityId<TKey>, IDomainEntityId<TKey>> EntityTracker { get;  }
         void AddToEntityTracker(IDomainEntityId<TKey> internalEntity, IDomainEntityId<TKey> externalEntity);
+        
     }
 }

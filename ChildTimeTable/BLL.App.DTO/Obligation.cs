@@ -1,4 +1,5 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 using Contracts.DAL.Base;
@@ -9,6 +10,7 @@ namespace BLL.App.DTO
     {
         public Guid Id { get; set; }
         public string Body { get; set; } = default!;
+        [Required]
         public bool Status { get; set; } = default!;
         
         public Guid LocationId { get; set; } = default!;

@@ -71,6 +71,15 @@ namespace BLL.Base.Services
             
             return result;
         }
+        
+        
+        /*public void DetachEntity(TBLLEntity entity)
+        {
+            var dalEntity = Mapper.Map(entity);
+            Repository.DetachEntity(dalEntity);
+        }*/
+
+        
 
         public virtual async Task<TBLLEntity> UpdateAsync(TBLLEntity entity, object? userId = null)
         {

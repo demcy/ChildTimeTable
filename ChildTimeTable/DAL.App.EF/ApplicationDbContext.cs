@@ -44,6 +44,8 @@ namespace DAL.App.EF
         {
             _entityTracker.Add(internalEntity, externalEntity);
         }
+        
+        
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -63,6 +65,12 @@ namespace DAL.App.EF
                 .OnDelete(DeleteBehavior.Cascade);
             
             builder.Entity<LangStrTranslation>().HasIndex(i => new {i.Culture, i.LangStrId}).IsUnique();
+
+            /*builder.Entity<Obligation>()
+                .HasOne(p => p.Parent)
+                .WithMany(o => o!.ParentObligations)
+                .HasForeignKey(k => k.Parent)
+                .OnDelete(DeleteBehavior.Restrict);*/
         }
         
         /*protected override void OnModelCreating(ModelBuilder builder)

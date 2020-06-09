@@ -11,10 +11,12 @@ namespace BLL.App.Mappers
         {
             MapperConfigurationExpression.CreateMap<BLLAppDTO.Location, DALAppDTO.Location>()
                 .ForMember(item=>item.Person,
-                    o=>o.Ignore());
+                    k=>k.Ignore());
             MapperConfigurationExpression.CreateMap<DALAppDTO.Location, BLLAppDTO.Location>()
                 .ForMember(item=>item.Person,
-                    o=>o.Ignore());
+                    k=>k.Ignore())
+                .ForMember(item=>item.Obligations,
+                    k=>k.Ignore());
             
             Mapper = new Mapper(new MapperConfiguration(MapperConfigurationExpression));
         }

@@ -22,7 +22,6 @@ namespace DAL.Base.EF
         public override async Task<int> SaveChangesAsync()
         {
             var result = await UOWDbContext.SaveChangesAsync();
-             
             UpdateTrackedEntities();
              
             return result;

@@ -11,6 +11,7 @@ namespace Contracts.BLL.App.Services
     {
         Task<IEnumerable<Obligation>> AllPerDay(DateTime dt, Guid? userId = null);
         Task<List<DateTime>> DatesList(Guid? userId = null);
-        
+        Task<Obligation> EditOne(Guid id);
+
     }
 }

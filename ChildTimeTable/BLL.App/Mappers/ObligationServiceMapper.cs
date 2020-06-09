@@ -11,42 +11,70 @@ namespace BLL.App.Mappers
     {
         public ObligationServiceMapper()
         {
-            MapperConfigurationExpression.CreateMap<BLLAppDTO.Time, DALAppDTO.Time>();
+            //create
+            //MapperConfigurationExpression.CreateMap<BLLAppDTO.Time, DALAppDTO.Time>();
+            //MapperConfigurationExpression.CreateMap<BLLAppDTO.Location, DALAppDTO.Location>();
+            /*.ForMember(item => item.Person,
+                o =>
+                    o.Ignore());
+                    //o.MapFrom(t=>t.Person));
+            .ForMember(item => item.PersonId,
+                o =>
+                    o.Ignore());*/
+            //MapperConfigurationExpression.CreateMap<BLLAppDTO.Person, DALAppDTO.Person>();
             MapperConfigurationExpression.CreateMap<BLLAppDTO.Obligation, DALAppDTO.Obligation>()
-                .ForMember(item=>item.Location,
-                    o=>o.Ignore())
-                .ForMember(item=>item.Time,
-                    o=> 
-                        o.MapFrom(t=>t.Time))
-                .ForMember(item=>item.Parent,
-                    o=>o.Ignore())
-                .ForMember(item=>item.Child,
-                    o=>o.Ignore());
+                .ForMember(item => item.Location,
+                    o =>
+                        o.Ignore())
+                .ForMember(item => item.Time,
+                    o =>
+                        o.Ignore())
+                .ForMember(item => item.Parent,
+                    o =>
+                        o.Ignore())
+                .ForMember(item => item.Child,
+                    o =>
+                        o.Ignore());
 
             MapperConfigurationExpression.CreateMap<DALAppDTO.Time, BLLAppDTO.Time>();
+            MapperConfigurationExpression.CreateMap<DALAppDTO.Location, BLLAppDTO.Location>();
+            /*.ForMember(item => item.Person,
+            o =>
+                o.Ignore());
+            //o.MapFrom(t=>t.Person));
+            .ForMember(item => item.PersonId,
+                o =>
+                    o.Ignore());*/
+            
+            MapperConfigurationExpression.CreateMap<DALAppDTO.Person, BLLAppDTO.Person>();
             MapperConfigurationExpression.CreateMap<DALAppDTO.Obligation, BLLAppDTO.Obligation>()
-                .ForMember(item=>item.Location,
-                    o=>o.Ignore())
-                .ForMember(item=>item.Time,
-                    o=> 
-                        o.MapFrom(t=>t.Time))
-                .ForMember(item=>item.Parent,
-                    o=>o.Ignore())
-                .ForMember(item=>item.Child,
-                    o=>o.Ignore());
+                .ForMember(item => item.Location,
+                    o =>
+                        //o.Ignore())
+                        o.MapFrom(t => t.Location))
+                .ForMember(item => item.Time,
+                    o =>
+                        o.MapFrom(t => t.Time))
+                .ForMember(item => item.Parent,
+                    o =>
+                        o.MapFrom(t => t.Parent))
+                        //o.Ignore())
+                .ForMember(item => item.Child,
+                    o =>
+                        o.MapFrom(t => t.Child));
+                        //o.Ignore());
             
             Mapper = new Mapper(new MapperConfiguration(MapperConfigurationExpression));
         }
         
-        public BLLAppDTO.Time MapTime1(DALAppDTO.Time inObject)
-        {
-            return Mapper.Map<BLLAppDTO.Time>(inObject);
-        }
         
-        public DALAppDTO.Time MapTime2(BLLAppDTO.Time inObject)
-        {
-            return Mapper.Map<DALAppDTO.Time>(inObject);
-        }
+
+        
+        
+        
+        
+        
+        
 
         
 

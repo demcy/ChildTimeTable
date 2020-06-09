@@ -516,10 +516,11 @@
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerGen.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Swashbuckle.AspNetCore.SwaggerUI.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/WebApp.xml
-/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/package-lock.json
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/package.json
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/tsconfig.json
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.App.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.Base.dll
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.App.pdb
 /Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/Domain.Base.pdb
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/bin/Debug/netcoreapp3.1/package-lock.json
+/Users/kira/RiderProjects/idc0009-2019s/ChildTimeTable/WebApp/obj/Debug/netcoreapp3.1/Razor/Views/Obligations/_CreateEdit.cshtml.g.cs

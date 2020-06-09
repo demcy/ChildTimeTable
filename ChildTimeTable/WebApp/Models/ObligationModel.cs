@@ -9,7 +9,7 @@ namespace WebApp.Models
     public class ObligationModel
     {
         public Obligation Obligation { get; set; } = default!;
-        public string Data { get; set; } = default!;
+        //public string Data { get; set; } = default!;
         public SelectList? LocationValues { get; set; }
         public IEnumerable<SelectListItem>? FullNames { get; set; }
         public string StartTime { get; set; } = default!;

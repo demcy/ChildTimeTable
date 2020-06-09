@@ -19,14 +19,30 @@ namespace DAL.App.EF.Repositories
             new DALMapper<Domain.App.Obligation, DAL.App.DTO.Obligation>())
         {
         }
+
+        public async Task<Obligation> EditOne(Guid id)
+        {
+            return Mapper.Map(await RepoDbSet.Where(o => o.Id == id)
+                .Include(o => o.Time)
+                .Include(o=>o.Location)
+                .Include(o=>o.Child)
+                .FirstOrDefaultAsync());
+        }
         
         public async Task<IEnumerable<Obligation>> AllPerDay(DateTime dt ,Guid? userId = null)
         {
+            
             var personId = RepoDbContext.Persons.First(p => p.AppUserId == userId).Id;
             return (await RepoDbSet.Where(o=>o.Time!.StartTime.Day==dt.Day)
-                    .Include(o=>o.Time)
                     .Where(o=>o.ParentId==personId || o.ChildId==personId)
-                    .OrderBy(o=>o.Time!.StartTime).ToListAsync())
+                    .Include(o=>o.Time)
+                    .Include(o=>o.Location)
+                    .Include(o=>o.Parent)
+                    .Include(o=>o.Child)
+                    
+                    //.AsNoTracking()
+                    .OrderBy(o=>o.Time!.StartTime)
+                    .ToListAsync())
                 .Select(dbEntity => Mapper.Map(dbEntity));
         }
 

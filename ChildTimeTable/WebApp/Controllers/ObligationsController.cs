@@ -15,25 +15,39 @@ using DAL.App.EF.Repositories;
 using Extensions;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
+using Microsoft.AspNetCore.Mvc.ModelBinding.Validation;
 using WebApp.Models;
 
 namespace WebApp.Controllers
 {
+    /// <summary>
+    /// Obligations Control
+    /// </summary>
     [Authorize(Roles = "User")]
     public class ObligationsController : Controller
     {
         private readonly IAppBLL _bll;
+        
 
+        /// <summary>
+        /// BLL DataBase
+        /// </summary>
+        /// <param name="bll"></param>
         public ObligationsController(IAppBLL bll)
         {
             _bll = bll;
         }
 
-
+        /// <summary>
+        /// Status Slider Implimentation
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<ActionResult> ChangeStatus(Guid id)
         {
             var obligation = await _bll.Obligations.FirstOrDefaultAsync(id);
             obligation.Status = !obligation.Status;
+            await _bll.Obligations.UpdateAsync(obligation);
             await _bll.SaveChangesAsync();
             return RedirectToAction("Index", "Obligations");
         }
@@ -76,7 +90,10 @@ namespace WebApp.Controllers
         {
             var vm = new ObligationModel();
             string htmlData = dt.ToString("yyyy-MM-dd") + "T00:00";
-            vm.Data = htmlData;
+            //vm.Data = htmlData;
+            vm.StartTime = dt.ToString("yyyy-MM-ddTHH:mm");
+            vm.EndTime = dt.ToString("yyyy-MM-ddTHH:mm");
+            vm.LocationValue = "Choose one!";
             vm.LocationValues = new SelectList(await _bll.Locations.AllForPerson(User.UserGuidId()),
                 nameof(BLL.App.DTO.Location.LocationValue),
                 nameof(BLL.App.DTO.Location.LocationValue));
@@ -118,29 +135,26 @@ namespace WebApp.Controllers
             await _bll.SaveChangesAsync();
             obligation.TimeId = t.Id;
             ModelState.SetModelValue("TimeId", new ValueProviderResult(t.Id.ToString()));
-            Guid locationId;
-            Location l;
+            Location l;    
             if (await _bll.Locations.ExistsValue(obligation.Location!.LocationValue, User.UserGuidId()))
             {
                 l = await _bll.Locations.LocationByValue(obligation.Location.LocationValue, User.UserGuidId());
-                locationId = l.Id;
             }
             else
             {
                 l = new Location();
                 l.LocationValue = obligation.Location.LocationValue;
-                l.Person = user;
                 l.PersonId = user.Id;
                 _bll.Locations.Add(l);
                 await _bll.SaveChangesAsync();
-                locationId = l.Id;
             }
-            obligation.Location = l;
-            obligation.LocationId = locationId;
-            ModelState.SetModelValue("LocationId", new ValueProviderResult(locationId.ToString()));
+            obligation.LocationId = l.Id;
+            ModelState.SetModelValue("LocationId", new ValueProviderResult(l.Id.ToString()));
             obligation.Status = false;
             ModelState.SetModelValue("Status", new ValueProviderResult("false"));
-            await TryUpdateModelAsync(obligation);
+            TryValidateModel(true);
+            //await TryUpdateModelAsync(obligation);
+            //var errors = ModelState.Values.SelectMany(v => v.Errors);
             if (ModelState.IsValid)
             {
                 _bll.Obligations.Add(obligation);
@@ -226,7 +240,7 @@ namespace WebApp.Controllers
                 return NotFound();
             }
 
-            var obligation = await _bll.Obligations.FirstOrDefaultAsync(id);
+            var obligation = await _bll.Obligations.EditOne(id);
             var vm = new ObligationModel();
             vm.Obligation = obligation;
             vm.StartTime = obligation.Time!.StartTime.ToString("yyyy-MM-ddTHH:mm");

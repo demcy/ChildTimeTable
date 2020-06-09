@@ -13,12 +13,20 @@ namespace BLL.App.Mappers
         public PersonServiceMapper():base()
         {
             MapperConfigurationExpression.CreateMap<DALAppDTO.PersonDisplay, BLLAppDTO.PersonDisplay>();
+            
             MapperConfigurationExpression.CreateMap<BLLAppDTO.Person, DALAppDTO.Person>()
                 .ForMember(item=>item.Locations,
                     o=>o.Ignore());
+
             MapperConfigurationExpression.CreateMap<DALAppDTO.Person, BLLAppDTO.Person>()
-                .ForMember(item=>item.Locations,
-                    o=>o.Ignore());
+                .ForMember(item => item.Locations,
+                    k => k.Ignore())
+                .ForMember(item => item.RecipientNotifications,
+                    k => k.Ignore())
+                .ForMember(item => item.ParentObligations,
+                    k => k.Ignore())
+                .ForMember(item => item.ChildObligations,
+                    k => k.Ignore());
             // add more mappings
             //MapperConfigurationExpression.CreateMap<DALAppDTO.Identity.AppUser, BLLAppDTO.Identity.AppUser>();
             //MapperConfigurationExpression.CreateMap<DALAppDTO.GpsSessionType, BLLAppDTO.GpsSessionType>();
