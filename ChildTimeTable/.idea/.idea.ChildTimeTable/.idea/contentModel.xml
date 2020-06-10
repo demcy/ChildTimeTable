@@ -546,51 +546,6 @@
           <e p="PersonDataModel.cs" t="Include" />
           <e p="PersonModel.cs" t="Include" />
         </e>
-        <e p="node_modules/@types" t="IncludeRecursive">
-          <e p="anymatch" t="IncludeRecursive" />
-          <e p="bootstrap" t="IncludeRecursive" />
-          <e p="events" t="IncludeRecursive" />
-          <e p="jquery" t="IncludeRecursive" />
-          <e p="lodash" t="IncludeRecursive" />
-          <e p="minimatch" t="IncludeRecursive" />
-          <e p="node" t="IncludeRecursive" />
-          <e p="sizzle" t="IncludeRecursive" />
-          <e p="source-list-map" t="IncludeRecursive" />
-          <e p="tapable" t="IncludeRecursive" />
-          <e p="uglify-js" t="IncludeRecursive" />
-          <e p="webpack-sources" t="IncludeRecursive" />
-        </e>
-        <e p="node_modules/bootstrap" t="IncludeRecursive" />
-        <e p="node_modules/chalk" t="IncludeRecursive" />
-        <e p="node_modules/chokidar" t="IncludeRecursive" />
-        <e p="node_modules/cldr-core" t="IncludeRecursive" />
-        <e p="node_modules/cldr-dates-modern" t="IncludeRecursive" />
-        <e p="node_modules/cldr-numbers-modern" t="IncludeRecursive" />
-        <e p="node_modules/clean-webpack-plugin" t="IncludeRecursive" />
-        <e p="node_modules/commander" t="IncludeRecursive" />
-        <e p="node_modules/copy-webpack-plugin" t="IncludeRecursive" />
-        <e p="node_modules/css-loader" t="IncludeRecursive" />
-        <e p="node_modules/exports-loader" t="IncludeRecursive" />
-        <e p="node_modules/file-loader" t="IncludeRecursive" />
-        <e p="node_modules/flatpickr" t="IncludeRecursive" />
-        <e p="node_modules/font-awesome" t="IncludeRecursive" />
-        <e p="node_modules/fsevents" t="IncludeRecursive" />
-        <e p="node_modules/globalize" t="IncludeRecursive" />
-        <e p="node_modules/html-webpack-plugin" t="IncludeRecursive" />
-        <e p="node_modules/jquery" t="IncludeRecursive" />
-        <e p="node_modules/jquery-validation" t="IncludeRecursive" />
-        <e p="node_modules/jquery-validation-unobtrusive" t="IncludeRecursive" />
-        <e p="node_modules/lodash" t="IncludeRecursive" />
-        <e p="node_modules/mini-css-extract-plugin" t="IncludeRecursive" />
-        <e p="node_modules/moment" t="IncludeRecursive" />
-        <e p="node_modules/popper.js" t="IncludeRecursive" />
-        <e p="node_modules/pretty-error" t="IncludeRecursive" />
-        <e p="node_modules/script-loader" t="IncludeRecursive" />
-        <e p="node_modules/source-map" t="IncludeRecursive" />
-        <e p="node_modules/style-loader" t="IncludeRecursive" />
-        <e p="node_modules/terser" t="IncludeRecursive" />
-        <e p="node_modules/ts-loader" t="IncludeRecursive" />
-        <e p="node_modules/tslib" t="IncludeRecursive" />
         <e p="node_modules/typescript/lib/lib.d.ts" t="IncludeRecursive" />
         <e p="node_modules/typescript/lib/lib.dom.d.ts" t="IncludeRecursive" />
         <e p="node_modules/typescript/lib/lib.dom.iterable.d.ts" t="IncludeRecursive" />
@@ -647,10 +602,6 @@
         <e p="node_modules/typescript/lib/lib.scripthost.d.ts" t="IncludeRecursive" />
         <e p="node_modules/typescript/lib/lib.webworker.d.ts" t="IncludeRecursive" />
         <e p="node_modules/typescript/lib/lib.webworker.importscripts.d.ts" t="IncludeRecursive" />
-        <e p="node_modules/upath" t="IncludeRecursive" />
-        <e p="node_modules/url-loader" t="IncludeRecursive" />
-        <e p="node_modules/webpack" t="IncludeRecursive" />
-        <e p="node_modules/webpack-cli" t="IncludeRecursive" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp3.1" t="Include">

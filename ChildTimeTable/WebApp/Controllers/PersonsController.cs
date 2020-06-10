@@ -19,19 +19,30 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
+    /// <summary>
+    /// Main Controller
+    /// </summary>
     [Authorize(Roles = "User")]
     public class PersonsController : Controller
     {
         private readonly IAppBLL _bll;
         private readonly IWebHostEnvironment _env;
-
+        /// <summary>
+        /// Person Constructor
+        /// </summary>
+        /// <param name="bll"></param>
+        /// <param name="env"></param>
         public PersonsController(IAppBLL bll, IWebHostEnvironment env)
         {
             _bll = bll;
             _env = env;
         }
 
-
+        /// <summary>
+        /// Add person to family
+        /// </summary>
+        /// <param name="email"></param>
+        /// <returns></returns>
         public async Task<IActionResult> NotificationCreate(string email)
         {
             if (await _bll.Persons.ExistAny(email))
@@ -46,36 +57,15 @@ namespace WebApp.Controllers
                 _bll.Notifications.Add(n);
                 await _bll.SaveChangesAsync();
             }
-            /*if (_context.Persons.Any(person => person.AppUser.UserName == email))
-            {
-                //var userId = User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value;
-                var sender = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
-                string name = sender.FirstName + " " + sender.LastName;
-                Notification n = new Notification();
-                n.SenderId = sender.Id;
-                n.RecipientId = _context.Persons.Single(p => p.AppUser.UserName == email).Id;
-                n.Status = false;
-                n.Body = name + " invite you to his/her family";
-                _context.Add(n);
-                _context.SaveChanges();
-            }*/
             return RedirectToAction("Index", "Persons");
         }
-        
+        /// <summary>
+        /// Main Task
+        /// </summary>
+        /// <returns></returns>
         // GET: Persons
         public async Task<IActionResult> Index()
         {
-            /*var person = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
-            var unreadN = _context.Notifications.Count(n => n.RecipientId == person.Id && n.Status==false);
-            var applicationDbContext = _context.Persons
-                .Include(p => p.AppUser)
-                .Where(item=>item.FamilyId==person.FamilyId)
-                .Include(p => p.Family);
-            List<DateTime> dates = _context.Obligations.Where(o=>o.ParentId==person.Id || o.ChildId==person.Id)
-                .Select(o => o.Time).Select(t => t.StartTime).ToList();
-            ViewData["Dates"] = dates;
-            ViewBag.Unread = unreadN;
-            return View(await applicationDbContext.ToListAsync());*/
             var vm = new PersonDataModel();
             vm.DatesList = await _bll.Obligations.DatesList(User.UserGuidId());
             vm.UnreadMessages = (await _bll.Persons.OnePerson(User.UserGuidId())).UnreadMessages;
@@ -84,29 +74,25 @@ namespace WebApp.Controllers
             return View(vm);
         }
         
-        
+        /// <summary>
+        /// Person Info
+        /// </summary>
+        /// <returns></returns>
         // GET: Persons/Edit/5
         public async Task<IActionResult> Edit()
         {
-            /*var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
-            var person =  await _context.Persons.FindAsync(personId);
-            List<string> logos = _env.WebRootFileProvider.GetDirectoryContents("Icons")
-                .Select(item=>item.Name).ToList();
-            var vm = new PersonModel();
-            vm.AppUserIdSelectList = new SelectList(_context.Users, nameof(Person.Id), "Id", person.AppUserId);
-            ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", person.AppUserId);
-            ViewData["FamilyId"] = new SelectList(_context.Families, "Id", "Id", person.FamilyId);
-            ViewBag.Logo = person.Logo;
-            ViewData["Logos"] = logos;*/
             var vm = new PersonModel();
             vm.Person = await _bll.Persons.OnePerson(User.UserGuidId());
             vm.LogoList = _env.WebRootFileProvider.GetDirectoryContents("Icons")
                 .Select(item=>item.Name).ToList();
             //var person = await _bll.Persons.OnePerson(User.UserGuidId());
             return View(vm);
-            
         }
-        
+        /// <summary>
+        /// Redact Person Info
+        /// </summary>
+        /// <param name="vm"></param>
+        /// <returns></returns>
         // POST: Persons/Edit/5
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
@@ -120,8 +106,6 @@ namespace WebApp.Controllers
                 await _bll.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-            //ViewData["AppUserId"] = new SelectList(_context.Users, "Id", "Id", person.AppUserId);
-            //ViewData["FamilyId"] = new SelectList(_context.Families, "Id", "Id", person.FamilyId);
             return View(vm);
         }
 

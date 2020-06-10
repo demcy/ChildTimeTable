@@ -17,53 +17,56 @@ using WebApp.Models;
 
 namespace WebApp.Controllers
 {
+    /// <summary>
+    /// Notification Control
+    /// </summary>
     [Authorize(Roles = "User")]
     public class NotificationsController : Controller
     {
         private readonly IAppBLL _bll;
-
+        /// <summary>
+        /// Notification Constructor
+        /// </summary>
+        /// <param name="bll"></param>
         public NotificationsController(IAppBLL bll)
         {
             _bll = bll;
         }
 
-
+        /// <summary>
+        /// Accept of invitation to family
+        /// </summary>
+        /// <param name="submitButton"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<IActionResult> InvitationAccept(string submitButton, Guid id)
         {
             var notification = await _bll.Notifications.FirstOrDefaultAsync(id);
             notification.Status = true;
             await _bll.Notifications.UpdateAsync(notification);
-            //await _bll.SaveChangesAsync();
             if (submitButton == "yes")
             {
-                //var userId = User.Claims.Single(c => c.Type == ClaimTypes.NameIdentifier).Value;
                 var person = await _bll.Persons.OnePerson(User.UserGuidId());
                 var sender = await _bll.Persons.FirstOrDefaultAsync(notification.SenderId);
                 person.FamilyId = sender.FamilyId;
                 await _bll.Persons.UpdateAsync(person);
             }
-            
             await _bll.SaveChangesAsync();
             return RedirectToAction("Index", "Persons");
         }
         
         
-        
+        /// <summary>
+        /// Read obligation request
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<IActionResult> ObligationAccept(Guid id)
         {
             var notification = await _bll.Notifications.FirstOrDefaultAsync(id);
             notification.Status = true;
             await _bll.Notifications.UpdateAsync(notification);
             await _bll.SaveChangesAsync();
-            
-            
-            //var personId = _context.Persons.Single(p => p.AppUserId == User.UserGuidId()).Id;
-            //var notification = _context.Notifications.Find(id);
-            
-            //await _bll.Notifications.UpdateAsync(notification);
-            //_context.SaveChanges();
-            //var unreadN = _context.Notifications.Count(n => n.RecipientId == personId && n.Status==false);
-            //ViewBag.Unread = unreadN;
             if ((await _bll.Notifications.AllImportant(User.UserGuidId()))
                 .Count(n => n.Status == false) == 0)
             {
@@ -72,23 +75,17 @@ namespace WebApp.Controllers
             return RedirectToAction("Index", "Notifications");
         }
         
-
+        /// <summary>
+        /// All Person Notifications
+        /// </summary>
+        /// <returns></returns>
         // GET: Notifications
         public async Task<IActionResult> Index()
         {
-            var personId = (await _bll.Persons.OnePerson(User.UserGuidId())).Id;
             var vm = new NotificationDataModel();
             vm.Notifications = await _bll.Notifications.AllImportant(User.UserGuidId());
             vm.UnreadMessages = (await _bll.Notifications.AllImportant(User.UserGuidId()))
                 .Count(n => n.Status == false);
-            /*var person = _context.Persons.Single(p => p.AppUserId == User.UserGuidId());
-            var applicationDbContext = _context.Notifications
-                .Include(n => n.Recipient)
-                .Where(item=>item.RecipientId == person.Id)
-                .Include(n => n.Sender);
-            var unreadN = _context.Notifications.Count(n => n.RecipientId == person.Id && n.Status==false);
-            ViewBag.Unread = unreadN;*/
-            //var applicationDbContext = await _bll.Notifications.AllImportant(User.UserGuidId());
             return View(vm);
         }
     }
