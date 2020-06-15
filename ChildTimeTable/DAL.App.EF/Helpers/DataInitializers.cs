@@ -18,54 +18,83 @@ namespace DAL.App.EF.Helpers
 
         public static void SeedIdentity(UserManager<AppUser> userManager, RoleManager<AppRole> roleManager)
         {
+            /*var user = new AppUser
+            {
+                UserName = "admin2@kide",
+                FirstName = "Polina",
+                LastName = "Khokhlacheva",
+                Email = "admin@kide",
+                EmailConfirmed = true
+            };
+            var result = userManager.CreateAsync(user, "aA@123").Result;
+            if (!result.Succeeded)
+            {
+                throw new ApplicationException("User creation failed!");
+            }
+            var role = new AppRole();
+            role.Name = "Admin";
+            role.DisplayName = "Admin";
+            roleManager.CreateAsync(role);
+            result = userManager.AddToRoleAsync(user, "Admin").Result;*/
             
-            var roleNames = new string[] {"User", "Admin"};
-            foreach (var roleName in roleNames)
+            
+            var roles = new (string roleName, string roleDisplayName)[]
+            {
+                ("user", "User"),
+                ("admin", "Admin")
+            };
+
+            foreach (var (roleName, roleDisplayName) in roles)
             {
                 var role = roleManager.FindByNameAsync(roleName).Result;
                 if (role == null)
                 {
-                    role = new AppRole();
-                    
-                    role.Name = roleName;
+                    role = new AppRole()
+                    {
+                        Name = roleName,
+                        DisplayName = roleDisplayName
+                    };
+
                     var result = roleManager.CreateAsync(role).Result;
                     if (!result.Succeeded)
                     {
                         throw new ApplicationException("Role creation failed!");
                     }
                 }
-                
             }
-            
 
-            var userName = "admin@kide";
-            var passWord = "aA@1230";
-            var firstName = "Polina";
-            var lastName = "Khokhlacheva";
 
-            var user = userManager.FindByNameAsync(userName).Result;
-            if (user == null)
+            var users = new (string name, string password, string firstName, string lastName, Guid Id)[]
             {
-                user = new AppUser();
-                user.Email = userName;
-                user.UserName = userName;
-                user.FirstName = firstName;
-                user.LastName = lastName;
-                
-                var result = userManager.CreateAsync(user, passWord).Result;
-                if (!result.Succeeded)
+                ("admin3@kide", "aA@123", "Polina", "Khokhlacheva", new Guid("00000000-0000-0000-0000-000000000001")),
+            };
+
+            foreach (var userInfo in users)
+            {
+                var user = userManager.FindByEmailAsync(userInfo.name).Result;
+                if (user == null)
                 {
-                    throw new ApplicationException("User creation failed!");
-
+                    user = new AppUser()
+                    {
+                        Id = userInfo.Id,
+                        Email = userInfo.name,
+                        UserName = userInfo.name,
+                        FirstName = userInfo.firstName,
+                        LastName = userInfo.lastName,
+                        EmailConfirmed = true
+                    };
+                    var result = userManager.CreateAsync(user, userInfo.password).Result;
+                    if (!result.Succeeded)
+                    {
+                        throw new ApplicationException("User creation failed!");
+                    }
                 }
+
+                var roleResult = userManager.AddToRoleAsync(user, "admin").Result;
+                roleResult = userManager.AddToRoleAsync(user, "user").Result;
             }
-
-
-            var roleResult = userManager.AddToRoleAsync(user, "Admin").Result;
-            roleResult = userManager.AddToRoleAsync(user, "User").Result;
-
         }
-        
+    
         public static void SeedData(ApplicationDbContext context)
         {
             

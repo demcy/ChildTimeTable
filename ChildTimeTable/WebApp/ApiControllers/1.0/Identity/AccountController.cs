@@ -1,7 +1,8 @@
-using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Security.Claims;
 using System.Threading.Tasks;
+using Domain.App.Identity;
 using Extensions;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
@@ -10,21 +11,22 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using PublicApi.DTO.v1;
 using PublicApi.DTO.v1.Identity;
-using AppUser = BLL.App.DTO.Identity.AppUser;
 
 namespace WebApp.ApiControllers._1._0.Identity
 {
-    
+    /// <summary>
+    /// Api endpoint for registering new user and user log-in (jwt token generation)
+    /// </summary>
     [ApiController]
-    [ApiVersion( "1.0" )]
+    [ApiVersion("1.0")]
     [Route("api/v{version:apiVersion}/[controller]/[action]")]
-    public class AccountController: ControllerBase
+    public class AccountController : ControllerBase
     {
         private readonly IConfiguration _configuration;
-        private readonly UserManager<AppUser> _userManager;
+        private readonly UserManager<Domain.App.Identity.AppUser> _userManager;
+        private readonly SignInManager<Domain.App.Identity.AppUser> _signInManager;
         private readonly ILogger<AccountController> _logger;
-        private readonly SignInManager<AppUser> _signInManager;
-        
+
         /// <summary>
         /// Constructor
         /// </summary>
@@ -32,13 +34,15 @@ namespace WebApp.ApiControllers._1._0.Identity
         /// <param name="userManager"></param>
         /// <param name="signInManager"></param>
         /// <param name="logger"></param>
-        public AccountController(IConfiguration configuration, UserManager<AppUser> userManager, ILogger<AccountController> logger, SignInManager<AppUser> signInManager)
+        public AccountController(IConfiguration configuration, UserManager<Domain.App.Identity.AppUser> userManager,
+            SignInManager<Domain.App.Identity.AppUser> signInManager, ILogger<AccountController> logger)
         {
             _configuration = configuration;
             _userManager = userManager;
-            _logger = logger;
             _signInManager = signInManager;
+            _logger = logger;
         }
+
         /// <summary>
         /// Endpoint for user log-in (jwt generation)
         /// </summary>
@@ -61,8 +65,8 @@ namespace WebApp.ApiControllers._1._0.Identity
             var result = await _signInManager.CheckPasswordSignInAsync(appUser, dto.Password, false);
             if (result.Succeeded)
             {
-                var claimsPrincipal = await _signInManager.CreateUserPrincipalAsync(appUser); //get the User analog
-                var jwt = IdentityExtension.GenerateJWT(
+                var claimsPrincipal = await _signInManager.CreateUserPrincipalAsync(appUser);
+                var jwt = IdentityExtensions.GenerateJWT(
                     claimsPrincipal.Claims
                         .Append(new Claim(ClaimTypes.GivenName, appUser.FirstName))
                         .Append(new Claim(ClaimTypes.Surname, appUser.LastName)),
@@ -77,15 +81,11 @@ namespace WebApp.ApiControllers._1._0.Identity
                     LastName = appUser.LastName
                 });
             }
+
             _logger.LogInformation($"WebApi login. User {appUser.Email} failed login attempt!");
             return NotFound(new MessageDTO("User not found!"));
         }
-        
-        
 
-        
-        
-        
         /// <summary>
         /// Endpoint for user registration and immediate log-in (jwt generation) 
         /// </summary>
@@ -106,7 +106,7 @@ namespace WebApp.ApiControllers._1._0.Identity
                 return NotFound(new MessageDTO("User already registered!"));
             }
 
-            appUser = new AppUser()
+            appUser = new Domain.App.Identity.AppUser()
             {
                 Email = dto.Email,
                 UserName = dto.Email,
@@ -122,7 +122,7 @@ namespace WebApp.ApiControllers._1._0.Identity
                 if (user != null)
                 {
                     var claimsPrincipal = await _signInManager.CreateUserPrincipalAsync(user);
-                    var jwt = IdentityExtension.GenerateJWT(
+                    var jwt = IdentityExtensions.GenerateJWT(
                         claimsPrincipal.Claims
                             .Append(new Claim(ClaimTypes.GivenName, appUser.FirstName))
                             .Append(new Claim(ClaimTypes.Surname, appUser.LastName)),
@@ -145,7 +145,5 @@ namespace WebApp.ApiControllers._1._0.Identity
             var errors = result.Errors.Select(error => error.Description).ToList();
             return BadRequest(new MessageDTO() {Messages = errors});
         }
-        
-        
     }
 }

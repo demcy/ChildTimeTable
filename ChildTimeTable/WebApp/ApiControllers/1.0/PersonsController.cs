@@ -2,46 +2,69 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using BLL.App.DTO;
 using Contracts.BLL.App;
 using DAL.App.EF;
 using Domain;
 using Extensions;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using PublicApi.DTO.v1;
+using PublicApi.DTO.v1.Mappers;
 using Person = PublicApi.DTO.v1.Person;
+using V1DTO = PublicApi.DTO.v1;
 
 namespace WebApp.ApiControllers._1._0
 {
-    [ApiController]
-    [ApiVersion( "1.0" )]
+    /// <summary>
+    /// API PERSON CONTROLLER
+    /// </summary>
     [Route("api/v{version:apiVersion}/[controller]")]
+    [ApiController]
+    [ApiVersion("1.0")]
     [Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme)]
+    [ProducesResponseType(StatusCodes.Status401Unauthorized)]
     public class PersonsController : ControllerBase
     {
         private readonly IAppBLL _bll;
-
+        private readonly PersonMapper _mapper = new PersonMapper();
+        /// <summary>
+        /// API PERSON CONSTRUCTOR
+        /// </summary>
+        /// <param name="bll"></param>
         public PersonsController(IAppBLL bll)
         {
             _bll = bll;
         }
-
+        
+        /// <summary>
+        /// GET PERSONS
+        /// </summary>
+        /// <returns></returns>
         // GET: api/Persons
         [HttpGet]
-        /*public async Task<ActionResult<IEnumerable<Person>>> GetPersons()
+        [AllowAnonymous]
+        //[Authorize(AuthenticationSchemes = JwtBearerDefaults.AuthenticationScheme, Roles = "admin")]
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(IEnumerable<V1DTO.Person>))]
+        public async Task<ActionResult<IEnumerable<PersonDisplay>>> GetPersons()
         {
-            var persons = (await _bll.Persons.AllAsync(User.UserGuidId()))
-                .Select(bllEntity=> new Person()
-                {
-                    Id = bllEntity.Id,
-                    FirstName = bllEntity.FirstName,
-                    LastName = bllEntity.LastName,
-                    LocationCount = bllEntity.LocationCount
-                });
-            return Ok(persons);
-        }*/
+            if (User.IsInRole("admin"))
+            {
+                return Ok((await _bll.Persons.GetAllPersonsAsync()).Select(e =>
+                    _mapper.PersonDisplayMapper(e)));
+            }
+
+            var b = await _bll.Persons.GetAllFamilyPersons(User.UserId());
+            //var g = b.Select(e => _mapper.Map(e));
+            return Ok((await _bll.Persons.AllFamilyPersons(User.UserId())).Select(e =>
+                _mapper.Map(e)));
+        }
+        
     
         // GET: api/Persons/5
         /// <summary>
@@ -51,78 +74,116 @@ namespace WebApp.ApiControllers._1._0
         /// <returns>Person object based on id</returns>
         /// <response code="200">The person was successfully retrieved.</response>
         /// <response code="404">The person does not exist.</response>
-        [ProducesResponseType( typeof( Person ), 200 )]	
-        [ProducesResponseType( 404 )]
         [HttpGet("{id}")]
-        public async Task<ActionResult<Person>> GetPerson(Guid id)
+        [AllowAnonymous]
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(V1DTO.Person))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(V1DTO.MessageDTO))]
+        public async Task<ActionResult<PersonDisplay>> GetPerson(Guid id)
         {
-            var person = await _bll.Persons.FirstOrDefaultAsync(id, User.UserGuidId());
-
+            var person = await _bll.Persons.GetPersonAsync(id);
             if (person == null)
             {
-                return NotFound();
+                return NotFound(new V1DTO.MessageDTO($"Person with id {id} not found"));
             }
-            return Ok(person);
+            return Ok(_mapper.PersonDisplayMapper(person));
         }
-
-        // PUT: api/Persons/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
+        
+        
+        //PUT: api/Persons/5
+        /// <summary>
+        /// Update Person
+        /// </summary>
+        /// <param name="id"></param>
+        /// <param name="person"></param>
+        /// <returns></returns>
         [HttpPut("{id}")]
-        /*public async Task<IActionResult> PutPerson(Guid id, PersonEdit personEdit)
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status204NoContent)]
+        public async Task<IActionResult> PutPerson(Guid id, Person person)
         {
-            if (id != personEdit.Id)
+            var inProperties = person
+                .GetType()
+                .GetProperties()
+                .ToDictionary(
+                    key => key.Name,
+                    val => val.GetValue(person));
+            var p = await _bll.Persons.OnePerson(User.UserId());
+            foreach (var property in p.GetType().GetProperties())
             {
-                return BadRequest();
+                if (inProperties.TryGetValue(property.Name, out var value))
+                {
+                    if (value != null)
+                    {
+                        if (value.ToString() != "00000000-0000-0000-0000-000000000000")
+                        {
+                            property.SetValue(p, value);
+                        }
+                    }
+                }
             }
-
-            var person = await _bll.Persons.FirstOrDefaultAsync(personEdit.Id, User.UserGuidId());
-
-            if (person == null)
-            {
-                return BadRequest();
-            }
-            person.FirstName = personEdit.FirstName;
-            person.LastName = personEdit.LastName;
-            
-            _bll.Persons.Update(person);
+            await _bll.Persons.UpdateAsync(p);
             await _bll.SaveChangesAsync();
             return NoContent();
-        }*/
-
-        // POST: api/Persons
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for
-        // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
-        [HttpPost]
-        public async Task<ActionResult<BLL.App.DTO.Person>> PostPerson(PersonCreate personCreate)
-        {
-            var person = new BLL.App.DTO.Person
-            {
-                AppUserId = User.UserGuidId(),
-                FirstName = personCreate.FirstName,
-                LastName = personCreate.LastName
-            };
-            _bll.Persons.Add(person);
-            await _bll.SaveChangesAsync();
-
-            return CreatedAtAction("GetPerson", new { id = person.Id }, person);
         }
+        
+        
+        // POST: api/Persons
+        /// <summary>
+        /// POST PERSON
+        /// </summary>
+        /// <param name="person"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status201Created, Type = typeof(V1DTO.Person))]
+        public async Task<ActionResult<BLL.App.DTO.Person>> PostPerson(Person person)
+        {
+            var prePerson = await _bll.Persons.OnePerson(User.UserId());
+            person.AppUserId = User.UserId();
+            person.FamilyId = prePerson.FamilyId;
+
+            var bllEntity = _mapper.Map(person);
+            _bll.Persons.Add(bllEntity);
+            await _bll.SaveChangesAsync();
+            person.Id = bllEntity.Id;
+
+            return CreatedAtAction("GetPerson",
+                new {id = person.Id, version = HttpContext.GetRequestedApiVersion()?.ToString() ?? "0"},
+                person);
+        }
+        
 
         // DELETE: api/Persons/5
-        //[HttpDelete("{id}")]
-        /*public async Task<ActionResult<BLL.App.DTO.Person>> DeletePerson(Guid id)
+        /// <summary>
+        /// DELETE PERSON
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        [HttpDelete("{id}")]
+        [Produces("application/json")]
+        [Consumes("application/json")]
+        [ProducesResponseType(StatusCodes.Status200OK, Type = typeof(V1DTO.Person))]
+        [ProducesResponseType(StatusCodes.Status404NotFound, Type = typeof(V1DTO.MessageDTO))]
+        public async Task<ActionResult<BLL.App.DTO.Person>> DeletePerson(Guid id)
         {
-            var person = await _bll.Persons.FirstOrDefaultAsync(id, User.UserGuidId());
+            var person =
+                await _bll.Persons.FirstOrDefaultAsync(id);
+
+            
             if (person == null)
             {
-                return NotFound();
+                return NotFound(new V1DTO.MessageDTO($"Person with id {id} not found!"));
             }
 
-            _bll.Persons.Remove(person);
+            await _bll.Persons.RemoveAsync(person);
             await _bll.SaveChangesAsync();
+
             return Ok(person);
-            
-        }*/
+        }
 
         
     }

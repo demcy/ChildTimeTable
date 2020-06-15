@@ -13,10 +13,15 @@ namespace BLL.App.Mappers
         public PersonServiceMapper():base()
         {
             MapperConfigurationExpression.CreateMap<DALAppDTO.PersonDisplay, BLLAppDTO.PersonDisplay>();
+            MapperConfigurationExpression.CreateMap<DALAppDTO.Person, BLLAppDTO.PersonDisplay>()
+                .ForMember(item => item.LocationCount,
+                    k=>
+                        k.MapFrom(src=>src.Locations!.Count));
             
-            MapperConfigurationExpression.CreateMap<BLLAppDTO.Person, DALAppDTO.Person>()
-                .ForMember(item=>item.Locations,
-                    o=>o.Ignore());
+            
+            MapperConfigurationExpression.CreateMap<BLLAppDTO.Person, DALAppDTO.Person>();
+                //.ForMember(item=>item.Locations,
+                //    o=>o.Ignore());
 
             MapperConfigurationExpression.CreateMap<DALAppDTO.Person, BLLAppDTO.Person>()
                 .ForMember(item => item.Locations,
@@ -25,6 +30,8 @@ namespace BLL.App.Mappers
                     k => k.Ignore())
                 .ForMember(item => item.ParentObligations,
                     k => k.Ignore())
+                //.ForMember(item => item.UnreadMessages,
+                  //  k => k.MapFrom(src=>src.RecipientNotifications.Count()))
                 .ForMember(item => item.ChildObligations,
                     k => k.Ignore());
             // add more mappings
@@ -33,8 +40,24 @@ namespace BLL.App.Mappers
             
             Mapper = new Mapper(new MapperConfiguration(MapperConfigurationExpression));
         }
+
+        public BLLAppDTO.PersonDisplay MapPersonDisplayToPersonDisplay(DALAppDTO.PersonDisplay inObject)
+        {
+            return Mapper.Map<BLLAppDTO.PersonDisplay>(inObject);
+
+
+            //MapperConfigurationExpression.CreateMap<BLLAppDTO.PersonDisplay, DALAppDTO.PersonDisplay>();
+        }
         
-        
+        public BLLAppDTO.PersonDisplay MapPersonToPersonDisplay(DALAppDTO.Person inObject)
+        {
+            return Mapper.Map<BLLAppDTO.PersonDisplay>(inObject);
+
+
+            //MapperConfigurationExpression.CreateMap<BLLAppDTO.PersonDisplay, DALAppDTO.PersonDisplay>();
+        }
+
+
         public BLLAppDTO.Person MapPersonDisplay(DALAppDTO.PersonDisplay inObject)
         {
             //return Mapper.Map<BLLAppDTO.Person>(inObject);
@@ -65,5 +88,7 @@ namespace BLL.App.Mappers
             }
             return result;
         }
+        
+        
     }
 }

@@ -60,6 +60,16 @@ namespace DAL.App.EF.Repositories
         {
             var familyId = RepoDbSet.First(p => p.AppUserId == userId).FamilyId;
             return (await RepoDbSet.Where(p => p.FamilyId == familyId)
+                .Include(p=>p.ChangedAt)
+                .Include(p=>p.ChangedBy)
+                .Include(p=>p.CreatedAt)
+                .Include(p=>p.ChangedBy)
+                .Include(p=>p.Locations)
+                .Include(p=>p.ChildObligations)
+                .Include(p=>p.ParentObligations)
+                .Include(p=>p.RecipientNotifications
+                    .Where(n => n.Status == false))
+                .AsNoTracking()
                 .ToListAsync()).Select(dbEntity => Mapper.Map(dbEntity));
         }
         
@@ -68,6 +78,56 @@ namespace DAL.App.EF.Repositories
             return Mapper.Map(await RepoDbSet.Where(p => p.FirstName + " " + p.LastName == fullName)
                 .AsNoTracking()
                 .FirstOrDefaultAsync());
+        }
+
+        public async Task<IEnumerable<PersonDisplay>> GetAllPersonsAsync()
+        {
+            return await RepoDbSet.AsNoTracking()
+                .Select(dbEntity => new PersonDisplay()
+                {
+                    Id = dbEntity.Id,
+                    AppUserId = dbEntity.AppUserId,
+                    CreatedAt = dbEntity.CreatedAt,
+                    CreatedBy = dbEntity.CreatedBy,
+                    ChangedAt = dbEntity.ChangedAt,
+                    ChangedBy = dbEntity.ChangedBy,
+                    FirstName = dbEntity.FirstName,
+                    LastName = dbEntity.LastName,
+                    Logo = dbEntity.Logo,
+                    FamilyId = dbEntity.FamilyId,
+                    PersonType = dbEntity.PersonType.ToString(),
+                    LocationCount = dbEntity.Locations!.Count,
+                    ParentObligationCount = dbEntity.ParentObligations!.Count,
+                    ChildObligationCount = dbEntity.ChildObligations!.Count,
+                    UnreadMessages = dbEntity.RecipientNotifications
+                        .Where(n => n.Status == false)!.Count()
+                }).ToListAsync();
+        }
+        
+        public async Task<PersonDisplay> GetPersonAsync(Guid? id)
+        {
+            return await RepoDbSet.AsNoTracking()
+                .Select(dbEntity => new PersonDisplay()
+                {
+                    Id = dbEntity.Id,
+                    AppUserId = dbEntity.AppUserId,
+                    CreatedAt = dbEntity.CreatedAt,
+                    CreatedBy = dbEntity.CreatedBy,
+                    ChangedAt = dbEntity.ChangedAt,
+                    ChangedBy = dbEntity.ChangedBy,
+                    FirstName = dbEntity.FirstName,
+                    LastName = dbEntity.LastName,
+                    Logo = dbEntity.Logo,
+                    FamilyId = dbEntity.FamilyId,
+                    PersonType = dbEntity.PersonType.ToString(),
+                    LocationCount = dbEntity.Locations!.Count,
+                    ParentObligationCount = dbEntity.ParentObligations!.Count,
+                    ChildObligationCount = dbEntity.ChildObligations!.Count,
+                    UnreadMessages = dbEntity.RecipientNotifications
+                        .Where(n => n.Status == false)!.Count()
+                }).FirstAsync(p => p.Id == id);
+
+            //return (await RepoDbSet.AsNoTracking().ToListAsync()).Select(e => Mapper.Map(e));
         }
         
         /*

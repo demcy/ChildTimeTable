@@ -47,7 +47,7 @@ namespace WebApp.Controllers
         {
             if (await _bll.Persons.ExistAny(email))
             {
-                var sender = await _bll.Persons.OnePerson(User.UserGuidId());
+                var sender = await _bll.Persons.OnePerson(User.UserId());
                 string name = sender.FirstName + " " + sender.LastName;
                 Notification n = new Notification();
                 n.SenderId = sender.Id;
@@ -67,10 +67,10 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var vm = new PersonDataModel();
-            vm.DatesList = await _bll.Obligations.DatesList(User.UserGuidId());
-            vm.UnreadMessages = (await _bll.Persons.OnePerson(User.UserGuidId())).UnreadMessages;
+            vm.DatesList = await _bll.Obligations.DatesList(User.UserId());
+            vm.UnreadMessages = (await _bll.Persons.OnePerson(User.UserId())).UnreadMessages;
             //var applicationDbContext = await _bll.Persons.AllFamilyPersons(User.UserGuidId());
-            vm.Persons = await _bll.Persons.AllFamilyPersons(User.UserGuidId());
+            vm.Persons = await _bll.Persons.AllFamilyPersons(User.UserId());
             return View(vm);
         }
         
@@ -82,7 +82,7 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Edit()
         {
             var vm = new PersonModel();
-            vm.Person = await _bll.Persons.OnePerson(User.UserGuidId());
+            vm.Person = await _bll.Persons.OnePerson(User.UserId());
             vm.LogoList = _env.WebRootFileProvider.GetDirectoryContents("Icons")
                 .Select(item=>item.Name).ToList();
             //var person = await _bll.Persons.OnePerson(User.UserGuidId());

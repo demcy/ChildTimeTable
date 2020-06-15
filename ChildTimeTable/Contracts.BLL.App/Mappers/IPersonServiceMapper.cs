@@ -8,5 +8,7 @@ namespace Contracts.BLL.App.Mappers
     {
         //BLLAppDTO.PersonDisplay MapPersonDisplay(DALAppDTO.PersonDisplay inObject);
         BLLAppDTO.Person MapPersonDisplay(DALAppDTO.PersonDisplay inObject);
+        BLLAppDTO.PersonDisplay MapPersonDisplayToPersonDisplay(DALAppDTO.PersonDisplay inObject);
+        BLLAppDTO.PersonDisplay MapPersonToPersonDisplay(DALAppDTO.Person inObject);
     }
 }

@@ -46,7 +46,7 @@ namespace WebApp.Controllers
             await _bll.Notifications.UpdateAsync(notification);
             if (submitButton == "yes")
             {
-                var person = await _bll.Persons.OnePerson(User.UserGuidId());
+                var person = await _bll.Persons.OnePerson(User.UserId());
                 var sender = await _bll.Persons.FirstOrDefaultAsync(notification.SenderId);
                 person.FamilyId = sender.FamilyId;
                 await _bll.Persons.UpdateAsync(person);
@@ -67,7 +67,7 @@ namespace WebApp.Controllers
             notification.Status = true;
             await _bll.Notifications.UpdateAsync(notification);
             await _bll.SaveChangesAsync();
-            if ((await _bll.Notifications.AllImportant(User.UserGuidId()))
+            if ((await _bll.Notifications.AllImportant(User.UserId()))
                 .Count(n => n.Status == false) == 0)
             {
                 return RedirectToAction("Index", "Persons");
@@ -83,8 +83,8 @@ namespace WebApp.Controllers
         public async Task<IActionResult> Index()
         {
             var vm = new NotificationDataModel();
-            vm.Notifications = await _bll.Notifications.AllImportant(User.UserGuidId());
-            vm.UnreadMessages = (await _bll.Notifications.AllImportant(User.UserGuidId()))
+            vm.Notifications = await _bll.Notifications.AllImportant(User.UserId());
+            vm.UnreadMessages = (await _bll.Notifications.AllImportant(User.UserId()))
                 .Count(n => n.Status == false);
             return View(vm);
         }

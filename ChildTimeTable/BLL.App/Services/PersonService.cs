@@ -34,18 +34,36 @@ namespace BLL.App.Services
         {
             return Mapper.MapPersonDisplay(await UOW.Persons.OnePerson(userId));
         }
+        
+        public async Task<IEnumerable<PersonDisplay>> GetAllPersonsAsync()
+        {
+            return (await UOW.Persons.GetAllPersonsAsync()).Select(e => 
+                Mapper.MapPersonDisplayToPersonDisplay(e));
+        }
+
+        public async Task<PersonDisplay> GetPersonAsync(Guid? id)
+        {
+            return Mapper.MapPersonDisplayToPersonDisplay(await UOW.Persons.GetPersonAsync(id));
+        }
 
         public async Task<Person> RecipientPerson(string email)
         {
             return Mapper.Map(await UOW.Persons.RecipientPerson(email));
         }
 
+        public async Task<IEnumerable<PersonDisplay>> GetAllFamilyPersons(Guid? userId = null)
+        {
+            return (await UOW.Persons.AllFamilyPersons(userId))
+                .Select(e => Mapper.MapPersonToPersonDisplay(e));
+        }
+        
         public async Task<IEnumerable<Person>> AllFamilyPersons(Guid? userId = null)
         {
             return (await UOW.Persons.AllFamilyPersons(userId))
                 .Select(e => Mapper.Map(e));
-
         }
+        
+        
 
         public async Task<Person> PersonByName(string fullName)
         {

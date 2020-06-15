@@ -14,6 +14,8 @@ namespace Contracts.DAL.App.Repositories
         Task<Person> RecipientPerson(string email);
         Task<IEnumerable<Person>> AllFamilyPersons(Guid? userId = null);
         Task<Person> PersonByName(string fullName);
+        Task<IEnumerable<PersonDisplay>> GetAllPersonsAsync();
+        Task<PersonDisplay> GetPersonAsync(Guid? id);
     }
 }
 

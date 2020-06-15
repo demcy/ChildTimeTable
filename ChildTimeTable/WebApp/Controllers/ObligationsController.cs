@@ -57,12 +57,12 @@ namespace WebApp.Controllers
                 dt = DateTime.Today;
             }
             var vm = new ObligationDataModel();
-            vm.Obligations = await _bll.Obligations.AllPerDay(dt, User.UserGuidId());
+            vm.Obligations = await _bll.Obligations.AllPerDay(dt, User.UserId());
             vm.Date = dt;
             vm.HtmlDate = dt.ToString("yyyy-MM-dd");
             DateTime today = DateTime.Today;
             vm.Today = dt >= today;
-            vm.PersonId = (await _bll.Persons.OnePerson(User.UserGuidId())).Id;
+            vm.PersonId = (await _bll.Persons.OnePerson(User.UserId())).Id;
             return View(vm);
         }
 
@@ -78,10 +78,10 @@ namespace WebApp.Controllers
             var vm = new ObligationModel();
             vm.StartTime = dt.ToString("yyyy-MM-ddTHH:mm");
             vm.EndTime = dt.ToString("yyyy-MM-ddTHH:mm");
-            vm.LocationValues = new SelectList(await _bll.Locations.AllForPerson(User.UserGuidId()),
+            vm.LocationValues = new SelectList(await _bll.Locations.AllForPerson(User.UserId()),
                 nameof(Location.LocationValue),
                 nameof(Location.LocationValue));
-            List<string> fullNames = (await _bll.Persons.AllFamilyPersons(User.UserGuidId()))
+            List<string> fullNames = (await _bll.Persons.AllFamilyPersons(User.UserId()))
                 .Select( p => p.FirstName + " " + p.LastName).ToList();
             vm.FullNames = fullNames.Select(x=>new SelectListItem(){Text = x.ToString()});
             return View(vm);
@@ -99,7 +99,7 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Obligation obligation, string fullName)
         {
-            var user = await _bll.Persons.OnePerson(User.UserGuidId());
+            var user = await _bll.Persons.OnePerson(User.UserId());
             obligation.ParentId = user.Id;
             ModelState.SetModelValue("ParentId", new ValueProviderResult(user.Id.ToString()));
             var child = await _bll.Persons.PersonByName(fullName);
@@ -113,9 +113,9 @@ namespace WebApp.Controllers
             obligation.TimeId = t.Id;
             ModelState.SetModelValue("TimeId", new ValueProviderResult(t.Id.ToString()));
             Location l;    
-            if (await _bll.Locations.ExistsValue(obligation.Location!.LocationValue, User.UserGuidId()))
+            if (await _bll.Locations.ExistsValue(obligation.Location!.LocationValue, User.UserId()))
             {
-                l = await _bll.Locations.LocationByValue(obligation.Location.LocationValue, User.UserGuidId());
+                l = await _bll.Locations.LocationByValue(obligation.Location.LocationValue, User.UserId());
             }
             else
             {
@@ -168,10 +168,10 @@ namespace WebApp.Controllers
             vm.StartTime = obligation.Time!.StartTime.ToString("yyyy-MM-ddTHH:mm");
             vm.EndTime = obligation.Time.EndTime.ToString("yyyy-MM-ddTHH:mm");
             vm.LocationValue = obligation.Location!.LocationValue;
-            vm.LocationValues = new SelectList(await _bll.Locations.AllForPerson(User.UserGuidId()),
+            vm.LocationValues = new SelectList(await _bll.Locations.AllForPerson(User.UserId()),
                 nameof(BLL.App.DTO.Location.LocationValue),
                 nameof(BLL.App.DTO.Location.LocationValue));
-            List<string> fullNames = (await _bll.Persons.AllFamilyPersons(User.UserGuidId()))
+            List<string> fullNames = (await _bll.Persons.AllFamilyPersons(User.UserId()))
                 .Select( p => p.FirstName + " " + p.LastName).ToList();
             vm.FullNames = fullNames.Select(x=>new SelectListItem(){Text = x.ToString()});
             vm.ChildIndex = fullNames.FindIndex(item => item == obligation.Child!.FirstName + " " + obligation.Child.LastName);
@@ -198,7 +198,7 @@ namespace WebApp.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(Guid? id, Obligation obligation, string fullName)
         {
-            var user = await _bll.Persons.OnePerson(User.UserGuidId());
+            var user = await _bll.Persons.OnePerson(User.UserId());
             Time t = await _bll.Times.FirstOrDefaultAsync(obligation.TimeId);
             if (obligation.Time!.StartTime != t.StartTime || obligation.Time.EndTime != t.EndTime)
             {
@@ -208,9 +208,9 @@ namespace WebApp.Controllers
                 await _bll.SaveChangesAsync();
             }
             Location l;    
-            if (await _bll.Locations.ExistsValue(obligation.Location!.LocationValue, User.UserGuidId()))
+            if (await _bll.Locations.ExistsValue(obligation.Location!.LocationValue, User.UserId()))
             {
-                l = await _bll.Locations.LocationByValue(obligation.Location.LocationValue, User.UserGuidId());
+                l = await _bll.Locations.LocationByValue(obligation.Location.LocationValue, User.UserId());
             }
             else
             {
