@@ -22,9 +22,5 @@ namespace PublicApi.DTO.v1
         public int LocationCount { get; set; } = default!;
         public int ParentObligationCount { get; set; } = default!;
         public int ChildObligationCount { get; set; } = default!;
-        public DateTime CreatedAt { get; set; } = default!;
-        public string? CreatedBy { get; set; } = default!;
-        public DateTime ChangedAt { get; set; } = default!;
-        public string? ChangedBy { get; set; } = default!;
     }
 }

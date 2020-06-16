@@ -16,7 +16,17 @@ namespace BLL.App.Mappers
             MapperConfigurationExpression.CreateMap<DALAppDTO.Person, BLLAppDTO.PersonDisplay>()
                 .ForMember(item => item.LocationCount,
                     k=>
-                        k.MapFrom(src=>src.Locations!.Count));
+                        k.MapFrom(src=>src.Locations!.Count))
+                .ForMember(item => item.ChildObligationCount,
+                    k=>
+                        k.MapFrom(src=>src.ChildObligations!.Count))
+                .ForMember(item => item.ParentObligationCount,
+                    k=>
+                        k.MapFrom(src=>src.ParentObligations!.Count))
+                .ForMember(item => item.UnreadMessages,
+                    k=>
+                        k.MapFrom(src=>src.RecipientNotifications
+                            .Where(n=>n.Status==false).ToList().Count));
             
             
             MapperConfigurationExpression.CreateMap<BLLAppDTO.Person, DALAppDTO.Person>();

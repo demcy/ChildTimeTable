@@ -60,15 +60,14 @@ namespace DAL.App.EF.Repositories
         {
             var familyId = RepoDbSet.First(p => p.AppUserId == userId).FamilyId;
             return (await RepoDbSet.Where(p => p.FamilyId == familyId)
-                .Include(p=>p.ChangedAt)
-                .Include(p=>p.ChangedBy)
-                .Include(p=>p.CreatedAt)
-                .Include(p=>p.ChangedBy)
+                //.Include(p=>p.ChangedAt)
+                //.Include(p=>p.ChangedBy)
+                //.Include(p=>p.CreatedAt)
+                //.Include(p=>p.ChangedBy)
                 .Include(p=>p.Locations)
                 .Include(p=>p.ChildObligations)
                 .Include(p=>p.ParentObligations)
-                .Include(p=>p.RecipientNotifications
-                    .Where(n => n.Status == false))
+                .Include(p=>p.RecipientNotifications)
                 .AsNoTracking()
                 .ToListAsync()).Select(dbEntity => Mapper.Map(dbEntity));
         }

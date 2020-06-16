@@ -56,13 +56,15 @@ namespace WebApp.ApiControllers._1._0
             if (User.IsInRole("admin"))
             {
                 return Ok((await _bll.Persons.GetAllPersonsAsync()).Select(e =>
-                    _mapper.PersonDisplayMapper(e)));
+                    _mapper.PersonViewDisplayMapper(e)));
             }
 
-            var b = await _bll.Persons.GetAllFamilyPersons(User.UserId());
+            var g = User.UserId();
+
+            //var b = await _bll.Persons.GetAllFamilyPersons(User.UserId());
             //var g = b.Select(e => _mapper.Map(e));
-            return Ok((await _bll.Persons.AllFamilyPersons(User.UserId())).Select(e =>
-                _mapper.Map(e)));
+            return Ok((await _bll.Persons.GetAllFamilyPersons(User.UserId())).Select(e =>
+                _mapper.PersonDisplayMapper(e)));
         }
         
     

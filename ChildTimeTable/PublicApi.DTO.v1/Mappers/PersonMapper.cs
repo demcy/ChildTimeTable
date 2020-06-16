@@ -9,9 +9,15 @@ namespace PublicApi.DTO.v1.Mappers
         public PersonMapper()
         {
             MapperConfigurationExpression.CreateMap<BLL.App.DTO.PersonDisplay, Person>();
+            MapperConfigurationExpression.CreateMap<BLL.App.DTO.PersonDisplay, PersonView>();
             Mapper = new Mapper(new MapperConfiguration(MapperConfigurationExpression));
         }
 
+        
+        public PersonView PersonViewDisplayMapper(BLL.App.DTO.PersonDisplay inObject)
+        {
+            return Mapper.Map<PersonView>(inObject);
+        }
         
         public Person PersonDisplayMapper(BLL.App.DTO.PersonDisplay inObject)
         {
